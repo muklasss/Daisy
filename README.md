@@ -1,5 +1,5 @@
 # The Daisy Robot
-
+All Errors are now fixed and the bot is working fine..
 
 ![Daisy](https://telegra.ph/file/d0c0156487ee42d9685e9.jpg)
 
