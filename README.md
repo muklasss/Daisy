@@ -7,11 +7,8 @@ All Errors are now fixed and the bot is working fine..
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/InukaAsith/Daisy.git)
 
-A Modular Group management Bot
-Based on [Emilia](https://github.com/Aryahikari/Emiliahikari)
+A Modular Group management Bot on Sinhala
 
-
-Special thanks to [Arya Hikari](https://github.com/Aryahikari)
 
 ## THE EASY WAY to Deploy 
 
