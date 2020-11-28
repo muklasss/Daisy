@@ -1,8 +1,8 @@
 from telegram import Message
 from telegram.ext import BaseFilter
+from emilia import SUPPORT_USERS, SUDO_USERS
 
-
-
+DEV_USERS == SUDO_USERS
 
 class CustomFilters(object):
     class _Supporters(BaseFilter):
@@ -16,6 +16,12 @@ class CustomFilters(object):
             return bool(message.from_user and message.from_user.id in "1141839926")
 
     sudo_filter = _Sudoers()
+    
+    class _Developers(BaseFilter):
+        def filter(self, message: Message):
+            return bool(message.from_user and message.from_user.id in DEV_USERS)
+
+    dev_filter = _Developers()
 
     class _MimeType(BaseFilter):
         def __init__(self, mimetype):
