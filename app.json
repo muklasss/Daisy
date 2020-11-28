@@ -19,6 +19,10 @@
       "description": "Your bot token, as a string.",
       "value": ""
     },
+    "AI_API_KEY": {
+      "description": "API key for AI chat. Get it from coffeehouse.",
+      "value": ""
+    },
     "OWNER_ID": {
       "description": "An integer of consisting of your owner ID",
       "value": "1141839926"
