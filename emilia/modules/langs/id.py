@@ -41,8 +41,8 @@ You can find the list of available commands with /help.
 
 Want to Chat with me, send /addchat and reply to my message to start chatting.
 
-[- 𝗚𝗿𝗼𝘂𝗽 𝗛𝗲𝗹𝗽 𝗠𝗮𝗻𝗮𝗴𝗲𝗿™ -](https://t.me/grouphelpmanagerbot)
-©2020 by [Infinity JE®](https://infinityje.com). All Rights Reserved
+[- The Source code is available on Github -](https://github.com/InukaAsith/Daisy.git)
+©2020 by [Infinity JE®](https://infinityje.com). 
 """,
 	"help_text": """
 Hey there! My name is *Daisy*.
