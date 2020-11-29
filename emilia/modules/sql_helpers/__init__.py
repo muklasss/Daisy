@@ -2,7 +2,7 @@ import os
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, scoped_session
-from emilia import DATABASE_URL
+from emilia import DB_URI
 
 
 def start() -> scoped_session:
