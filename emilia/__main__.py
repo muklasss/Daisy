@@ -30,7 +30,7 @@ from emilia.modules.languages import set_language
 
 PM_START_TEXT = "start_text"
 
-DAISY_IMG = "https://telegra.ph/file/4be7c7a8a1a9f50b73d21.jpg"
+
 
 HELP_STRINGS = "help_text"#.format(dispatcher.bot.first_name, "" if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
