@@ -6,7 +6,7 @@ import emilia.modules.sql.chatbot_sql as sql
 from coffeehouse.api import API
 from coffeehouse.exception import CoffeeHouseError as CFError
 from coffeehouse.lydia import LydiaAI
-from emilia import OWNER_ID, dispatcher
+from emilia import OWNER_ID, dispatcher, AI_API_KEY
 from emilia.modules.helper_funcs.chat_status import user_admin
 from emilia.modules.helper_funcs.filters import CustomFilters
 from telegram import Update
