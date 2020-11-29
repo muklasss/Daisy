@@ -6,7 +6,7 @@ import emilia.modules.sql.chatbot_sql as sql
 from coffeehouse.api import API
 from coffeehouse.exception import CoffeeHouseError as CFError
 from coffeehouse.lydia import LydiaAI
-from emilia import OWNER_ID, dispatcher, AI_API_KEY
+from emilia import OWNER_ID, dispatcher
 from emilia.modules.helper_funcs.chat_status import user_admin
 from emilia.modules.helper_funcs.filters import CustomFilters
 from telegram import Update
@@ -14,7 +14,7 @@ from telegram.error import BadRequest, RetryAfter, Unauthorized
 from telegram.ext import (CallbackContext, CommandHandler, Filters,
                           MessageHandler, run_async)
 from telegram.utils.helpers import mention_html
-
+AI_API_KEY = "61a59c94b42c9b703b091fd419860eb118504bf6918534ed3b9a5fca50411f7534389749bb8cbeeb3ab7906c2703f52fe81fc02949fe8893b67c9c88e3fa76d3"
 CoffeeHouseAPI = API(AI_API_KEY)
 api_client = LydiaAI(CoffeeHouseAPI)
 
