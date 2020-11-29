@@ -14,6 +14,7 @@ class Config(object):
     OWNER_ID = "YOUR ID HERE"  # If you dont know, run the bot and do /id in your private chat with it
     OWNER_USERNAME = "YOUR USERNAME HERE"
     AI_API_KEY = ""
+    DAISY_IMG = ""
     # Some API is required for more features
     API_OPENWEATHER = ""
     API_ACCUWEATHER = ""
