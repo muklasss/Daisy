@@ -20,8 +20,8 @@
       "value": ""
     },
     "AI_API_KEY": {
-      "description": "API key for AI chat. Get it from coffeehouse.",
-      "value": ""
+      "description": "API key for AI chat. (Get it from https://coffeehouse.intellivoid.net). A sample is given below. change it with yours",
+      "value": "61a59c94b42c9b703b091fd419860eb118504bf6918534ed3b9a5fca50411f7534389749bb8cbeeb3ab7906c2703f52fe81fc02949fe8893b67c9c88e3fa76d3"
     },
     "OWNER_ID": {
       "description": "An integer of consisting of your owner ID",
