@@ -21,10 +21,12 @@
     },
     "AI_API_KEY": {
       "description": "API key for AI chat. (Get it from https://coffeehouse.intellivoid.net).",
+      "required" : false,
       "value": ""
     },
     "DAISY_IMG": {
       "description": "Daisy's Logo.. Telegra.ph only",
+      "required" : false,
       "value": ""
     },
     
