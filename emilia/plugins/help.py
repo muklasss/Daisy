@@ -1,10 +1,10 @@
 import logging
-from Config import Messages as tr
+
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 logging.basicConfig(level=logging.INFO)
-
+START_MSG = "HI"
 @Client.on_message(filters.private & filters.incoming & filters.command(['fsubstart']))
 def _start(client, message):
     client.send_message(message.chat.id,
