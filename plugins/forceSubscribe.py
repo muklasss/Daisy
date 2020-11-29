@@ -30,8 +30,8 @@ def _onUnMuteRequest(client, cb):
         client.answer_callback_query(cb.id, text="❗ ඔයාව වෙන හේතුවක් නිසා Admin ල mute කරලයි ඉන්නෙ.", show_alert=True)
     else:
       if not client.get_chat_member(chat_id, (client.get_me()).id).status == 'administrator':
-        client.send_message(chat_id, f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Leaving this chat...__")
-        client.leave_chat(chat_id)
+        client.send_message(chat_id, f"❗ **{cb.from_user.mention} is trying to UnMute himself but i can't unmute him because i am not an admin in this chat add me as admin again.**\n__#Contact the owner...__")
+        
       else:
         client.answer_callback_query(cb.id, text="❗ අවවාදයයි: ඔයාට කතාකරන්න පුලුවන්කම තියෙද්දි button එක click කරන්න එපා.", show_alert=True)
 
