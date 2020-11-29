@@ -20,9 +20,19 @@
       "value": ""
     },
     "AI_API_KEY": {
-      "description": "API key for AI chat. (Get it from https://coffeehouse.intellivoid.net).",
+      "description": "API key for AI chat. **Exclusively on Daisy** (Get it from https://coffeehouse.intellivoid.net).",
       "value": ""
     },
+    "APP_ID": {
+      "description": "App ID (get it from https://my.telegram.org)",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "App HASH (get it from https://my.telegram.org)",
+      "value": ""
+    },
+    
+    
     "DAISY_IMG": {
       "description": "Daisy's Logo.. Telegra.ph only",
       "value": ""
