@@ -13,3 +13,7 @@ Pillow
 alphabet_detector
 urbandict
 coffeehouse
+
+TgCrypto
+pyrogram==1.0.1
+psycopg2
