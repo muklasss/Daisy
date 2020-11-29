@@ -543,25 +543,28 @@ def main():
 
     updater.idle()
 
-if __name__ == '__main__':
-    LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
-    main()
-    plugins = dict(
+    
+plugins = dict(
     root="emilia.plugins",
     include=[
         "forceSubscribe",
         "help"
     ]
 )
-
-    app = Client(
+app = Client(
+    
+    
         
-         'ForceSubscribe',
-          bot_token = TOKEN,
-          api_id = APP_ID,
-          api_hash = API_HASH,
-          plugins = plugins
+   'ForceSubscribe',
+    bot_token = TOKEN,
+    api_id = APP_ID,
+    api_hash = API_HASH,
+    plugins = plugins
     )
 
-    app.run()
-
+app.run()
+    
+if __name__ == '__main__':
+    LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
+    main()
+    
