@@ -31,6 +31,11 @@
       "description": "Your username",
       "value": "InukaASiTH"
     },
+    
+    "DAISY_IMG": {
+      "description": "Daisy's Logo.. ",
+      "value": "https://telegra.ph/file/4be7c7a8a1a9f50b73d21.jpg"
+    },
   
     "URL": {
       "description": "The Heroku App URL similar to https://<appname>.herokuapp.com/",
