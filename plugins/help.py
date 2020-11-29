@@ -5,7 +5,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 logging.basicConfig(level=logging.INFO)
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['start']))
+@Client.on_message(filters.private & filters.incoming & filters.command(['fsubstart']))
 def _start(client, message):
     client.send_message(message.chat.id,
         text=tr.START_MSG.format(message.from_user.first_name, message.from_user.id),
@@ -14,7 +14,7 @@ def _start(client, message):
         )
 
 
-@Client.on_message(filters.private & filters.incoming & filters.command(['help']))
+@Client.on_message(filters.private & filters.incoming & filters.command(['fsubhelp']))
 def _help(client, message):
     client.send_message(chat_id = message.chat.id,
         text = tr.HELP_MSG[1],
@@ -24,7 +24,7 @@ def _help(client, message):
         reply_to_message_id = message.message_id
     )
 
-help_callback_filter = filters.create(lambda _, __, query: query.data.startswith('help+'))
+help_callback_filter = filters.create(lambda _, __, query: query.data.startswith('fsubhelp+'))
 
 @Client.on_callback_query(help_callback_filter)
 def help_answer(client, callback_query):
