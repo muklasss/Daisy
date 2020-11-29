@@ -20,7 +20,7 @@
       "value": ""
     },
     "AI_API_KEY": {
-      "description": "API key for AI chat. (Get it from https://coffeehouse.intellivoid.net).",
+      "description": "API key for AI chat..** Exclusively on Daisy**. (Get it from https://coffeehouse.intellivoid.net)",
       "required" : false,
       "value": ""
     },
