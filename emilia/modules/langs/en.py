@@ -45,8 +45,8 @@ Want to Chat with me, send /addchat and reply to my message to start chatting.
 ©2020 by [Infinity JE®](https://infinityje.com). 
 """,
     "help_text": """
-ආයුබෝවන්! මම තමයි {}.
-I'm a modular group management bot powered by the Daisy project! Have a look at the following for an idea of some of \
+ආයුබෝවන්!
+ ඔයාව Daisy Project එකෙන් රන් වෙන තවත් බොට් කෙනෙකුට සාදරයෙන් පිළිගන්නවා! Have a look at the following for an idea of some of \
 the things I can help you with.
 
 *Main* commands available:
