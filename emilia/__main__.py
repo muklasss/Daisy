@@ -15,7 +15,7 @@ from telegram.ext import CommandHandler, Filters, MessageHandler, CallbackQueryH
 from telegram.ext.dispatcher import run_async, DispatcherHandlerStop, Dispatcher
 from telegram.utils.helpers import escape_markdown, mention_html
 
-from emilia import dispatcher, updater, TOKEN, WEBHOOK, OWNER_ID, DONATION_LINK, CERT_PATH, PORT, URL, LOGGER, spamcheck, DAISY_IMG
+from emilia import dispatcher, updater, TOKEN, WEBHOOK, OWNER_ID, DONATION_LINK, CERT_PATH, PORT, URL, LOGGER, spamcheck, DAISY_IMG, APP_ID, api_hash
 # needed to dynamically load modules
 # NOTE: Module order is not guaranteed, specify that in the config file!
 from emilia.modules import ALL_MODULES
@@ -27,6 +27,10 @@ from emilia.modules.sql import languages_sql as langsql
 
 from emilia.modules.connection import connect_button
 from emilia.modules.languages import set_language
+
+import logging
+from pyrogram import Client
+
 
 PM_START_TEXT = "start_text"
 
@@ -46,6 +50,27 @@ DATA_EXPORT = []
 
 CHAT_SETTINGS = {}
 USER_SETTINGS = {}
+
+
+plugins = dict(
+    root="plugins",
+    include=[
+        "forceSubscribe",
+        "help"
+    ]
+)
+
+app = Client(
+     'ForceSubscribe',
+      bot_token = TOKEN,
+      api_id = APP_ID,
+      api_hash = API_HASH,
+      plugins = plugins
+)
+
+app.run()
+
+
 
 for module_name in ALL_MODULES:
     imported_module = importlib.import_module("emilia.modules." + module_name)
