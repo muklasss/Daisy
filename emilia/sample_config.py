@@ -13,6 +13,7 @@ class Config(object):
     API_KEY = "YOUR KEY HERE"
     OWNER_ID = "YOUR ID HERE"  # If you dont know, run the bot and do /id in your private chat with it
     OWNER_USERNAME = "YOUR USERNAME HERE"
+    AI_API_KEY = ""
     # Some API is required for more features
     API_OPENWEATHER = ""
     API_ACCUWEATHER = ""
