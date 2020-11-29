@@ -562,9 +562,10 @@ app = Client(
     plugins = plugins
     )
 
-app.run()
+
     
 if __name__ == '__main__':
     LOGGER.info("Successfully loaded modules: " + str(ALL_MODULES))
     main()
+    app.run()
     
