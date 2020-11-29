@@ -43,7 +43,7 @@ def _check_member(client, message):
   chat_db = sql.fs_settings(chat_id)
   if chat_db:
     user_id = message.from_user.id
-    if not client.get_chat_member(chat_id, user_id).status in ("administrator", "creator") and not user_id in Config.SUDO_USERS:
+    if not client.get_chat_member(chat_id, user_id).status in ("administrator", "creator") and not user_id in SUDO_USERS:
       channel = chat_db.channel
       try:
         client.get_chat_member(channel, user_id)
@@ -70,7 +70,7 @@ def _check_member(client, message):
 @Client.on_message(filters.command(["forcesubscribe", "fsub"]) & ~filters.private)
 def config(client, message):
   user = client.get_chat_member(message.chat.id, message.from_user.id)
-  if user.status is "creator" or user.user.id in Config.SUDO_USERS:
+  if user.status is "creator" or user.user.id in SUDO_USERS:
     chat_id = message.chat.id
     if len(message.command) > 1:
       input_str = message.command[1]
