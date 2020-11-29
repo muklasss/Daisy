@@ -35,7 +35,7 @@ Available commands are:
     
 Hi {}, my name is {}! 
 
-I am a group manager bot developed by [InukaASiTH](https://visi.tk/inukaasith)
+I am a group manager bot created by [my master](tg://user?id={}) based on Project Daisy written by [InukaASiTH](https://visi.tk/inukaasith)
 
 You can find the list of available commands with /help.
 
@@ -45,8 +45,8 @@ Want to Chat with me, send /addchat and reply to my message to start chatting.
 ©2020 by [Infinity JE®](https://infinityje.com). 
 """,
     "help_text": """
-ආයුබෝවන්! මම තමයි *Daisy*.
-I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
+ආයුබෝවන්! මම තමයි {}.
+I'm a modular group management bot powered by the Daisy project! Have a look at the following for an idea of some of \
 the things I can help you with.
 
 *Main* commands available:
