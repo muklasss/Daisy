@@ -45,7 +45,7 @@ Want to Chat with me, send /addchat and reply to my message to start chatting.
 ©2020 by [Infinity JE®](https://infinityje.com). 
 """,
 	"help_text": """
-Hey there! My name is {}.
+Hey there! I'm a powerful group manager powered by *Daisy*.
 I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
 the things I can help you with.
 
