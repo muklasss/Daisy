@@ -60,11 +60,11 @@ def _check_member(client, message):
           )
           client.restrict_chat_member(chat_id, user_id, ChatPermissions(can_send_messages=False))
         except ChatAdminRequired:
-          sent_message.edit("❗ **මම මේකෙ Admin නෙමෙයි..**\n__මට Ban Permissions එක්ක Admin දීල ආපහු උත්සාහ කරන්න.. \n#Leaving this chat...__")
-          client.leave_chat(chat_id)
+          sent_message.edit("❗ **මම මේකෙ Admin නෙමෙයි..**\n__මට Ban Permissions එක්ක Admin දීල ආපහු උත්සාහ කරන්න.. \n#Please C...__")
+          
       except ChatAdminRequired:
-        client.send_message(chat_id, text=f"❗ **මම @{channel} එකේ Admin නෙමෙයි.**\n__මට ඒකෙ Admin දීල ආපහු Add කරන්න.\n#Leaving this chat...__")
-        client.leave_chat(chat_id)
+        client.send_message(chat_id, text=f"❗ **මම @{channel} එකේ Admin නෙමෙයි.**\n__මට ඒකෙ Admin දීල ආපහු Add කරන්න.\n#Please Contact Owner...__")
+        
 
 
 @Client.on_message(filters.command(["forcesubscribe", "fsub"]) & ~filters.private)
