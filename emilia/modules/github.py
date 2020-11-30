@@ -39,8 +39,14 @@ __help__ = """
  - /git:{GitHub username} Returns info about a GitHub user or organization.
 """
 
-__mod_name__ = "Github"
+
 
 github_handle = DisableAbleCommandHandler("git", github)
 
 dispatcher.add_handler(github_handle)
+
+__mod_name__ = "Github"
+__command_list__ = ["git"]
+__handlers__ = [
+    github_handle
+]
