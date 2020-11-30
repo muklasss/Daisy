@@ -13,3 +13,5 @@ Pillow
 alphabet_detector
 urbandict
 coffeehouse
+pynewtonmath
+speedtest-cli
