@@ -104,7 +104,7 @@ To find the area under a function, send the request as c:d|f(x) where c is the s
 To compute fractions, enter expressions as numerator(over)denominator. For example, to process 2/4 you must send in your expression as 2(over)4. The result expression will be in standard math notation (1/2, 3/4).
 """
 
-__mod_name__ = "Math"
+
 
 SIMPLIFY_HANDLER = DisableAbleCommandHandler("math", simplify, pass_args=True)
 FACTOR_HANDLER = DisableAbleCommandHandler("factor", factor, pass_args=True)
@@ -137,3 +137,9 @@ dispatcher.add_handler(ARCSIN_HANDLER)
 dispatcher.add_handler(ARCTAN_HANDLER)
 dispatcher.add_handler(ABS_HANDLER)
 dispatcher.add_handler(LOG_HANDLER)
+
+__mod_name__ = "Math"
+__command_list__ = ["math","factor","derive","integrate","zeroes","tangent","area","cos","sin","tan","arccos","arcsin","arctan","abs","log"]
+__handlers__ = [
+    SIMPLIFY_HANDLER,FACTOR_HANDLER,DERIVE_HANDLER,INTEGRATE_HANDLER,ZEROES_HANDLER,TANGENT_HANDLER,AREA_HANDLER,AREA_HANDLER,COS_HANDLER,SIN_HANDLER,TAN_HANDLER,ARCCOS_HANDLER,ARCSIN_HANDLER,ARCTAN_HANDLER,ABS_HANDLER,LOG_HANDLER
+]
