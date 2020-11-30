@@ -6,6 +6,7 @@ from telegram import Update, Bot
 from telegram.ext import CommandHandler
 
 from emilia import dispatcher
+from emilia.modules.helper_funcs.alternate import send_message
 
 # Open API key
 API_KEY = "6ae0c3a0-afdc-4532-a810-82ded0054236"
