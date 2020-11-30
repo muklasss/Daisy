@@ -33,9 +33,15 @@ With this module, you can find the definitions of words without having to leave 
  - /define <word>: returns the definition of the word.
  """
  
-__mod_name__ = "DICTIONARY"
+
         
         
 DEFINE_HANDLER = CommandHandler("define", define, pass_args=True)
 
 dispatcher.add_handler(DEFINE_HANDLER)
+
+__mod_name__ = "DICTIONARY"
+__command_list__ = ["define"]
+__handlers__ = [
+    DEFINE_HANDLER
+]
