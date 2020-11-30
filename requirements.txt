@@ -17,3 +17,4 @@ pynewtonmath
 speedtest-cli
 requests
 wikipedia
+tswift 
