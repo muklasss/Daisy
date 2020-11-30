@@ -2,6 +2,7 @@ from telegram import ParseMode, Update, Bot, Chat
 from telegram.ext import CommandHandler, MessageHandler, BaseFilter, run_async
 
 from emilia import dispatcher
+from emilia.modules.helper_funcs.alternate import send_message
 
 import os
 import json
