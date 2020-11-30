@@ -51,9 +51,14 @@ __help__ = """
  - /t: while replying to a message, will reply with a grammar corrected version
 """
 
-__mod_name__ = "Grammmar"
 
 
 TRANSLATE_HANDLER = CommandHandler('t', translate)
 
 dispatcher.add_handler(TRANSLATE_HANDLER)
+
+__mod_name__ = "Grammmar"
+__command_list__ = ["t"]
+__handlers__ = [
+    TRANSLATE_HANDLER
+]
