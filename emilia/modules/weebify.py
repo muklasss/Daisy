@@ -5,6 +5,7 @@ from telegram.ext import run_async
 
 from emilia import dispatcher
 from emilia.modules.disable import DisableAbleCommandHandler
+from emilia.modules.helper_funcs.alternate import send_message
 
 normiefont = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u',
               'v', 'w', 'x', 'y', 'z']
