@@ -3,6 +3,7 @@ from telegram.ext import run_async
 
 from emilia.modules.disable import DisableAbleCommandHandler
 from emilia import dispatcher
+from emilia.modules.helper_funcs.alternate import send_message
 
 from requests import get
 
