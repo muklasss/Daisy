@@ -13,6 +13,7 @@ from telegram.ext import run_async
 from emilia import dispatcher
 
 from emilia.modules.disable import DisableAbleCommandHandler
+from emilia.modules.helper_funcs.alternate import send_message
 
 
 opener = urllib.request.build_opener()
