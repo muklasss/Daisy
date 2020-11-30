@@ -3,6 +3,7 @@ from telegram import Bot, Message, Update, ParseMode
 from telegram.ext import CommandHandler, run_async
 
 from emilia import dispatcher
+from emilia.modules.helper_funcs.alternate import send_message
 
 
 @run_async
