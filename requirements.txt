@@ -15,3 +15,5 @@ urbandict
 coffeehouse
 pynewtonmath
 speedtest-cli
+requests
+wikipedia
