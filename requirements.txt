@@ -17,4 +17,5 @@ pynewtonmath
 speedtest-cli
 requests
 wikipedia
-tswift 
+tswift
+pprint
