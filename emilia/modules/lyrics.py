@@ -44,10 +44,16 @@ Want to get the lyrics of your favorite songs straight from the app? This module
  You can either enter just the song name or both the artist and song name.
 """
 
-__mod_name__ = "Songslyrics"
+
 
 
 
 LYRICS_HANDLER = DisableAbleCommandHandler("lyrics", lyrics, pass_args=True)
 
 dispatcher.add_handler(LYRICS_HANDLER)
+
+__mod_name__ = "Songslyrics"
+__command_list__ = ["lyrics"]
+__handlers__ = [
+    LYRICS_HANDLER
+]
