@@ -18,4 +18,4 @@ speedtest-cli
 requests
 wikipedia
 tswift
-pprint
+
