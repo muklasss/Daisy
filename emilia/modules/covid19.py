@@ -121,7 +121,7 @@ COV_HANDLER = CommandHandler('cov', cov)
 dispatcher.add_handler(COV_HANDLER)
 
 __mod_name__ = "COVID-19 Tracker"
-__command_list__ = ["cov","covid19"]
+__command_list__ = ["cov"]
 __handlers__ = [
     COV_HANDLER
 ]
