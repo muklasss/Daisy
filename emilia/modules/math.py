@@ -4,6 +4,7 @@ from telegram import Message, Update, Bot, MessageEntity
 from telegram.ext import CommandHandler, run_async
 from emilia import dispatcher
 from emilia.modules.disable import DisableAbleCommandHandler
+from emilia.modules.helper_funcs.alternate import send_message
 import pynewtonmath as newton
 import math
 
