@@ -25,19 +25,18 @@ def api_call(operation, expression):
 	connect.close()
 
 
-
-def simplify(update, context):
-	
-	
-    	args = context.args
-    	operation = 'simplify'
-	expression = ('{}'.format(args[0]))
-	api_call(operation, expression)
+@run_async
+def simplify(update, context):	
+    args = context.args
+    operation = 'simplify'
+    expression = ('{}'.format(args[0]))
+    api_call(operation, expression)
     
     
 
 @run_async
 def factor(update, context):
+	
     args = context.args.List[str]
     message = update.effective_message
     message.reply_text(newton.factor('{}'.format(args[0])))
