@@ -11,18 +11,18 @@ import urllib
 import json
 
 def api_call(operation, expression):
-	connect = urllib.urlopen("https://newton.now.sh/%s/%s"%(operation,expression))
-	output_string = connect.read()
-	output_json = json.loads(output_string)
-	message = update.effective_message
-	if "error" not in output_json:
+   connect = urllib.urlopen("https://newton.now.sh/%s/%s"%(operation,expression))
+   output_string = connect.read()
+   output_json = json.loads(output_string)
+   message = update.effective_message
+   if "error" not in output_json:
+           
+           message.reply_text(output_json['result'])
 		
-        	message.reply_text(output_json['result'])
+   else:
 		
-	else:
-		
-		message.reply_text( output_json['error'] + "\n" + "Please check for errors in operation or expression.")
-	connect.close()
+	   message.reply_text( output_json['error'] + "\n" + "Please check for errors in operation or expression.")
+   connect.close()
 
 
 @run_async
