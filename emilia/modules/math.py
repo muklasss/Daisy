@@ -16,13 +16,13 @@ def simplify(update, context):
 
 @run_async
 def factor(update, context):
-    args = context.args
+    args = context.args.List[str]
     message = update.effective_message
     message.reply_text(newton.factor('{}'.format(args[0])))
 
 @run_async
-def derive(update, context):
-    args = context.args
+def derive(update, context.args : List[str]):
+    
     message = update.effective_message
     message.reply_text(newton.derive('{}'.format(args[0])))
 
