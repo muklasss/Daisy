@@ -12,7 +12,7 @@ import json
 @run_async
 def api_call(operation, expression, update, context):
     message = update.effective_message
-	connect = urllib.urlopen("https://newton.now.sh/%s/%s"%(operation,expression))
+	connect = urllib.urlopen(f"https://newton.now.sh/api/v2/{operation}/{expression}")
 	output_string = connect.read()
 	output_json = json.loads(output_string)
 	if "error" not in output_json:
