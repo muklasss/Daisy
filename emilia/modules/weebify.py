@@ -14,7 +14,7 @@ weebyfont = ['卂', '乃', '匚', '刀', '乇', '下', '厶', '卄', '工', '丁
 
 
 @run_async
-def weebify(update,context) 
+def weebify(update,context): 
   
     args=context.args
     args=str(args)
