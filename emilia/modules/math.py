@@ -10,12 +10,27 @@ import math
 import urllib
 import json
 
-def api_call(operation, expression):
-   connect = requests.get("https://newton.now.sh/%s/%s"%(operation,expression))
-   output_string = connect.json()[0].get("result")
-   
-   message = update.effective_message
-   message.reply_text(output_string)
+def api_call(operation, expression ,context, update):
+
+
+    args = context.args
+    msg = update.effective_message
+    word = " ".join(args)
+    res = requests.get("https://newton.now.sh/%s/%s"%(operation,expression))
+    if res.status_code == 200:
+        info = res.json()[0].get("definition")
+        if info:
+            meaning = ""
+            for count, (key, value) in enumerate(info.items(), start=1):
+                meaning += f"<b>{count}. {word}</b> <i>({key})</i>\n"
+                for i in value:
+                    defs = i.get("result")
+                    meaning += f"• <i>{defs}</i>\n"
+            msg.reply_text(meaning, parse_mode=ParseMode.HTML)
+        else:
+            return 
+    else:
+        msg.reply_text("No results found!")
    
 
 @run_async
