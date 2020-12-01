@@ -7,12 +7,30 @@ from emilia.modules.disable import DisableAbleCommandHandler
 from emilia.modules.helper_funcs.alternate import send_message
 import pynewtonmath as newton
 import math
-
+import urllib
+import json
 @run_async
+def api_call(operation, expression, update, context):
+    message = update.effective_message
+	connect = urllib.urlopen("https://newton.now.sh/%s/%s"%(operation,expression))
+	output_string = connect.read()
+	output_json = json.loads(output_string)
+	if "error" not in output_json:
+        message.reply_text(output_json['result'])
+		
+	else:
+		message.reply_text( output_json['error'] + "\n" + "Please check for errors in operation or expression.")
+	connect.close()
+
+
+
 def simplify(update, context):
     
-    message = update.effective_message
-    message.reply_text(newton.simplify('{}'))
+    operation = 'simplify'
+	expression = '{}'
+	api_call(operation, expression)
+    
+    
 
 @run_async
 def factor(update, context):
