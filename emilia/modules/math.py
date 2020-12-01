@@ -21,7 +21,7 @@ def factor(update, context):
     message.reply_text(newton.factor('{}'.format(args[0])))
 
 @run_async
-def derive(update, context.args : List[str]):
+def derive(update, context):
     
     message = update.effective_message
     message.reply_text(newton.derive('{}'.format(args[0])))
