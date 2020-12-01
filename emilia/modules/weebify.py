@@ -14,7 +14,8 @@ weebyfont = ['卂', '乃', '匚', '刀', '乇', '下', '厶', '卄', '工', '丁
 
 
 @run_async
-def weebify(bot: Bot, update: Update, args: List[str]):
+def weebify(update,context):
+  args=context.args.List[str]
     string = '  '.join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
