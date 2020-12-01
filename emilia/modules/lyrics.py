@@ -11,7 +11,8 @@ from emilia.modules.helper_funcs.alternate import send_message
 
 
 @run_async
-def lyrics(bot: Bot, update: Update, args):
+def lyrics(update, context):
+    args = context.args
     msg = update.effective_message
     query = " ".join(args)
     song = ""
