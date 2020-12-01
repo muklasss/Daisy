@@ -32,7 +32,7 @@ def github(update,context):
 *Account created at:* `{usr['created_at']}`
 """)
 
-        message.reply_text(reply_text, parse_mode=ParseMode.MARKDOWN)
+        
     else:
     
         reply_text = "User not found. Make sure you entered valid username!"
