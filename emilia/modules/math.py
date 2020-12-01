@@ -28,9 +28,9 @@ def api_call(operation, expression):
 @run_async
 def simplify(update, context):
 	
-    
+    	args = context.args
     	operation = 'simplify'
-	expression = '{}'
+	expression = ('{}'.format(args[0]))
 	api_call(operation, expression)
     
     
