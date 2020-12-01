@@ -11,7 +11,7 @@ import urllib
 import json
 
 def api_call(operation, expression):
-   connect = urllib.urlopen("https://newton.now.sh/%s/%s"%(operation,expression))
+   connect = requests.get("https://newton.now.sh/%s/%s"%(operation,expression))
    output_string = connect.read()
    output_json = json.loads(output_string)
    message = update.effective_message
