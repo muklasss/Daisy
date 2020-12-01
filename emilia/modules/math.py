@@ -72,13 +72,7 @@ To compute fractions, enter expressions as numerator(over)denominator. For examp
 
 
 
-SIMPLIFY_HANDLER = DisableAbleCommandHandler("math", simplify, pass_args=True)
-FACTOR_HANDLER = DisableAbleCommandHandler("factor", factor, pass_args=True)
-DERIVE_HANDLER = DisableAbleCommandHandler("derive", derive, pass_args=True)
-INTEGRATE_HANDLER = DisableAbleCommandHandler("integrate", integrate, pass_args=True)
-ZEROES_HANDLER = DisableAbleCommandHandler("zeroes", zeroes, pass_args=True)
-TANGENT_HANDLER = DisableAbleCommandHandler("tangent", tangent, pass_args=True)
-AREA_HANDLER = DisableAbleCommandHandler("area", area, pass_args=True)
+
 COS_HANDLER = DisableAbleCommandHandler("cos", cos, pass_args=True)
 SIN_HANDLER = DisableAbleCommandHandler("sin", sin, pass_args=True)
 TAN_HANDLER = DisableAbleCommandHandler("tan", tan, pass_args=True)
@@ -88,13 +82,7 @@ ARCTAN_HANDLER = DisableAbleCommandHandler("arctan", arctan, pass_args=True)
 ABS_HANDLER = DisableAbleCommandHandler("abs", abs, pass_args=True)
 LOG_HANDLER = DisableAbleCommandHandler("log", log, pass_args=True)
 
-dispatcher.add_handler(SIMPLIFY_HANDLER)
-dispatcher.add_handler(FACTOR_HANDLER)
-dispatcher.add_handler(DERIVE_HANDLER)
-dispatcher.add_handler(INTEGRATE_HANDLER)
-dispatcher.add_handler(ZEROES_HANDLER)
-dispatcher.add_handler(TANGENT_HANDLER) 
-dispatcher.add_handler(AREA_HANDLER)
+
 dispatcher.add_handler(COS_HANDLER)
 dispatcher.add_handler(SIN_HANDLER)
 dispatcher.add_handler(TAN_HANDLER)
