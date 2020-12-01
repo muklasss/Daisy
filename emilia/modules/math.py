@@ -5,66 +5,6 @@ from telegram.ext import CommandHandler, run_async
 from emilia import dispatcher
 from emilia.modules.disable import DisableAbleCommandHandler
 from emilia.modules.helper_funcs.alternate import send_message
-import pynewtonmath as newton
-import math
-import urllib
-import json
-
-def api_call(operation, expression ,context, update):
-
-
-    args = context.args
-    msg = update.effective_message
-    meaning = newton.simplify(expression)
-    msg.reply_text(meaning, parse_mode=ParseMode.HTML)
-
-    
-
-@run_async
-def simplify(update, context):	
-    args = context.args
-    operation = 'simplify'
-    expression = ('{}'.format(args[0]))
-    api_call(operation, expression,context,update)
-    
-    
-
-@run_async
-def factor(update, context):
-	
-    args = context.args.List[str]
-    message = update.effective_message
-    message.reply_text(newton.factor('{}'.format(args[0])))
-
-@run_async
-def derive(update, context ):
-    args = context.args
-    message = update.effective_message
-    message.reply_text(newton.derive('{}'.format(args[0])))
-
-@run_async
-def integrate(update, context):
-    args = context.args
-    message = update.effective_message
-    message.reply_text(newton.integrate('{}'.format(args[0])))
-
-@run_async
-def zeroes(update, context):
-    args = context.args
-    message = update.effective_message
-    message.reply_text(newton.zeroes('{}'.format(args[0])))
-
-@run_async
-def tangent(update, context):
-    args = context.args
-    message = update.effective_message
-    message.reply_text(newton.tangent('{}'.format(args[0])))
-
-@run_async
-def area(update, context):
-    args = context.args
-    message = update.effective_message
-    message.reply_text(newton.area('{}'.format(args[0])))
 
 @run_async
 def cos(update, context):
@@ -116,13 +56,7 @@ def log(update, context):
 
 __help__ = """
 Solves complex math problems using https://newton.now.sh
- - /math: Simplify `/simplify 2^2+2(2)`
- - /factor: Factor `/factor x^2 + 2x`
- - /derive: Derive `/derive x^2+2x`
- - /integrate: Integrate `/integrate x^2+2x`
- - /zeroes: Find 0's `/zeroes x^2+2x`
- - /tangent: Find Tangent `/tangent 2lx^3`
- - /area: Area Under Curve `/area 2:4lx^3`
+ 
  - /cos: Cosine `/cos pi`
  - /sin: Sine `/sin 0`
  - /tan: Tangent `/tan 0`
