@@ -6,6 +6,60 @@ from emilia import dispatcher
 from emilia.modules.disable import DisableAbleCommandHandler
 from emilia.modules.helper_funcs.alternate import send_message
 
+
+@run_async
+def simplify(update, context):
+    args=context.args
+    args=str(args)
+    message = update.effective_message
+    message.reply_text(newton.simplify('{}'.format(args[0])))
+
+@run_async
+def factor(update, context):
+    args=context.args
+    args=str(args)
+    message = update.effective_message
+    message.reply_text(newton.factor('{}'.format(args[0])))
+
+@run_async
+def derive(update, context):
+    args=context.args
+    args=str(args)
+    message = update.effective_message
+    message.reply_text(newton.derive('{}'.format(args[0])))
+
+@run_async
+def integrate(update, context):
+    args=context.args
+    args=str(args)
+    message = update.effective_message
+    message.reply_text(newton.integrate('{}'.format(args[0])))
+
+@run_async
+def zeroes(update, context):
+    args=context.args
+    args=str(args)
+    message = update.effective_message
+    message.reply_text(newton.zeroes('{}'.format(args[0])))
+
+@run_async
+def tangent(update, context):
+    args=context.args
+    args=str(args)
+    message = update.effective_message
+    message.reply_text(newton.tangent('{}'.format(args[0])))
+
+@run_async
+def area(update, context):
+    args=context.args
+    args=str(args)
+    message = update.effective_message
+    message.reply_text(newton.area('{}'.format(args[0])))
+
+
+
+
+
 @run_async
 def cos(update, context):
     args = context.args
@@ -56,7 +110,14 @@ def log(update, context):
 
 __help__ = """
 Solves complex math problems using https://newton.now.sh
- 
+  *** EXCLUSIVELY ON DAISY ***
+ - /math: Simplify `/math 2^2+2(2)`
+ - /factor: Factor `/factor x^2 + 2x`
+ - /derive: Derive `/derive x^2+2x`
+ - /integrate: Integrate `/integrate x^2+2x`
+ - /zeroes: Find 0's `/zeroes x^2+2x`
+ - /tangent: Find Tangent `/tangent 2lx^3`
+ - /area: Area Under Curve `/area 2:4lx^3
  - /cos: Cosine `/cos pi`
  - /sin: Sine `/sin 0`
  - /tan: Tangent `/tan 0`
@@ -72,7 +133,13 @@ To compute fractions, enter expressions as numerator(over)denominator. For examp
 
 
 
-
+SIMPLIFY_HANDLER = DisableAbleCommandHandler("math", simplify, pass_args=True)
+FACTOR_HANDLER = DisableAbleCommandHandler("factor", factor, pass_args=True)
+DERIVE_HANDLER = DisableAbleCommandHandler("derive", derive, pass_args=True)
+INTEGRATE_HANDLER = DisableAbleCommandHandler("integrate", integrate, pass_args=True)
+ZEROES_HANDLER = DisableAbleCommandHandler("zeroes", zeroes, pass_args=True)
+TANGENT_HANDLER = DisableAbleCommandHandler("tangent", tangent, pass_args=True)
+AREA_HANDLER = DisableAbleCommandHandler("area", area, pass_args=True)
 COS_HANDLER = DisableAbleCommandHandler("cos", cos, pass_args=True)
 SIN_HANDLER = DisableAbleCommandHandler("sin", sin, pass_args=True)
 TAN_HANDLER = DisableAbleCommandHandler("tan", tan, pass_args=True)
@@ -82,7 +149,13 @@ ARCTAN_HANDLER = DisableAbleCommandHandler("arctan", arctan, pass_args=True)
 ABS_HANDLER = DisableAbleCommandHandler("abs", abs, pass_args=True)
 LOG_HANDLER = DisableAbleCommandHandler("log", log, pass_args=True)
 
-
+dispatcher.add_handler(SIMPLIFY_HANDLER)
+dispatcher.add_handler(FACTOR_HANDLER)
+dispatcher.add_handler(DERIVE_HANDLER)
+dispatcher.add_handler(INTEGRATE_HANDLER)
+dispatcher.add_handler(ZEROES_HANDLER)
+dispatcher.add_handler(TANGENT_HANDLER) 
+dispatcher.add_handler(AREA_HANDLER)
 dispatcher.add_handler(COS_HANDLER)
 dispatcher.add_handler(SIN_HANDLER)
 dispatcher.add_handler(TAN_HANDLER)
@@ -95,5 +168,5 @@ dispatcher.add_handler(LOG_HANDLER)
 __mod_name__ = "Math"
 __command_list__ = ["math","factor","derive","integrate","zeroes","tangent","area","cos","sin","tan","arccos","arcsin","arctan","abs","log"]
 __handlers__ = [
-    COS_HANDLER,SIN_HANDLER,TAN_HANDLER,ARCCOS_HANDLER,ARCSIN_HANDLER,ARCTAN_HANDLER,ABS_HANDLER,LOG_HANDLER
+    SIMPLIFY_HANDLER,FACTOR_HANDLER,DERIVE_HANDLER,INTEGRATE_HANDLER,TANGENT_HANDLER,ZEROES_HANDLER,AREA_HANDLER,COS_HANDLER,SIN_HANDLER,TAN_HANDLER,ARCCOS_HANDLER,ARCSIN_HANDLER,ARCTAN_HANDLER,ABS_HANDLER,LOG_HANDLER
 ]
