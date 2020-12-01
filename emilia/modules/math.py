@@ -10,43 +10,43 @@ import math
 
 @run_async
 def simplify(update, context):
-    args = context.args: List[str]
+    args = context.args
     message = update.effective_message
     message.reply_text(newton.simplify('{}'.format(args[0])))
 
 @run_async
 def factor(update, context):
-    args = context.args: List[str]
+    args = context.args
     message = update.effective_message
     message.reply_text(newton.factor('{}'.format(args[0])))
 
 @run_async
 def derive(update, context):
-    args = context.args: List[str]
+    args = context.args
     message = update.effective_message
     message.reply_text(newton.derive('{}'.format(args[0])))
 
 @run_async
 def integrate(update, context):
-    args = context.args: List[str]
+    args = context.args
     message = update.effective_message
     message.reply_text(newton.integrate('{}'.format(args[0])))
 
 @run_async
 def zeroes(update, context):
-    args = context.args: List[str]
+    args = context.args
     message = update.effective_message
     message.reply_text(newton.zeroes('{}'.format(args[0])))
 
 @run_async
 def tangent(update, context):
-    args = context.args: List[str]
+    args = context.args
     message = update.effective_message
     message.reply_text(newton.tangent('{}'.format(args[0])))
 
 @run_async
 def area(update, context):
-    args = context.args: List[str]
+    args = context.args
     message = update.effective_message
     message.reply_text(newton.area('{}'.format(args[0])))
 
