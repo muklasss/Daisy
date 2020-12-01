@@ -18,7 +18,7 @@ def sign_delta(delta_var):
     return delta_var
 
 @run_async
-def cov(bot: Bot, update: Update):
+def cov(update, context):
     message = update.effective_message
     confirmed = 0
     confirmed_delta = 0
@@ -67,7 +67,7 @@ def cov(bot: Bot, update: Update):
             target = global_dict
 
         if not target:
-            bot.send_message(
+            send_message(
                 message.chat.id,
                 'Data unavailable for %s!' % (message.text[4:].strip())
             )
@@ -87,7 +87,7 @@ def cov(bot: Bot, update: Update):
 
         location = target['displayName'].upper()
 
-        bot.send_message(
+        send_message(
             message.chat.id,
             '`COVID-19 Tracker:` *%s*\n\n' % location.upper() +
             '*Confirmed:* %s _(%s)_\n' % (format(confirmed, ',d'), sign_delta(confirmed_delta)) +
@@ -103,7 +103,7 @@ def cov(bot: Bot, update: Update):
         return
 
     except:
-        bot.send_message(
+        send_message(
             message.chat.id,
             'Unable to contact the Bing COVID-19 Data API. Try again in a while.'
         )
