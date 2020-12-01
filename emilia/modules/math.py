@@ -9,7 +9,7 @@ import pynewtonmath as newton
 import math
 import urllib
 import json
-@run_async
+
 def api_call(operation, expression):
 	connect = urllib.urlopen("https://newton.now.sh/%s/%s"%(operation,expression))
 	output_string = connect.read()
@@ -25,7 +25,7 @@ def api_call(operation, expression):
 	connect.close()
 
 
-
+@run_async
 def simplify(update, context):
 	
     
