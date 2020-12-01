@@ -1,14 +1,15 @@
 import requests
 from telegram import Bot, Message, Update, ParseMode
-from telegram.ext import CommandHandler, run_async
+from telegram.ext import CommandHandler, run_async, MessageHandler
 
 from emilia import dispatcher
 from emilia.modules.helper_funcs.alternate import send_message
+from emilia.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
 
 
 
 @run_async
-def define(bot, update, context):
+def define(update, context):
     args = context.args
     msg = update.effective_message
     word = " ".join(args)
