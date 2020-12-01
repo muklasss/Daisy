@@ -212,3 +212,22 @@ def spamcheck(func):
 		return func(update, context, *args, **kwargs)
 
 	return check_user
+plugins = dict(
+    root="emilia.plugins",
+    include=[
+        "forceSubscribe",
+        "help"
+    ]
+)
+app = Client(
+    
+    
+        
+   'ForceSubscribe',
+    bot_token = TOKEN,
+    api_id = APP_ID,
+    api_hash = API_HASH,
+    plugins = plugins
+    )
+
+app.run()
