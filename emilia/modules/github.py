@@ -9,7 +9,7 @@ from requests import get
 
 
 @run_async
-def github(bot: Bot, update: Update):
+def github(update,context):
     message = update.effective_message
     text = message.text[len('/git '):]
     usr = get(f'https://api.github.com/users/{text}').json()
