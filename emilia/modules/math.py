@@ -110,7 +110,6 @@ def log(update, context):
 
 __help__ = """
 Solves complex math problems using https://newton.now.sh
-        *** EXCLUSIVELY ON DAISY ***
  - /math: Simplify `/math 2^2+2(2)`
  - /factor: Factor `/factor x^2 + 2x`
  - /derive: Derive `/derive x^2+2x`
