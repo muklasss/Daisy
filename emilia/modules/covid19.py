@@ -67,8 +67,8 @@ def cov(update, context):
             target = global_dict
 
         if not target:
-            message.reply_text,
-                'Data unavailable for %s!' % (message.text[4:].strip())
+            message.reply_text(
+                'Data unavailable for %s!' % (message.text[4:].strip()))
             
             return
 
@@ -85,7 +85,7 @@ def cov(update, context):
         recovery_rate = (recovered / confirmed) * 100
 
         location = target['displayName'].upper()
-        message.reply_text,
+        message.reply_text(
             '`COVID-19 Tracker:` *%s*\n\n' % location.upper() +
             '*Confirmed:* %s _(%s)_\n' % (format(confirmed, ',d'), sign_delta(confirmed_delta)) +
             '*Active:* %s _(%s)_\n' % (format(active, ',d'), sign_delta(active_delta)) +
@@ -95,14 +95,14 @@ def cov(update, context):
             '*Recovery rate:* %s%%\n\n' % round(recovery_rate, 2) +
             '[Powered by Bing.](https://bing.com/covid)',
             parse_mode = ParseMode.MARKDOWN,
-            disable_web_page_preview = True
+            disable_web_page_preview = True)
 
         
         return
 
     except:
-        message.reply_text,
-            'Unable to contact the Bing COVID-19 Data API. Try again in a while.'
+        message.reply_text(
+            'Unable to contact the Bing COVID-19 Data API. Try again in a while.')
         
         return
 
