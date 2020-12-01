@@ -68,7 +68,7 @@ def cov(update, context):
 
         if not target:
             send_message(
-                message.chat.id,
+                message.reply_text,
                 'Data unavailable for %s!' % (message.text[4:].strip())
             )
             return
@@ -88,7 +88,7 @@ def cov(update, context):
         location = target['displayName'].upper()
 
         send_message(
-            message.chat.id,
+            message.reply_text,
             '`COVID-19 Tracker:` *%s*\n\n' % location.upper() +
             '*Confirmed:* %s _(%s)_\n' % (format(confirmed, ',d'), sign_delta(confirmed_delta)) +
             '*Active:* %s _(%s)_\n' % (format(active, ',d'), sign_delta(active_delta)) +
@@ -104,7 +104,7 @@ def cov(update, context):
 
     except:
         send_message(
-            message.chat.id,
+            message.reply_text,
             'Unable to contact the Bing COVID-19 Data API. Try again in a while.'
         )
         return
