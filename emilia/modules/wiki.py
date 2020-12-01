@@ -18,7 +18,9 @@ from emilia.modules.disable import DisableAbleCommandHandler
 import wikipedia
 
 def wiki(update, context):
-    args="dictionary " + context.args
+    args=context.args
+    args=str(args)
+    args="dictionary " + args
     reply = "".join(args)
     summary = '{}'
     update.message.reply_text(summary.format(wikipedia.summary(reply, sentences=10), wikipedia.page(reply).url))
