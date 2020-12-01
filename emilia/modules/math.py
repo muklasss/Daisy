@@ -10,7 +10,7 @@ import math
 
 @run_async
 def simplify(update, context):
-    args = context.args
+    args = context.args.List[str]
     message = update.effective_message
     message.reply_text(newton.simplify('{}'.format(args[0])))
 
