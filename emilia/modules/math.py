@@ -12,7 +12,7 @@ import json
 
 def api_call(operation, expression):
    connect = requests.get("https://newton.now.sh/%s/%s"%(operation,expression))
-   output_string = res.json()[0].get("result")
+   output_string = connect.json()[0].get("result")
    
    message = update.effective_message
    message.reply_text(output_string)
