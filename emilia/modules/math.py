@@ -16,15 +16,7 @@ def api_call(operation, expression):
    
    message = update.effective_message
    message.reply_text(output_string)
-   if "error" not in output_json:
-           
-           
-		
-   else:
-		
-	   message.reply_text( output_json['error'] + "\n" + "Please check for errors in operation or expression.")
-   connect.close()
-
+   
 
 @run_async
 def simplify(update, context):	
