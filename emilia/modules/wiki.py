@@ -19,9 +19,9 @@ import wikipedia
 
 def wiki(update, context):
     args=context.args
-    reply = " ".join(args)
-    summary = 'define {} <a href="{}">more</a>'
-    update.message.reply_text(summary.format(wikipedia.summary(reply, sentences=3), wikipedia.page(reply).url))
+    reply = "define ".join(args)
+    summary = '{}'
+    update.message.reply_text(summary.format(wikipedia.summary(reply, sentences=10), wikipedia.page(reply).url))
 		
 __help__ = """
  Ever stumbled upon a word that you didn't know of and wanted to look it up?
