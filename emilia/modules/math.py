@@ -22,7 +22,7 @@ def factor(update, context):
 
 @run_async
 def derive(update, context ):
-    
+    args = context.args
     message = update.effective_message
     message.reply_text(newton.derive('{}'.format(args[0])))
 
