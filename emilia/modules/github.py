@@ -14,7 +14,7 @@ def github(bot: Bot, update: Update):
     text = message.text[len('/git '):]
     usr = get(f'https://api.github.com/users/{text}').json()
     if usr.get('login'):
-        reply_text = f """*Name:* `{usr['name']}`
+        reply_text = (f"""*Name:* `{usr['name']}`"
 *Username:* `{usr['login']}`
 *Account ID:* `{usr['id']}`
 *Account type:* `{usr['type']}`
@@ -30,7 +30,8 @@ def github(bot: Bot, update: Update):
 *Website:* `{usr['blog']}`
 *Last updated:* `{usr['updated_at']}`
 *Account created at:* `{usr['created_at']}`
-"""
+""")
+
         message.reply_text(reply_text, parse_mode=ParseMode.MARKDOWN)
     else:
     
