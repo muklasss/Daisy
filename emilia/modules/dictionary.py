@@ -7,7 +7,7 @@ from emilia.modules.helper_funcs.alternate import send_message
 
 
 @run_async
-def define(bot: Bot, update: Update, args):
+def define(bot: Bot, update: Update, args,context):
     msg = update.effective_message
     word = " ".join(args)
     res = requests.get(f"https://googledictionaryapi.eu-gb.mybluemix.net/?define={word}")
