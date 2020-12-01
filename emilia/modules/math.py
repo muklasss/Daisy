@@ -38,7 +38,7 @@ def simplify(update, context):
     args = context.args
     operation = 'simplify'
     expression = ('{}'.format(args[0]))
-    api_call(operation, expression)
+    api_call(operation, expression,context,update)
     
     
 
