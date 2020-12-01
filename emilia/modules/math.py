@@ -17,21 +17,21 @@ def api_call(operation, expression ,context, update):
     msg = update.effective_message
     word = " ".join(args)
     res = requests.get("https://newton.now.sh/%s/%s"%(operation,expression))
-    if res.status_code == 200:
-        info = res.json()[0].get("definition")
-        if info:
-            meaning = ""
-            for count, (key, value) in enumerate(info.items(), start=1):
-                meaning += f"<b>{count}. {word}</b> <i>({key})</i>\n"
-                for i in value:
-                    defs = i.get("result")
-                    meaning += f"• <i>{defs}</i>\n"
-            msg.reply_text(meaning, parse_mode=ParseMode.HTML)
-        else:
-            return 
-    else:
-        msg.reply_text("No results found!")
-   
+    
+    info = res.json()[0].get("definition")
+       
+    meaning = ""
+    for count, (key, value) in enumerate(info.items(), start=1):
+	
+            
+		
+        meaning += f"<b>{count}. {word}</b> <i>({key})</i>\n"
+        for i in value:
+                defs = i.get("result")
+                meaning += f"• <i>{defs}</i>\n"
+        msg.reply_text(meaning, parse_mode=ParseMode.HTML)
+
+    
 
 @run_async
 def simplify(update, context):	
