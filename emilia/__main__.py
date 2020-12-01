@@ -544,24 +544,6 @@ def main():
     updater.idle()
 
     
-plugins = dict(
-    root="emilia.plugins",
-    include=[
-        "forceSubscribe",
-        "help"
-    ]
-)
-app = Client(
-    
-    
-        
-   'ForceSubscribe',
-    bot_token = TOKEN,
-    api_id = APP_ID,
-    api_hash = API_HASH,
-    plugins = plugins
-    )
-
 
     
 if __name__ == '__main__':
