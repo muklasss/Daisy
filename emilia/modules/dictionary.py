@@ -15,7 +15,7 @@ def define(update, context):
     word = " ".join(args)
     res = requests.get(f"https://api.dictionaryapi.dev/api/v2/entries/en/{word}")
     if res.status_code == 200:
-        info = res.json()[0].get("meaning")
+        info = res.json()[0].get("definition")
         if info:
             meaning = ""
             for count, (key, value) in enumerate(info.items(), start=1):
