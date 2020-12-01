@@ -23,7 +23,9 @@ opener.addheaders = [('User-agent', useragent)]
 
 
 @run_async
-def reverse(bot: Bot, update: Update, args: List[str]):
+def reverse(update, context):
+    args=context.args
+    args=str(args)
     if os.path.isfile("okgoogle.png"):
         os.remove("okgoogle.png")
 
