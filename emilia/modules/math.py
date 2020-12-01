@@ -12,12 +12,13 @@ import json
 
 def api_call(operation, expression):
    connect = requests.get("https://newton.now.sh/%s/%s"%(operation,expression))
-   output_string = connect.read()
-   output_json = json.loads(output_string)
+   output_string = res.json()[0].get("result")
+   
    message = update.effective_message
+   message.reply_text(output_string)
    if "error" not in output_json:
            
-           message.reply_text(output_json['result'])
+           
 		
    else:
 		
