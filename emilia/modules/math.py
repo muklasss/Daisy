@@ -25,8 +25,9 @@ def api_call(operation, expression):
 	connect.close()
 
 
-@run_async
+
 def simplify(update, context):
+	
 	
     	args = context.args
     	operation = 'simplify'
