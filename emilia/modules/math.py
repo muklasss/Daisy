@@ -109,14 +109,7 @@ def log(update, context):
     message.reply_text(math.log(int(args[0])))
 
 __help__ = """
-Solves complex math problems using https://newton.now.sh
- - /math: Simplify `/math 2^2+2(2)`
- - /factor: Factor `/factor x^2 + 2x`
- - /derive: Derive `/derive x^2+2x`
- - /integrate: Integrate `/integrate x^2+2x`
- - /zeroes: Find 0's `/zeroes x^2+2x`
- - /tangent: Find Tangent `/tangent 2lx^3`
- - /area: Area Under Curve `/area 2:4lx^3
+Under Developmeent.. More features soon
  - /cos: Cosine `/cos pi`
  - /sin: Sine `/sin 0`
  - /tan: Tangent `/tan 0`
