@@ -5,8 +5,8 @@ from telegram.ext import CommandHandler, run_async
 from emilia import dispatcher
 from emilia.modules.disable import DisableAbleCommandHandler
 from emilia.modules.helper_funcs.alternate import send_message
-
-
+import pynewtonmath as newton
+import math
 @run_async
 def simplify(update, context):
     args=context.args
@@ -110,7 +110,7 @@ def log(update, context):
 
 __help__ = """
 Solves complex math problems using https://newton.now.sh
-  *** EXCLUSIVELY ON DAISY ***
+        *** EXCLUSIVELY ON DAISY ***
  - /math: Simplify `/math 2^2+2(2)`
  - /factor: Factor `/factor x^2 + 2x`
  - /derive: Derive `/derive x^2+2x`
