@@ -8,6 +8,7 @@ import os
 from emilia import client, dispatcher
 from emilia.events import register
 from telegram.ext import CommandHandler
+
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
 
@@ -28,7 +29,7 @@ async def is_register_admin(chat, user):
         return None
 
 @register(pattern=r'^/phone (.*)')
-async def phone(event): 
+async def phone(event , context, update): 
     if event.is_group:
      if not (await is_register_admin(event.input_chat, event.message.sender_id)):
           await event.reply("☎️ You are not admin 🚶‍♀️")
