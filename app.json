@@ -35,13 +35,13 @@
     },
     
     "TELETHON_ID": {
-      "description": "App ID (get it from my.telegram.org),
+      "description": "App ID (get it from my.telegram.org)",
       "required"=true
       "value": ""
     },
     
     "TELETHON_HASH": {
-      "description": "API HASH (get it from my.telegram.org),
+      "description": "API HASH (get it from my.telegram.org)",
       "required"=true
       "value": ""
     },
