@@ -85,6 +85,8 @@ if ENV:
 	MAPS_API = os.environ.get('MAPS_API', None)
 	TEMPORARY_DATA = os.environ.get('TEMPORARY_DATA', None)
 	SPAMWATCH_TOKEN = os.environ.get('SPAMWATCH_TOKEN', None)
+	TELETHON_ID = int(os.environ.get("TELETHON_ID", None))
+        TELETHON_HASH = os.environ.get("TELETHON_HASH", None)
 
 else:
 	from emilia.config import Development as Config
@@ -154,9 +156,6 @@ else:
 
 SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(388576209)
-api_id = TELETHON_ID
-api_hash = TELETHON_HASH
-client = TelegramClient("Daisy", api_id, api_hash)
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 
@@ -167,6 +166,9 @@ WHITELIST_USERS = list(WHITELIST_USERS)
 SUPPORT_USERS = list(SUPPORT_USERS)
 SPAMMERS = list(SPAMMERS)
 GROUP_BLACKLIST = list(GROUP_BLACKLIST)
+api_id = TELETHON_ID
+api_hash = TELETHON_HASH
+client = TelegramClient("Daisy", api_id, api_hash)
 
 # Load at end to ensure all prev variables have been set
 from emilia.modules.helper_funcs.handlers import CustomCommandHandler
