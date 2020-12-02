@@ -33,6 +33,21 @@
       "description": "An integer of consisting of your owner ID",
       "value": "1141839926"
     },
+    
+    "TELETHON_ID": {
+      "description": "App ID (get it from my.telegram.org),
+      "required"=true
+      "value": ""
+    },
+    
+    "TELETHON_HASH": {
+      "description": "API HASH (get it from my.telegram.org),
+      "required"=true
+      "value": ""
+    },
+    
+    
+    
     "OWNER_USERNAME": {
       "description": "Your username",
       "value": "InukaASiTH"
