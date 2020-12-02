@@ -364,12 +364,13 @@ __help__ = "filters_help"
 __mod_name__ = "Filters"
 
 FILTER_HANDLER = CommandHandler("addfilter", filters)
-FILTER_HANDLER = CommandHandler("filter", changed)
+CHANGE_HANDLER = CommandHandler("filter", changed)
 STOP_HANDLER = CommandHandler("stop", stop_filter)
 LIST_HANDLER = DisableAbleCommandHandler("filters", list_handlers, admin_ok=True)
 CUST_FILTER_HANDLER = MessageHandler(CustomFilters.has_text & ~Filters.update.edited_message, reply_filter)
 
 dispatcher.add_handler(FILTER_HANDLER)
+dispatcher.add_handler(CHANGE_HANDLER)
 dispatcher.add_handler(STOP_HANDLER)
 dispatcher.add_handler(LIST_HANDLER)
 dispatcher.add_handler(CUST_FILTER_HANDLER, HANDLER_GROUP)
