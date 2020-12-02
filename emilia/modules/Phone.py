@@ -7,33 +7,17 @@ import os
 
 from emilia import client, dispatcher
 from emilia.events import register
-from telegram.ext import CommandHandler
+from telegram.ext import CommandHandler , run_async
+from emilia.modules.helper_funcs.chat_status import user_admin
 
-async def is_register_admin(chat, user):
-    if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
 
-        return isinstance(
-            (await client(functions.channels.GetParticipantRequest(chat, user))).participant,
-            (types.ChannelParticipantAdmin, types.ChannelParticipantCreator)
-        )
-    elif isinstance(chat, types.InputPeerChat):
+@run_async
+@user_admin
 
-        ui = await client.get_peer_id(user)
-        ps = (await client(functions.messages.GetFullChatRequest(chat.chat_id))) \
-            .full_chat.participants.participants
-        return isinstance(
-            next((p for p in ps if p.user_id == ui), None),
-            (types.ChatParticipantAdmin, types.ChatParticipantCreator)
-        )
-    else:
-        return None
+def phone(update,context): 
+    
 
-@register(pattern=r'^/phone (.*)')
-async def phone(update,context,event): 
-    if event.is_group:
-     if not (await is_register_admin(event.input_chat, event.message.sender_id)):
-          await event.reply("☎️ You are not admin 🚶‍♀️")
-          return
+    
     information = event.pattern_match.group(1)
     number = information
     key = "fe65b94e78fc2e3234c1c6ed1b771abd" 
@@ -55,7 +39,7 @@ async def phone(update,context,event):
     e = "Carrier: " +str(carrier)
     f = "Device: " +str(line_type)
     g = f"{aa}\n{a}\n{b}\n{c}\n{d}\n{e}\n{f}"
-    await event.reply(g)
+    await update.effective_message.reply_text(g)
     
     
     
