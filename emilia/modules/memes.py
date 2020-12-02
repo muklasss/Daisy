@@ -598,7 +598,7 @@ Some dank memes for fun or whatever!
  • /hitler: Quote a message and type this command to make a caption of hitler.
  • /mock: Does the same as /hitler but spongemock instead.
  • /kim: Does the same as /hitler but with Kim Jong Un.
- • /gandhi: Gandhi memes.
+ • /maithri: memes on maithripala sirisena **EXCLUSIVE**.
  • /modi : Modi memes.
  
  • /runs: reply a random string from an array of replies. 
@@ -647,7 +647,7 @@ __mod_name__ = "Memes"
 
 MOCK_HANDLER = DisableAbleCommandHandler("mock", spongemocktext, admin_ok=True)
 KIM_HANDLER = DisableAbleCommandHandler("kim", kimtext, admin_ok=True)
-GANDHI_HANDLER = DisableAbleCommandHandler("gandhi", gandhitext, admin_ok=True)
+GANDHI_HANDLER = DisableAbleCommandHandler("maithri", gandhitext, admin_ok=True)
 MODI_HANDLER = DisableAbleCommandHandler("modi", moditext, admin_ok=True)
 HITLER_HANDLER = DisableAbleCommandHandler("hitler", hitlertext, admin_ok=True)
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs)
