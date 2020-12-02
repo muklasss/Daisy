@@ -631,15 +631,15 @@ Some dank memes for fun or whatever!
  • /stretch:  streeeeeeetch iiiiiiit.
  • /warm: Hug a user warmly, or get hugged if not a reply.
  • /punch: Punch a user, or get punched if not a reply.
- • /bug <bug>: Reports bugs to Developers. Only can be used in @luciferProBotSupport
+ • /bug <bug>: Reports bugs to Developers. Only can be used in @InfinityJE
  
 *Regex based memes:*
-`/decide` can be also used with regex like: `lucifer? <question>: randomly answer "Yes, No" etc.`
+`/decide` can be also used with regex like: `Daisy? <question>: randomly answer "Yes, No" etc.`
 
 Some other regex filters are:
 `me too` | `goodmorning` | `goodnight`.
 
-Lucifer will reply random strings accordingly when these words are used!
+Daisy will reply random strings accordingly when these words are used!
 All regex filters can be disabled incase u don't want... like: `/disable metoo`.
 """
 
@@ -677,7 +677,7 @@ MEETOO_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(me too)"), me_to
 RECITE_HANDLER = DisableAbleCommandHandler("recite", recite)
 DICE_HANDLER = DisableAbleCommandHandler("dice", dice)
 DART_HANDLER = DisableAbleCommandHandler("dart", dart)
-DECIDE_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)^lucifer\?"), decide, friendly="decide")
+DECIDE_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)^Daisy\?"), decide, friendly="decide")
 YESNOWTF_HANDLER = DisableAbleCommandHandler("decide", yesnowtf)
 GDMORNING_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodmorning)"), goodmorning, friendly="goodmorning")
 GDNIGHT_HANDLER = DisableAbleMessageHandler(Filters.regex(r"(?i)(goodnight)"), goodnight, friendly="goodnight")
