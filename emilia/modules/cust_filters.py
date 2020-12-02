@@ -351,12 +351,20 @@ def __chat_settings__(chat_id, user_id):
 	cust_filters = sql.get_chat_triggers(chat_id)
 	return tl(user_id, "Ada `{}` filter khusus di sini.").format(len(cust_filters))
 
+def changed(update, context):
+	
+    
+    	
+    	message = update.effective_message
+    	message.reply_text("Use /addfilter to add filters with Daisy)
+
 
 __help__ = "filters_help"
 
 __mod_name__ = "Filters"
 
-FILTER_HANDLER = CommandHandler("filter", filters)
+FILTER_HANDLER = CommandHandler("addfilter", filters)
+FILTER_HANDLER = CommandHandler("filter", changed)
 STOP_HANDLER = CommandHandler("stop", stop_filter)
 LIST_HANDLER = DisableAbleCommandHandler("filters", list_handlers, admin_ok=True)
 CUST_FILTER_HANDLER = MessageHandler(CustomFilters.has_text & ~Filters.update.edited_message, reply_filter)
