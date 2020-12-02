@@ -7,7 +7,7 @@ import os
 
 from emilia import client, dispatcher
 from emilia.events import register
-
+from telegram.ext import CommandHandler
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
 
