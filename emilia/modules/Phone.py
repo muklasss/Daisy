@@ -5,7 +5,7 @@ import time
 import urllib
 import os
 
-from emilia import client
+from emilia import client, dispatcher
 from emilia.events import register
 
 async def is_register_admin(chat, user):
@@ -55,3 +55,15 @@ async def phone(event):
     f = "Device: " +str(line_type)
     g = f"{aa}\n{a}\n{b}\n{c}\n{d}\n{e}\n{f}"
     await event.reply(g)
+    
+    
+    
+PHONE_HANDLER = CommandHandler('phone', phone)
+
+dispatcher.add_handler(PHONE_HANDLER)
+
+
+__command_list__ = ["phone"]
+__handlers__ = [
+    PHONE_HANDLER
+]
