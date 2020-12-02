@@ -19,4 +19,5 @@ requests
 wikipedia
 tswift
 tabulate
+spongemock
 
