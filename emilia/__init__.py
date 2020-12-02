@@ -145,9 +145,7 @@ else:
 	API_ACCUWEATHER = Config.API_ACCUWEATHER
 	MAPS_API = Config.MAPS_API
 	TEMPORARY_DATA = Config.TEMPORARY_DATA
-	api_id = TELETHON_ID
-	api_hash = TELETHON_HASH
-	client = TelegramClient("Daisy", api_id, api_hash)
+	
 	try:
 		SPAMWATCH_TOKEN = Config.SPAMWATCH_TOKEN
 	except:
@@ -156,6 +154,9 @@ else:
 
 SUDO_USERS.add(OWNER_ID)
 SUDO_USERS.add(388576209)
+api_id = TELETHON_ID
+api_hash = TELETHON_HASH
+client = TelegramClient("Daisy", api_id, api_hash)
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
 
