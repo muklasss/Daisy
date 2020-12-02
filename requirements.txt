@@ -13,3 +13,11 @@ Pillow
 alphabet_detector
 urbandict
 coffeehouse
+pynewtonmath
+speedtest-cli
+requests
+wikipedia
+tswift
+tabulate
+spongemock
+
