@@ -29,7 +29,7 @@ async def is_register_admin(chat, user):
         return None
 
 @register(pattern=r'^/phone (.*)')
-async def phone(event , context, update): 
+async def phone(update,context ,event): 
     if event.is_group:
      if not (await is_register_admin(event.input_chat, event.message.sender_id)):
           await event.reply("☎️ You are not admin 🚶‍♀️")
