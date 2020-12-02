@@ -67,7 +67,7 @@ if ENV:
 	URL = os.environ.get('URL', "")  # Does not contain token
 	PORT = int(os.environ.get('PORT', 5000))
 	CERT_PATH = os.environ.get("CERT_PATH")
-        TELETHON_HASH = os.environ.get('TELETHON_HASH', None)
+        TELETHON_HASH = os.environ.get('TELETHON1_HASH', None)
 
 	DB_URI = os.environ.get('DATABASE_URL')
 	DONATION_LINK = os.environ.get('DONATION_LINK')
@@ -86,7 +86,7 @@ if ENV:
 	MAPS_API = os.environ.get('MAPS_API', None)
 	TEMPORARY_DATA = os.environ.get('TEMPORARY_DATA', None)
 	SPAMWATCH_TOKEN = os.environ.get('SPAMWATCH_TOKEN', None)
-	TELETHON_ID = int(os.environ.get('TELETHON_ID', None))
+	TELETHON_ID = int(os.environ.get('TELETHON_ID1', None))
         
 
 else:
