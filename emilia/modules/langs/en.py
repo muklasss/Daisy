@@ -585,13 +585,13 @@ NOTE: all filter keywords are in lowercase. If you want your keyword to be a sen
     "Saya *tidak akan menghapus* pesan dari command yang di nonaktifkan.": "When command was disabled, I *will not delete* that message.",
     "Opsi disable del saat ini: *{}*": "Current disable del settings: *{}*",
     "disable_help": """
- - /cmds: check the current status of disabled commands
+ - /cmds: අක්‍රීය විධාන වල වත්මන් තත්වය පරීක්ෂා කරන්න
 
 *Admin only:*
- - /enable <cmd name>: enable that command
- - /disable <cmd name>: disable that command
- - /listcmds: list all possible toggleable commands
- - /disabledel: delete message when command is disabled
+ - /enable <cmd name>: එම විධානය සක්‍රීය කරන්න
+ - /disable <cmd name>: එම විධානය අක්‍රීය කරන්න
+ - /listcmds: විධානය අක්‍රිය වූ විට පණිවිඩය මකන්න
+ - /disabledel: විධානය අක්‍රිය වූ විට පණිවිඩය මකන්න
     """,
 
     # Federation
@@ -719,42 +719,41 @@ NOTE: all filter keywords are in lowercase. If you want your keyword to be a sen
     "*Anda tidak mempunyai federasi!*": "*You are not have any feds!*",
     "\n\n<b>Pengguna ini adalah pemilik federasi ini:</b>\n<code>": "\n\n<b>This user is a owner fed in the current federation:</b>\n<code>",
     "feds_help": """
-Ah, group management. It's all fun and games, until you start getting spammers in, and you need to ban them. Then you need to start banning more, and more, and it gets painful.
-But then you have multiple groups, and you don't want these spammers in any of your groups - how can you deal? Do you have to ban them manually, in all your groups?
+අහ්, කණ්ඩායම් කළමනාකරණය. ඔබ ස්පෑම් කරුවන් ලබා ගැනීමට පටන් ගන්නා තෙක් ඒ සියල්ල විනෝදජනක සහ ක්‍රීඩා වන අතර ඔබ ඒවා තහනම් කළ යුතුය. එවිට ඔබ වැඩි වැඩියෙන් තහනම් කිරීම ආරම්භ කළ යුතු අතර තවත් බොහෝ දේ වේදනාකාරී වේ.
+නමුත් ඔබට බහු කණ්ඩායම් ඇති අතර, ඔබේ කිසිදු කණ්ඩායමක මෙම ස්පෑම්කරුවන් ඔබට අවශ්‍ය නැත - ඔබට ගනුදෙනු කළ හැක්කේ කෙසේද? ඔබගේ සියලු කණ්ඩායම් තුළ ඔබ ඒවා අතින් තහනම් කළ යුතුද?.
 
-No more! With federations, you can make a ban in one chat overlap to all your other chats.
-You can even appoint federation admins, so that your trustworthiest admins can ban across all the chats that you want to protect.
+තවත් බැහැ! සම්මේලන සමඟ, ඔබට ඔබගේ අනෙක් සියලුම කතාබස් වලට එක් චැට් එකකින් තහනමක් පැනවිය හැකිය. ඔබට සම්මේලන පරිපාලකයින් පවා පත් කළ හැකිය, එවිට ඔබේ විශ්වාසදායක පරිපාලකයින්ට ඔබට ආරක්ෂා කිරීමට අවශ්‍ය සියලුම කතාබස් තහනම් කළ හැකිය.
 
 *Commands:*
- - /fedstat: List all the federations you've been banned from.
- - /fedstat <user ID>: Lists all the federations the specified user has been banned from (also works with username, mention, and replies).
- - /fedstat <user ID> <Fed ID>: Gives information on the specified user's ban reason in that federation. If no user is specified, checks the sender.
- - /joinfed <FedID>: Joins the current chat to the federation. Each chat can only be in one federation. Only chat owners can do this.
- - /leavefed <FedID>: Leaves the current federation. Only chat owners can do this.
+ - /fedstat: ඔබට තහනම් කර ඇති සියලුම සම්මේලන ලැයිස්තුගත කරන්න.
+ - /fedstat <user ID>: නිශ්චිත පරිශීලකයා තහනම් කර ඇති සියලුම සම්මේලන ලැයිස්තුගත කරයි (පරිශීලක නාමය, සඳහන් කිරීම සහ පිළිතුරු සමඟද ක්‍රියා කරයි).
+ - /fedstat <user ID> <Fed ID>: එම සම්මේලනයේ නිශ්චිත පරිශීලකයාගේ තහනම් හේතුව පිළිබඳ තොරතුරු ලබා දෙයි. පරිශීලකයෙකු නිශ්චිතව දක්වා නොමැති නම්, යවන්නා පරීක්ෂා කරයි.
+ - /joinfed <FedID>: වත්මන් සංවාදයට සම්මේලනයට සම්බන්ධ වේ. සෑම කතාබහක්ම සිදුවිය හැක්කේ එක් සම්මේලනයක් තුළ පමණි. මෙය කළ හැක්කේ චැට් හිමිකරුවන්ට පමණි.
+ - /leavefed <FedID>: වත්මන් සම්මේලනය අතහැර යයි. මෙය කළ හැක්කේ චැට් හිමිකරුවන්ට පමණි.
 
 *Only federation admin:*
- - /newfed <fedname>: Creates a new federation with the given name. Users are only allowed to own one federation. Using this method when you already have a fed will simply change the federation name. (max 64 characters)
- - /delfed: Deletes your federation, and any information relating to it. Will not unban any banned users.
- - /fedinfo <FedID>: Information about the specified federation.
- - /fbroadcast <teks>: Broadcast text to all groups that join the federation.
- - /fban <user>: Bans a user from the current chat's federation.
- - /unfban <user>: Unbans a user the current chat's federation.
- - /setfrules: Set federation rules.
- - /frules: See federation regulations.
- - /chatfed: See current federation.
- - /fedadmins: Show federated admin.
- - /fednotif <on/off>: Set federation notified in PM when user is fban/unfban.
- - /fedchats: Get all chat connected in federation.
- - /myfeds: Get all your feds, only for feds owner
+ - /newfed <fedname>: දී ඇති නම සමඟ නව සම්මේලනයක් නිර්මාණය කරයි. පරිශීලකයින්ට අවසර ඇත්තේ එක් සම්මේලනයක් පමණි. ඔබට දැනටමත් ආහාරයක් ඇති විට මෙම ක්‍රමය භාවිතා කිරීමෙන් සම්මේලනයේ නම වෙනස් වේ. (max 64 characters)
+ - /delfed: ඔබේ සම්මේලනය සහ ඒ හා සම්බන්ධ ඕනෑම තොරතුරක් මකා දමයි. කිසිදු තහනම් පරිශීලකයෙකු තහනම් නොකරනු ඇත.
+ - /fedinfo <FedID>: නිශ්චිත සම්මේලනය පිළිබඳ තොරතුරු.
+ - /fbroadcast <teks>: සම්මේලනයට සම්බන්ධ වන සියලුම කණ්ඩායම් වෙත පෙළ විකාශනය කරන්න.
+ - /fban <user>: වත්මන් චැට් සම්මේලනයෙන් පරිශීලකයෙකු තහනම් කරයි.
+ - /unfban <user>: වත්මන් චැට් සම්මේලනය පරිශීලකයෙකුට තහනම් කරන්න.
+ - /setfrules: සම්මේලන නීති සකසන්න.
+ - /frules: සම්මේලන රෙගුලාසි බලන්න.
+ - /chatfed: වත්මන් සම්මේලනය බලන්න.
+ - /fedadmins: ෆෙඩරල් පරිපාලක පෙන්වන්න.
+ - /fednotif <on/off>: පරිශීලකයා සිටින විට PM හි දැනුම් දෙන ලද සම්මේලනය සකසන්න fban/unfban.
+ - /fedchats: පරිශීලකයා සිටින විට PM හි දැනුම් දෙන ලද සම්මේලනය සකසන්න.
+ - /myfeds: ඔබේ සියලු ෆෙඩ්ස් ලබා ගන්න, ෆෙඩ්ස් හිමිකරුට පමණි
 
 *Only federation owner:*
- - /fpromote <user>: Promotes the user to fed admin in your fed.
- - /fdemote <user>: Demotes the user from fed admin to normal user, in your fed.
- - /fbanlist: Get the list of currently banned users. If you want different modes, use /fbanlist <csv/json>
- - /importfbans: Reply federated backup message file to import banned list to current federation.
- - /subfed <fedid>: to subscribe federation, can subscribe multiple federations.
- - /unsubfed <fedid>: unsubscribe that federation.
- - /fedsubs: check all subscribed in current federation.
+ - /fpromote <user>: ඔබේ සංග්‍රහයේ පෝෂණය කළ පරිපාලක වෙත පරිශීලකයා ප්‍රවර්ධනය කරයි.
+ - /fdemote <user>: ඔබේ පෝෂණය තුළ පරිශීලකයා ෆෙඩරල් පරිපාලකගේ සිට සාමාන්‍ය පරිශීලකයා දක්වා පහත හෙලයි.
+ - /fbanlist: දැනට තහනම් කර ඇති පරිශීලකයින්ගේ ලැයිස්තුව ලබා ගන්න. ඔබට විවිධ Modes අවශ්‍ය නම්, use /fbanlist <csv/json>
+ - /importfbans: තහනම් ලැයිස්තුවක් වත්මන් සම්මේලනයට ආයාත කිරීම සඳහා ෆෙඩරල් උපස්ථ පණිවිඩ ගොනුවට පිළිතුරු දෙන්න.
+ - /subfed <fedid>: සම්මේලනය දායක වීමට, බහු සම්මේලන දායක විය හැකිය.
+ - /unsubfed <fedid>: එම සම්මේලනය ඉවත් කරන්න.
+ - /fedsubs: වත්මන් සම්මේලනයේ දායක වී ඇති සියල්ල පරීක්ෂා කරන්න.
 """,
 
     # global bans
@@ -863,8 +862,8 @@ Locking bots will stop non-admins from adding bots to the chat.
     "Tidak ada saluran masuk yang ditetapkan untuk grup ini!": "No log channel is set for this group!",
     "logchannel_help": """
 *Admin only:*
-- /logchannel: get log channel info
-- /setlog: set the log channel.
+- /logchannel: ලොග් නාලිකා තොරතුරු ලබා ගන්න
+- /setlog: ලොග් නාලිකාව සකසන්න.
 - /unsetlog: unset the log channel.
 
 Setting the log channel is done by:
@@ -886,7 +885,7 @@ Setting the log channel is done by:
     "\nNama pengguna: @{}": "\nපරිශීලක නාමය: @{}",
     "\nTautan pengguna permanen: {}": "\nස්තිර පරිශීලක ලින්කුව: {}",
     "\n\nOrang ini adalah pemilik saya - saya tidak akan pernah melakukan apa pun terhadap mereka!": "\n\nමේ මගේ අයිතිකාරයා - මම එයාට ආදරෙයි ගොඩාක්, මම එයාට මොකුත් කරන් නෑ ❤.!",
-    "\n\nOrang ini adalah salah satu pengguna sudo saya! Hampir sama kuatnya dengan pemilik saya - jadi tontonlah.": "\n මේ මගේ සුඩෝ යූසර් කෙනෙක් - යිතිකාරය තරම්ම බලවත්, මම එයාට මොකුත් කරන් නෑ ❤.",
+    "\n\nOrang ini adalah salah satu pengguna sudo saya! Hampir sama kuatnya dengan pemilik saya - jadi tontonlah.": "\n මේ මගේ සුඩෝ යූසර් කෙනෙක් - මගේ අයිතිකාරයා තරම්ම බලවත්, මම එයාට මොකුත් කරන් නෑ ❤.",
     "\n\nOrang ini adalah salah satu pengguna dukungan saya! Tidak sekuat pengguna sudo, tetapi masih dapat menyingkirkan Anda dari peta.": "\nමේ මාව හදන්න උදව් කරපු එක්කෙනෙක්, මම එයාට මොනවත් කරන්නෙ නෑ.. ඒවුනාට gban කරන්නනම් පුලුවන්.",
     "\n\nOrang ini telah dimasukkan dalam daftar putih! Itu berarti saya tidak diizinkan untuk melarang/menendang mereka.": "\nමෙයා සුදු ලේඛනේ එක්කෙනෙක්! ඒකියන්නෙ මට එයාව ban/kick කරන්න බෑ.",
     "Selalu ada waktu banned untukku!": "Its always banhammer time for me!",
@@ -1078,10 +1077,10 @@ NOTE: neither of these will get triggered if used by admins
     "Tautan ini bukan tautan Umpan RSS": "This link is not an RSS Feed link",
     "<b>Peringatan: </b>{} kejadian telah ditinggalkan untuk mencegah spam": "<b>Warning: </b>{} occurrences have been left out to prevent spam",
     "rss_help": """
- - /addrss <link>: add an RSS link to the subscriptions.
- - /removerss <link>: removes the RSS link from the subscriptions.
- - /rss <link>: shows the link's data and the last entry, for testing purposes.
- - /listrss: shows the list of rss feeds that the chat is currently subscribed to.
+ - /addrss <link>: දායකත්වයට RSS සබැඳියක් එක් කරන්න.
+ - /removerss <link>: දායකත්වයන්ගෙන් RSS සබැඳිය ඉවත් කරයි.
+ - /rss <link>: පරීක්ෂණ අරමුණු සඳහා සබැඳියේ දත්ත සහ අවසාන ප්‍රවේශය පෙන්වයි.
+ - /listrss: චැට් දැනට දායක වී ඇති RSS සංග්‍රහ ලැයිස්තුව පෙන්වයි.
 
 NOTE: In groups, only admins can add/remove RSS links to the group's subscription
 """,
@@ -1105,9 +1104,9 @@ NOTE: In groups, only admins can add/remove RSS links to the group's subscriptio
  - /rules: get the rules for this chat.
 
 *Admin only:*
- - /setrules <your rules here>: set the rules for this chat.
- - /clearrules: clear the rules for this chat.
- - /privaterules <yes/no/on/off>: should the rules be sent to private chat. Default: yes.
+ - /setrules <your rules here>: මෙම කතාබහ සඳහා නීති සකසන්න.
+ - /clearrules: මෙම කතාබහ සඳහා නීති ඉවත් කරන්න.
+ - /privaterules <yes/no/on/off>: නීති පුද්ගලික කතාබස් වෙත යැවිය යුතුද?. Default: yes.
 """,
 
     # userinfo
@@ -1204,8 +1203,8 @@ NOTE: In groups, only admins can add/remove RSS links to the group's subscriptio
  - /warnlist: list of all current warning filters
 
 *Admin only:*
- - /warn <userhandle>: warn a user. After 3 warns, the user will be banned from the group. Can also be used as a reply.
- - /resetwarn <userhandle>: reset the warnings for a user. Can also be used as a reply.
+ - /warn <userhandle>: පරිශීලකයෙකුට අනතුරු අඟවන්න. අනතුරු ඇඟවීම් 3 කට පසුව, පරිශීලකයා කණ්ඩායමෙන් තහනම් කරනු ලැබේ. පිළිතුරක් ලෙසද භාවිතා කළ හැකිය.
+ - /resetwarn <userhandle>: පරිශීලකයෙකු සඳහා අනතුරු ඇඟවීම් නැවත සකසන්න. පිළිතුරක් ලෙසද භාවිතා කළ හැකිය.
  - /addwarn <keyword> <reply message>: set a warning filter on a certain keyword. If you want your keyword to \
 be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is an angry user`. 
  - /nowarn <keyword>: stop a warning filter
@@ -1323,30 +1322,30 @@ Note:
     "Obrolan ini memiliki preferensi `{}` untuk pesan sambutan.\nUntuk preferensi pesan selamat tinggal `{}`.\nBot `{}` menghapus notifikasi member masuk/keluar secara otomatis": "This chat has it's welcome preference set to `{}`.\nIt's goodbye preference is `{}`.",
     "welcome_help": """
 *Admin only:*
- - /welcome <on/off>: enable/disable the welcome message.
- - /goodbye <on/off>: enable/disable goodbye message.
- - /welcome: show current welcome settings, without formatting - useful for recycling your welcome message!
+ - /welcome <on/off>: පිළිගැනීමේ පණිවිඩය සක්‍රිය / අක්‍රීය කරන්න.
+ - /goodbye <on/off>: සමුගැනීමේ පණිවිඩය සක්‍රිය / අක්‍රීය කරන්න.
+ - /welcome: ආකෘතිකරණයකින් තොරව වත්මන් පිළිගැනීමේ සැකසුම් පෙන්වන්න - ඔබගේ පිළිගැනීමේ පණිවිඩය ප්‍රතිචක්‍රීකරණය කිරීමට ප්‍රයෝජනවත් වේ!
  - /goodbye: same use and args as /welcome.
- - /setwelcome <sometext>: set a custom welcome message. If used to reply to media, use that media.
- - /setgoodbye <sometext>: set a custom goodbye message. If used to reply to media, use that media.
- - /resetwelcome: reset to the default welcome message.
- - /resetgoodbye: reset to the default goodbye message.
- - /cleanwelcome <on/off>: deletes old welcome messages; when a new person joins, the old message is deleted.
- - /cleanservice <on/off/yes/no>: deletes all service message; those are the annoying "x joined the group" you see when people join.
- - /welcomemute <on/ya/off/ga>: all users that join, get muted; a button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot!
- - /welcomemutetime <Xw/d/h/m>: if a user hasnt pressed the "unmute" button in the welcome message after a certain this time, they'll get unmuted automatically after this period of time.
- Note: if you want to reset the mute time to be forever, use /welcomemutetime 0m. 0 == eternal!
- - /setmutetext <new text>: Customise the "Click here to unmute" button obtained from enabling welcomemutes.
- - /resetmutetext: Reset teks tombol unmute menjadi default.
+ - /setwelcome <sometext>: අභිරුචි පිළිගැනීමේ පණිවිඩයක් සකසන්න. මාධ්‍යයට පිළිතුරු දීමට භාවිතා කරන්නේ නම්, එම මාධ්‍යය භාවිතා කරන්න.
+ - /setgoodbye <sometext>: අභිරුචි සමුගැනීමේ පණිවිඩයක් සකසන්න. මාධ්‍යයට පිළිතුරු දීමට භාවිතා කරන්නේ නම්, එම මාධ්‍යය භාවිතා කරන්න.
+ - /resetwelcome: සුපුරුදු පිළිගැනීමේ පණිවිඩයට යළි පිහිටුවන්න.
+ - /resetgoodbye: සුපුරුදු සමුගැනීමේ පණිවිඩයට යළි පිහිටුවන්න.
+ - /cleanwelcome <on/off>: පැරණි පිළිගැනීමේ පණිවිඩ මකා දමයි; නව පුද්ගලයෙක් සම්බන්ධ වූ විට, පැරණි පිළිගැනීමේ පණිවිඩ මකා දමයි.
+ - /cleanservice <on/off/yes/no>: සියලුම සේවා පණිවිඩ මකා දමයි; ඒවා කරදරකාරී ය "x joined the group" මිනිස්සු එකතු වූ විට ඔබට පෙනේ.
+ - /welcomemute <on/ya/off/ga>: සම්බන්ධ වන සියලුම පරිශීලකයින් නිශ්ශබ්ද වන්න; පිළිගැනීමේ පණිවිඩයට බොත්තමක් එක් කර ඔවුන් නිශ්ශබ්ද කිරීමට. මෙයින් ඔප්පු වන්නේ ඔවුන් බොට් නොවන බවයි!
+ - /welcomemutetime <Xw/d/h/m>: යම් වේලාවකට පසු පරිශීලකයෙකු පිළිගැනීමේ පණිවිඩයේ “unmute” බොත්තම එබුවේ නැත්නම්, මෙම කාල පරිච්ඡේදයෙන් පසුව ඔවුන් ස්වයංක්‍රීයව Unmute වනු ඇත.
+ Note: නිශ්ශබ්ද කාලය සදහටම නැවත සැකසීමට ඔබට අවශ්‍ය නම්, use /welcomemutetime 0m. 0 == eternal!
+ - /setmutetext <new text>: පිළිගැනීමේ යන්ත්‍ර සක්‍රීය කිරීමෙන් ලබාගත් "Click here to unmute" බොත්තම Customize කරන්න.
+ - /resetmutetext: නිශ්ශබ්ද බොත්තම් පෙළ පෙරනිමියට යළි පිහිටුවන්න.
 
- - /welcomeverify <on/off>: Enable welcome verification with images and buttons, best for anti bots
- - /wtimeout <Xw/d/h/m>: Set welcome timeout, when user wasn't verify for X, then that user will be kicked/banned
- - /wtmode <kick/ban>: Set welcome timeout should be kicked or banned
+ - /welcomeverify <on/off>: Anti Bot සඳහා වඩාත් සුදුසු රූප සහ බොත්තම් සමඟ පිළිගැනීමේ සත්‍යාපනය සක්‍රීය කරන්න
+ - /wtimeout <Xw/d/h/m>: පිළිගැනීමේ කල් ඉකුත්වීම සකසන්න, පරිශීලකයා X සඳහා සත්‍යාපනය නොකළ විට, එම පරිශීලකයා පයින් ගසනු / තහනම් කරනු ලැබේ
+ - /wtmode <kick/ban>: පිළිගැනීමේ කල් ඉකුත්වීම පයින් ගැසීම හෝ තහනම් කළ යුතුය
 
-Read /welcomehelp and /markdownhelp to learn about formatting your text and mentioning new users when the join!
+කියවන්න /welcomehelp and /markdownhelp ඔබගේ පෙළ සංයුති කිරීම සහ සම්බන්ධ වන විට නව පරිශීලකයින් සඳහන් කිරීම ගැන දැන ගැනීමට!
 
-If you want to save an image, gif, or sticker, or any other data, do the following:
-/setwelcome while replying to a sticker or whatever data you'd like. This data will now be sent to welcome new users.
+ඔබට රූපයක්, gif, හෝ ස්ටිකර් හෝ වෙනත් දත්ත සුරැකීමට අවශ්‍ය නම්, පහත සඳහන් දෑ කරන්න:
+/setwelcome ස්ටිකරයකට හෝ ඔබ කැමති ඕනෑම දත්තයකට පිළිතුරු දෙන අතරතුර. නව පරිශීලකයින් පිළිගැනීම සඳහා මෙම දත්ත දැන් යවනු ලැබේ.
 
 Tip: use /welcome noformat to retrieve the unformatted welcome message.
 This will retrieve the welcome message and send it without formatting it; getting you the raw markdown, allowing you to make easy edits.
@@ -1388,8 +1387,8 @@ This also works with /goodbye.
     "Baca di Wikipedia": "Read on Wikipedia",
     "Baca Lebih Lengkap": "Read More",
     "exclusive_help": """
- - /stickerid: reply message sticker at PM to get ID sticker
- - /ping: check the speed of the bot
+ - /stickerid: හැඳුනුම්පත ලබා ගැනීම සඳහා PM ට පිළිතුරු පණිවිඩ ස්ටිකර්
+ - /ping: Bot වේගය පරීක්ෂා කරන්න
  - /fortune: give a fortune
  - /tr <from>-<to> <text>: translate text written or reply for any language to the intended language, or
  - /tr <to> <text>: translate text written or reply for any language to the intended language
@@ -1463,35 +1462,35 @@ SLAP_TEMPLATES = (
 )
 
 ITEMS = (
-    "cast iron skillet",
-    "large trout",
-    "baseball bat",
-    "cricket bat",
-    "wooden cane",
-    "nail",
-    "printer",
-    "shovel",
-    "CRT monitor",
-    "physics textbook",
-    "toaster",
-    "portrait of Richard Stallman",
-    "television",
-    "five ton truck",
-    "roll of duct tape",
-    "book",
-    "laptop",
-    "old television",
-    "sack of rocks",
-    "rainbow trout",
-    "rubber chicken",
-    "spiked bat",
-    "fire extinguisher",
-    "heavy rock",
-    "chunk of dirt",
-    "beehive",
-    "piece of rotten meat",
-    "bear",
-    "ton of bricks",
+    "වාත්තු යකඩ සායක්",
+    "විශාල තුරුම්පුව",
+    "බේස්බෝල් පිත්ත",
+    "ක්රිකට් පිත්ත",
+    "ලී වේවැල්",
+    "නිය",
+    "මුද්‍රණ යන්ත්‍රය",
+    "සවල",
+    "CRT මොනිටරය",
+    "භෞතික විද්‍යා පෙළ පොත",
+    "ටෝස්ටර්",
+    "රිචඩ් ස්ටෝල්මන්ගේ ආලේඛ්‍ය චිත්‍රය",
+    "රූපවාහිනිය",
+    "ටොන් පහක ට්‍රක්",
+    "ඩක් ටේප් රෝල්",
+    "පොත",
+    "ලැප්ටොප්",
+    "පැරණි රූපවාහිනිය",
+    "පාෂාණ මල්ල",
+    "දේදුන්න තුරුම්පුව",
+    "රබර් චිකන්",
+    "ස්පයික් බැට්",
+    "ගිනි නිවනය",
+    "බර පාෂාණය",
+    "කුණු කැබැල්ල",
+    "මී මැසි",
+    "කුණු වූ මස් කැබැල්ලක්",
+    "වලහා",
+    "ගඩොල් ටොන්",
 )
 
 THROW = (
@@ -1512,76 +1511,76 @@ HIT = (
 RAMALAN_STRINGS = (
     "There’s a friend who would be happy to hear from you today\nTell them I said “Hi”",
     "5 - 8 - 27 - 38 - 42 - 48\nWhoops! That was the back!",
-    "You're due for a good documentary",
-    "It's a good time to re-read your favorite book",
-    "Consider adding a little extra color to your wardrobe tomorrow 👠",
-    "Make sure you drink enough water today\nThat’s not so much a fortune as a general guideline to keep feeling alright",
-    "A stranger will come into your life with a BANG 💥",
-    "It's great to be grateful\nThank somebody today",
-    "Temptation is often disguised as opportunity",
-    "Now is the right time to do something you've put off",
-    "You can't get what you don't ask for 👐",
-    "Never let a cookie tell you what to do",
-    "Trust decisions where your emotions and logic agree",
-    "Animal companionship can bring a smile to even the most frowny face ️😔 🐶 😊",
-    "If you make someone’s day, your day will be made, too\nIt pretty much always works that way 😊",
-    "Knowing that an illusion isn’t real doesn’t it make it less magical",
-    "The next meal you cook will be your best yet 🍴",
-    "You'll notice something new in your neighborhood soon 🏡",
-    "Today will be yesterday tomorrow",
-    "Indulge in some nostalgia; sweet memories can be good medicine",
-    "Today is a good day to listen to your intuition rather than advice 🚶",
-    "It's a good day to appreciate the little things",
-    "Embrace your goals\nSmooch your dreams 😘 🌙",
-    "That food you've never tasted might actually taste good",
-    "Hear no evil 🙉, see no evil 🙈, tweet no evil 🐥",
-    "You will learn a new dance\nAnd you'll be really good at it",
-    "Try going somewhere new, even if it's just a few miles away from home",
-    "Do something you love today 💞\nI can all but promise happiness awaits 😀",
-    "It's time to try out a new hobby",
-    "An opportunity will present itself if you pay attention 👀",
-    "Companionship is right within your reach\nIn fact, you're holding it right now 😊",
-    "Keep doing what you’re doing and it will be done\nOk, even I will admit that was a weak fortune",
-    "In life, there is but one truth\nHe who smelt it, delt it",
-    "If you listen closely, the wind will provide all of lifes answers 💨",
-    "Positive things will enter your life today\nBut bear in mind that most of them will be atomically bonded to negative things 🔬😀",
-    "A great gift awaits\nBut fair warning, it’s a very patient gift",
-    "It's a good time for a new creative pursuit",
-    "Stop and smell the roses\nReally, any flowers you come across willl do 💐",
-    "You will pick up a good book tonight\nBut ultimately decide to free the spider outside",
-    "You're about to receive a new message from your Google Assistant:\nHI 😀",
-    "Make a playlist for a friend this week 🎧",
-    "Your favorite YouTube video is yet to be found",
-    "Take some time to listen to your loved ones",
-    "Make sure to laugh at something silly today 😆",
-    "The one you love is closer than you think 💞",
-    "You're going to hear a song that will make you smile for days",
-    "Keep your head up, because good things are coming your way 😎",
-    "When in doubt, Google it 😉",
-    "May you go from strength to strength",
-    "Error 404: Fortune not found\nTry again soon 😉",
-    "The next time you go out to eat, you will order dessert\nNot exactly a fortune, more like a good idea 🍪",
-    "Chase the dawn and your shadow will be behind you",
-    "You are admired for your talents more than you realize 👏",
-    "It's a good time to learn a new skill",
-    "Fortune favors the bold\nLuck favors the italic",
-    "It's the right time to act like the person you want to be",
-    "Pay attention to the details\nYou might notice something interesting",
-    "An unexpected visitor will surprise you with a treat",
-    "Walk a block out of your way today",
-    "A new adventure lurks right around the corner",
-    "You will get a taste of something unexpected",
-    "Go somewhere you've never been, and see what you find there",
-    "Seek not fortunes in the inedible",
-    "It's a great time to plan a trip with someone you love ✈️",
-    "Send an old friend a message today",
-    "Trust your instincts\nWin that bear 🎯🐻",
-    "Someone will invite you to a karaoke party 🎶",
-    "An exciting email is coming your way soon"
+    "ඔබ හොඳ වාර්තා චිත්‍රපටයක් සඳහා පැමිණීමට නියමිතයි",
+    "ඔබේ ප්‍රියතම පොත නැවත කියවීමට මෙය හොඳ කාලයකි",
+    "හෙට ඔබේ ඇඳුම් ආයිත්තම් කට්ටලයට අමතර වර්ණයක් එකතු කිරීම සලකා බලන්න 👠",
+    "ඔබ අද ප්‍රමාණවත් තරම් ජලය පානය කරන බවට වග බලා ගන්න it n සාමාන්‍ය හැඟීමක් ඇති කර ගැනීම සඳහා සාමාන්‍ය මාර්ගෝපදේශයක් ලෙස එය එතරම් වාසනාවක් නොවේ",
+    "ආගන්තුකයෙකු ඔබේ ජීවිතයට බෑන්ග් with සමඟ පැමිණෙනු ඇත,",
+    "ස්තුතිවන්ත වීම සතුටක් today n අද කාටහරි ස්තූතියි",
+    "පරීක්ෂාව බොහෝ විට අවස්ථාව ලෙස වෙස්වලාගෙන ඇත",
+    "ඔබ කල් දැමූ දෙයක් කිරීමට සුදුසුම කාලය දැන්",
+    "You ඉල්ලන්නේ නැති දේ ඔබට ලබා ගත නොහැක",
+    "කුකී ඔබට කුමක් කළ යුතු දැයි පැවසීමට කිසි විටෙකත් ඉඩ නොදෙන්න",
+    "ඔබේ හැඟීම් සහ තර්කනය එකඟ වන තීරණ විශ්වාස කරන්න",
+    "සත්ව ඇසුරෙන් වඩාත් කේන්තියෙන් යුත් මුහුණට පවා සිනහවක් ගෙන එනු ඇත ️😔 🐶 😊",
+    "ඔබ යමෙකුගේ දිනයක් සෑදුවහොත්, ඔබගේ දිනයද සාදනු ඇත it n එය සෑම විටම ඒ ආකාරයට ක්‍රියාත්මක වේ 😊",
+    "මායාවක් සැබෑ නොවන බව දැන ගැනීමෙන් එය අඩු ඉන්ද්‍රජාලික දෙයක් නොවේ",
+    "ඔබ පිසින ඊළඟ ආහාරය ඔබේ හොඳම වේ 🍴",
+    "ඔබගේ අසල්වැසියා තුළ ඉක්මනින් අලුත් දෙයක් ඔබ දකිනු ඇත 🏡",
+    "අද හෙට හෙට වේවි",
+    "කිසියම් විකාරයක නිරත වන්න; මිහිරි මතකයන් හොඳ medicine ෂධයක් විය හැකිය",
+    "උපදෙස් වලට වඩා ඔබේ බුද්ධියට සවන් දීමට අද හොඳ දවසක් 🚶",
+    "කුඩා දේවල් අගය කිරීමට හොඳ දවසක්",
+    "ඔබේ අරමුණු වැලඳ ගන්න \ n ඔබේ සිහින සුමට කරන්න 😘 🌙",
+    "ඔබ කවදාවත් රස නොගත් එම ආහාරය ඇත්තෙන්ම රසවත් විය හැකිය",
+    "නපුරක් අසන්න evil, නපුරක් නොදකින්න see, නපුරක් නොකරන්න twe",
+    "ඔබ නව නැටුමක් ඉගෙන ගනු ඇත \ n තවද ඔබ එයට හොඳ වනු ඇත",
+    "නිවසින් සැතපුම් කිහිපයක් away තින් වුවද නව තැනකට යාමට උත්සාහ කරන්න",
+    "ඔබ අද ආදරය කරන දෙයක් කරන්න 💞 I n මට සතුටක් බලාපොරොත්තුවෙන් සිටිය හැකි සියල්ල කළ හැකිය",
+    "නව විනෝදාංශයක් අත්හදා බැලීමට කාලයයි",
+    "ඔබ අවධානය යොමු කළහොත් අවස්ථාවක් ලැබෙනු ඇත 👀",
+    "සහජීවනය ඔබට ළඟාවිය හැකිය fact n ඇත්ත වශයෙන්ම, ඔබ එය දැන්ම දරයි 😊",
+    "ඔබ කරන දේ දිගටම කරගෙන යන්න. එය සිදු වනු ඇත O n අහෝ, එය දුර්වල වාසනාවක් බව මම පිළිගනිමි",
+    "ජීවිතයේ, ඇත්තේ එක් සත්‍යයක් පමණි it n ඔහු එය ගඳ ගසන, ඩෙල්ට් කරන්න",
+    "ඔබ සමීපව ඇහුම්කන් දෙන්නේ නම්, සුළඟ මගින් සියළුම ජීවිත පිළිතුරු ලබා දෙනු ඇත 💨",
+    "ධනාත්මක දේවල් අද ඔබේ ජීවිතයට ඇතුල් වනු ඇත \ n නමුත් ඒවායින් බොහොමයක් පරමාණුකව negative ණාත්මක දේ සමඟ බැඳී ඇති බව මතක තබා ගන්න 🔬😀",
+    "විශිෂ්ට තෑග්ගක් බලාපොරොත්තුවෙන් සිටී but n නමුත් සාධාරණ අනතුරු ඇඟවීමක්, එය ඉතා ඉවසිලිවන්ත තෑග්ගක්",
+    "නව නිර්මාණාත්මක ලුහුබැඳීමක් සඳහා මෙය හොඳ කාලයකි",
+    "රෝස මල් නැවැත්වීම සහ සුවඳ දැනීම re n ඇත්ත වශයෙන්ම, ඔබ හමුවන ඕනෑම මල් කැමැත්තක් කරනු ඇත 💐",
+    "ඔබ අද රාත්‍රියේ හොඳ පොතක් ගන්නවා ut n නමුත් අවසානයේ මකුළුවා නිදහස් කිරීමට තීරණය කරන්න",
+    "ඔබගේ ගූගල් සහායක වෙතින් ඔබට නව පණිවිඩයක් ලැබීමට සූදානම්: H nHI 😀",
+    "මේ සතියේ මිතුරෙකු සඳහා ධාවන ලැයිස්තුවක් සාදන්න 🎧",
+    "ඔබගේ ප්‍රියතම යූ ටියුබ් වීඩියෝව තවම සොයාගෙන නැත",
+    "ඔබේ ආදරණීයයන්ට ඇහුම්කන් දීමට යම් කාලයක් ගත කරන්න",
+    "අද මෝඩ දෙයකට සිනාසීමට වග බලා ගන්න 😆",
+    "ඔබ ආදරය කරන තැනැත්තා ඔබ සිතනවාට වඩා සමීපයි 💞",
+    "ඔබ දින ගණනක් සිනහ වන ගීතයක් අසනු ඇත",
+    "ඔබේ හිස ඔසවන්න, මන්ද හොඳ දේ ඔබේ මාර්ගයට එන බැවිනි",
+    "සැකයක් ඇති විට, ගූගල් එය 😉",
+    "ඔබට ශක්තියෙන් ශක්තියට යන්න දෙන්න",
+    "දෝෂය 404: වාසනාව හමු නොවීය \ n ඉක්මනින් නැවත උත්සාහ කරන්න 😉",
+    "ඊළඟ වතාවේ ඔබ කෑමට එළියට යන විට, ඔබ අතුරුපස ඇණවුම් කරනු ඇත \ n හොඳ අදහසක් මෙන් හරියටම වාසනාවක් නැත 🍪",
+    "උදාව පසුපස හඹා යන්න, ඔබේ සෙවනැල්ල ඔබ පිටුපසින් සිටිනු ඇත",
+    "ඔබ සිතනවාට වඩා ඔබේ දක්ෂතා අගය කරනු ලැබේ 👏",
+    "නව නිපුණතාවයක් ඉගෙන ගැනීමට මෙය හොඳ කාලයකි",
+    "වාසනාව නිර්භීතව වාසිදායකයි l n ඉතාලියට අනුග්‍රහය දක්වයි",
+    "ඔබට අවශ්‍ය පුද්ගලයා මෙන් ක්‍රියා කිරීමට සුදුසුම කාලය මෙයයි",
+    "විස්තර කෙරෙහි අවධානය යොමු කරන්න interesting n ඔබට රසවත් යමක් පෙනෙනු ඇත",
+    "අනපේක්ෂිත අමුත්තෙක් සංග්‍රහයකින් ඔබව පුදුමයට පත් කරනු ඇත",
+    "අද ඔබේ මාර්ගයෙන් ඉවතට යන්න",
+    "නව වික්‍රමාන්විතයක් කෙළවරේ සැඟවී ඇත",
+    "ඔබට අනපේක්ෂිත දෙයක රසයක් ලැබෙනු ඇත",
+    "ඔබ කවදාවත් නොසිටි තැනකට ගොස් එහි ඔබ සොයා ගන්නා දේ බලන්න",
+    "ආහාරයට ගත නොහැකි අය තුළ වාසනාව සොයන්න එපා",
+    "ඔබ ආදරය කරන කෙනෙකු සමඟ ගමනක් සැලසුම් කිරීමට මෙය හොඳ කාලයකි ✈️",
+    "අද පැරණි මිතුරෙකුට පණිවිඩයක් යවන්න",
+    "ඔබේ සහජ බුද්ධිය විශ්වාස කරන්න bear n එය දරයි 🎯🐻",
+    "කවුරුහරි ඔබට කැරෝකී සාදයකට ආරාධනා කරනු ඇත 🎶",
+    "සිත් ඇදගන්නා සුළු ඊ-තැපෑලක් ඔබගේ මාර්ගයට පැමිණේ"
 )
 
 RAMALAN_FIRST = (
-    "I've got a fortune for you.\n",
-    "I'm no cookie, but I do know some fortunes.\n",
-    "One fortune, coming right up.\n"
+    "මට ඔබට වාසනාවක් තිබේ.\n",
+    "මම කුකියක් නොවේ, නමුත් මම වාසනාව දනිමි.\n",
+    "එක් වාසනාවක්, වහාම ඉහළට.\n"
 )
