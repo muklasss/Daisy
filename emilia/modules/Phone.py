@@ -9,7 +9,7 @@ from emilia import client, dispatcher
 from emilia.events import register
 from telegram.ext import CommandHandler , run_async
 from emilia.modules.helper_funcs.chat_status import user_admin
-
+from emilia.modules.helper_funcs.alternate import send_message
 
 @run_async
 @user_admin
@@ -39,7 +39,8 @@ def phone(update,context):
     e = "Carrier: " +str(carrier)
     f = "Device: " +str(line_type)
     g = f"{aa}\n{a}\n{b}\n{c}\n{d}\n{e}\n{f}"
-    await update.effective_message.reply_text(g)
+    send_message(update.effective_message,g)
+    
     
     
     
