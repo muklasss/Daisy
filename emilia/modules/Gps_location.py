@@ -31,9 +31,9 @@ GMAPS_LOC = "https://maps.googleapis.com/maps/api/geocode/json"
 
 @run_async
 @user_admin
-def gps(bot: Bot, update: Update):
+def gps(bot: Bot, update: Update , *args, **kwargs):
     
-    args = update.effective_message.text.split(None, 1)
+    args = str(*args)
     message = update.effective_message
     if len(args) == 0:
         update.effective_message.reply_text("That was a funny joke, but no really, put in a location")
