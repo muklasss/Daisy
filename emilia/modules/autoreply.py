@@ -46,7 +46,7 @@ async def handle_new_message(event):
 
 
                 
-def auto(update,context):
+def auto():
     global x
     global A
     global B
@@ -61,22 +61,8 @@ def auto(update,context):
             
         print(time.asctime(), '-', 'Auto-replying...')
         client.start(phone, password)
-        send_message(update.effective_message, "Service Started!")
-            
         
             
-
-
-            
-
-
-
-
-    else:
-        
-        
-        send_message(update.effective_message, "Enter all other commands before you go!")
-
             
 def phne(update,context):
     global phone
