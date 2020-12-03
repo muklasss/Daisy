@@ -2,44 +2,28 @@ import os
 from emilia import client
 from geopy.geocoders import Nominatim
 from emilia.events import register
-from emilia import *
+
 from telethon import *
 from telethon.tl import *
 
-
-async def is_register_admin(chat, user):
-    if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
-
-        return isinstance(
-            (await
-             client(functions.channels.GetParticipantRequest(chat,
-                                                           user))).participant,
-            (types.ChannelParticipantAdmin, types.ChannelParticipantCreator),
-        )
-    if isinstance(chat, types.InputPeerChat):
-
-        ui = await client.get_peer_id(user)
-        ps = (await client(functions.messages.GetFullChatRequest(chat.chat_id)
-                         )).full_chat.participants.participants
-        return isinstance(
-            next((p for p in ps if p.user_id == ui), None),
-            (types.ChatParticipantAdmin, types.ChatParticipantCreator),
-        )
-    return None
-
+from emilia import client, dispatcher
+from emilia.events import register
+from telegram.ext import CommandHandler , run_async
+from emilia.modules.helper_funcs.chat_status import user_admin
+from emilia.modules.helper_funcs.alternate import send_message
 GMAPS_LOC = "https://maps.googleapis.com/maps/api/geocode/json"
 
+@run_async
+@user_admin
 
-@register(pattern="^/gps (.*)")
-async def _(event):
-    if event.fwd_from:
-        return
-    if event.is_group:
-     if not (await is_register_admin(event.input_chat, event.message.sender_id)):
-       await event.reply("😜 Hai.. You are not admin..🤭 You can't use this command.. But you can use in my pm🙈")
-       return
 
-    args = event.pattern_match.group(1)
+
+
+
+
+def _(update,context):
+    args = update.effective_message.text.split(None, 1)
+    chat = update.effective_chat
 
     try:
         geolocator = Nominatim(user_agent="SkittBot")
@@ -49,11 +33,11 @@ async def _(event):
         latitude = geoloc.latitude
         gm = "https://www.google.com/maps/search/{},{}".format(
             latitude, longitude)
-        await client.send_file(event.chat_id, file=types.InputMediaGeoPoint(types.InputGeoPoint(float(latitude), float(longitude))))
-        await event.reply(
+        send_message(update.effective_message.send_file(chat.id, file=types.InputMediaGeoPoint(types.InputGeoPoint(float(latitude), float(longitude))))
+        send_message(update.effective_message,
             "Open with: [Google Maps]({})".format(gm),
             link_preview=False,
         )
     except Exception as e:
         print(e)
-        await event.reply("I can't find that")
+        send_message(update.effective_message,"I can't find that")
