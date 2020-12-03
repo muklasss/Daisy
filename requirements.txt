@@ -20,4 +20,4 @@ wikipedia
 tswift
 tabulate
 spongemock
-
+telethon==1.6.2
