@@ -46,7 +46,7 @@ async def handle_new_message(event):
 
 
                 
-def auto():
+def auto(update, context):
     global x
     global A
     global B
