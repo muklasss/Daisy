@@ -21,7 +21,7 @@ GMAPS_LOC = "https://maps.googleapis.com/maps/api/geocode/json"
 
 
 
-def _(update,context):
+def gps(update,context):
     args = update.effective_message.text.split(None, 1)
     chat = update.effective_chat
 
@@ -41,3 +41,15 @@ def _(update,context):
     except Exception as e:
         print(e)
         send_message(update.effective_message,"I can't find that")
+                     
+                     
+GPS_HANDLER = CommandHandler('gps', gps)
+
+dispatcher.add_handler(GPS_HANDLER)
+
+
+__command_list__ = ["gps"]
+__handlers__ = [
+    
+    GPS_HANDLER
+]
