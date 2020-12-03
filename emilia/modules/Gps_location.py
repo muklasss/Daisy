@@ -1,44 +1,60 @@
-import os
-from emilia import client
-from geopy.geocoders import Nominatim
-from emilia.events import register
 
-from telethon import *
-from telethon.tl import *
 
-from emilia import client, dispatcher
-from emilia.events import register
-from telegram.ext import CommandHandler , run_async
+
+
+import html
+import json
+import random
+from datetime import datetime
+from typing import Optional, List
+import time
+import requests
+from telegram import Message, Chat, Update, Bot, MessageEntity
+from telegram import ParseMode
+from telegram.ext import CommandHandler, run_async, Filters
+from telegram.utils.helpers import escape_markdown, mention_html
+                                                                   
+from emilia import dispatcher
+from emilia.modules.disable import DisableAbleCommandHandler
+from emilia.modules.helper_funcs.extraction import extract_user
+from emilia.modules.helper_funcs.filters import CustomFilters
 from emilia.modules.helper_funcs.chat_status import user_admin
 from emilia.modules.helper_funcs.alternate import send_message
+
+from geopy.geocoders import Nominatim
+from telegram import Location
+
+
 GMAPS_LOC = "https://maps.googleapis.com/maps/api/geocode/json"
+
+
 
 @run_async
 @user_admin
-
-
-
-
-
-
-def gps(update,context):
+def gps(bot: Bot, update: Update):
+    
     args = update.effective_message.text.split(None, 1)
-    chat = update.effective_chat
-
+    message = update.effective_message
+    if len(args) == 0:
+        update.effective_message.reply_text("That was a funny joke, but no really, put in a location")
     try:
         geolocator = Nominatim(user_agent="SkittBot")
-        location = args
-        geoloc = geolocator.geocode(location)
-        longitude = geoloc.longitude
-        latitude = geoloc.latitude
-        gm = "https://www.google.com/maps/search/{},{}".format(
-            latitude, longitude)
-        send_message(update.effective_message.send_file(chat.id, file=types.InputMediaGeoPoint(types.InputGeoPoint(float(latitude), float(longitude)))))
-        send_message(update.effective_message,f"Open with: [Google Maps]({gm})",link_preview=False)
-        
-    except Exception as e:
-        print(e)
-        send_message(update.effective_message,"I can't find that")
+        location = " ".join(args)
+        geoloc = geolocator.geocode(location)  
+        chat_id = update.effective_chat.id
+        lon = geoloc.longitude
+        lat = geoloc.latitude
+        the_loc = Location(lon, lat) 
+        gm = "https://www.google.com/maps/search/{},{}".format(lat,lon)
+        bot.send_location(chat_id, location=the_loc)
+        update.message.reply_text("Open with: [Google Maps]({})".format(gm), parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
+    except AttributeError:
+        update.message.reply_text("I can't find that")
+
+
+
+
+
                      
                      
 GPS_HANDLER = CommandHandler('gps', gps)
