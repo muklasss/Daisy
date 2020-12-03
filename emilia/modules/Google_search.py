@@ -60,3 +60,4 @@ dispatcher.add_handler(GOOGLE_HANDLER)
 __command_list__ = ["google"]
 __handlers__ = [
     GOOGLE_HANDLER
+]
