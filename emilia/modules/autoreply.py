@@ -1,0 +1,48 @@
+from telegram import ParseMode, Update, Bot, Chat
+from telegram.ext import CommandHandler, MessageHandler, BaseFilter, run_async
+
+from emilia import dispatcher
+from emilia.modules.helper_funcs.alternate import send_message
+from emilia.modules.disable import DisableAbleCommandHandler, DisableAbleMessageHandler
+
+import time
+
+from telethon import TelegramClient, events
+
+# sample API_ID from https://github.com/telegramdesktop/tdesktop/blob/f98fdeab3fb2ba6f55daf8481595f879729d1b84/Telegram/SourceFiles/config.h#L220
+# or use your own
+api_id = 2993816
+api_hash = '7fb36e8000845a3834d852f1bd717469'
+
+# fill in your own details here
+phone = '+94703287501'
+session_file = '@InukaASiTH'  # use your username if unsure
+password = 'Kaia@20041223'  # if you have two-step verification enabled
+
+# content of the automatic reply
+message = "Hello! I'm Inuka Asith.\n Looks like I'm little bit bussy right now.. \n I'll reply you back as soon as possible \n(This is an automated Message)"
+def auto(update,context):
+
+
+if __name__ == '__main__':
+    # Create the client and connect
+    # use sequential_updates=True to respond to messages one at a time
+    client = TelegramClient(session_file, api_id, api_hash, sequential_updates=True)
+
+
+    @client.on(events.NewMessage(incoming=True))
+    async def handle_new_message(event):
+        if event.is_private:  # only auto-reply to private chats
+            from_ = await event.client.get_entity(event.from_id)  # this lookup will be cached by telethon
+            if not from_.bot:  # don't auto-reply to bots
+                print(time.asctime(), '-', event.message)  # optionally log time and message
+                time.sleep(1)  # pause for 1 second to rate-limit automatic replies
+                await event.respond(message)
+
+
+    print(time.asctime(), '-', 'Auto-replying...')
+    client.start(phone, password)
+    client.run_until_disconnected()
+    print(time.asctime(), '-', 'Stopped!')
+    
+    
