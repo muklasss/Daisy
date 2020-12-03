@@ -34,10 +34,7 @@ def gps(update,context):
         gm = "https://www.google.com/maps/search/{},{}".format(
             latitude, longitude)
         send_message(update.effective_message.send_file(chat.id, file=types.InputMediaGeoPoint(types.InputGeoPoint(float(latitude), float(longitude))))
-        send_message(update.effective_message,
-            "Open with: [Google Maps]({})".format(gm),
-            link_preview=False,
-        )
+        send_message(update.effective_message,"Open with: [Google Maps]({})".format(gm),link_preview=False)
     except Exception as e:
         print(e)
         send_message(update.effective_message,"I can't find that")
