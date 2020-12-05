@@ -10,7 +10,7 @@ from telegram import error
 from emilia import DEL_CMDS, SUDO_USERS, WHITELIST_USERS
 
 from emilia.modules import languages
-DEV_USERS = SUDO_USERS
+
 
 def can_delete(chat: Chat, bot_id: int) -> bool:
 	return chat.get_member(bot_id).can_delete_messages
@@ -61,27 +61,6 @@ def is_bot_admin(chat: Chat, bot_id: int, bot_member: ChatMember = None) -> bool
 def is_user_in_chat(chat: Chat, user_id: int) -> bool:
 	member = chat.get_member(user_id)
 	return member.status not in ('left', 'kicked')
-
-def dev_plus(func):
-    @wraps(func)
-    def is_dev_plus_func(bot: Bot, update: Update, *args, **kwargs):
-
-        user = update.effective_user
-
-        if user.id in DEV_USERS:
-            return func(bot, update, *args, **kwargs)
-        elif not user:
-            pass
-        elif DEL_CMDS and " " not in update.effective_message.text:
-            update.effective_message.delete()
-        else:
-            update.effective_message.reply_text("This is a developer restricted command."
-                                                " You do not have permissions to run this.")
-
-    return is_dev_plus_func
-
-
-
 
 
 def bot_can_delete(func):
