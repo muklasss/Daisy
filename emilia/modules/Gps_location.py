@@ -31,9 +31,9 @@ GMAPS_LOC = "https://maps.googleapis.com/maps/api/geocode/json"
 
 @run_async
 @user_admin
-def gps(bot,update ,context, *args, **kwargs):
+def gps(update ,context, *args, **kwargs):
     
-    args = str(*args)
+    args = context.args
     message = update.effective_message
     if len(args) == 0:
         update.effective_message.reply_text("That was a funny joke, but no really, put in a location")
@@ -46,7 +46,7 @@ def gps(bot,update ,context, *args, **kwargs):
         lat = geoloc.latitude
         the_loc = Location(lon, lat) 
         gm = "https://www.google.com/maps/search/{},{}".format(lat,lon)
-        bot.send_location(chat_id, location=the_loc)
+        dispatcher.bot.send_location(chat_id, location=the_loc)
         update.message.reply_text("Open with: [Google Maps]({})".format(gm), parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True)
     except AttributeError:
         update.message.reply_text("I can't find that")
