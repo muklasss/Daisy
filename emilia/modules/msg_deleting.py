@@ -15,12 +15,13 @@ from emilia.modules.log_channel import loggable
 @run_async
 @user_admin
 @loggable
-def purge(bot: Bot, update: Update, args: List[str]) -> str:
+def purge(update,context):
+    args = context.args
     msg = update.effective_message  # type: Optional[Message]
     if msg.reply_to_message:
         user = update.effective_user  # type: Optional[User]
         chat = update.effective_chat  # type: Optional[Chat]
-        if can_delete(chat, bot.id):
+        if can_delete(chat, context.bot.id):
             message_id = msg.reply_to_message.message_id
             if args and args[0].isdigit():
                 if int(args[0]) < int(1):
