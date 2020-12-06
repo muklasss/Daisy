@@ -51,7 +51,7 @@ def purge(update,context):
                 elif err.message != "Message to delete not found":
                     LOGGER.exception("Error while purging chat messages.")
 
-            bot.send_message(chat.id, "Purge complete.")
+            send_message(chat.id, "Purge complete.")
             return "<b>{}:</b>" \
                    "\n#PURGE" \
                    "\n<b>• Admin:</b> {}" \
@@ -68,11 +68,11 @@ def purge(update,context):
 @run_async
 @user_admin
 @loggable
-def del_message(bot: Bot, update: Update) -> str:
+def del_message(update,context) -> str:
     if update.effective_message.reply_to_message:
         user = update.effective_user  # type: Optional[User]
         chat = update.effective_chat  # type: Optional[Chat]
-        if can_delete(chat, bot.id):
+        if can_delete(chat, context.bot.id):
             update.effective_message.reply_to_message.delete()
             update.effective_message.delete()
             return "<b>{}:</b>" \
