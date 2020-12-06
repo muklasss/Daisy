@@ -423,7 +423,7 @@ def get_settings(update, context):
             text = tl(update.effective_message, "Klik di sini untuk mendapatkan pengaturan obrolan ini, serta milik Anda.")
             msg.reply_text(text,
                            reply_markup=InlineKeyboardMarkup(
-                               [[InlineKeyboardButton(text="Pengaturan",
+                               [[InlineKeyboardButton(text="Settings",
                                                       url="t.me/{}?start=stngs_{}".format(
                                                           context.bot.username, chat.id))]]))
         # else:
