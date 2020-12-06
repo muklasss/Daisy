@@ -11,35 +11,20 @@ from emilia import LOGGER, client
 from telethon import types
 from telethon.tl import functions
 
+from emilia.modules.helper_funcs.chat_status import user_admin
+from emilia.modules.helper_funcs.alternate import send_message
+
 langi = "en"
 
-async def is_register_admin(chat, user):
-    if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
 
-        return isinstance(
-            (await client(functions.channels.GetParticipantRequest(chat, user))).participant,
-            (types.ChannelParticipantAdmin, types.ChannelParticipantCreator)
-        )
-    elif isinstance(chat, types.InputPeerChat):
 
-        ui = await client.get_peer_id(user)
-        ps = (await client(functions.messages.GetFullChatRequest(chat.chat_id))) \
-            .full_chat.participants.participants
-        return isinstance(
-            next((p for p in ps if p.user_id == ui), None),
-            (types.ChatParticipantAdmin, types.ChatParticipantCreator)
-        )
-    else:
-        return None
-
-@register(pattern="^/imdb (.*)") 
-async def imdb(e):
- if e.is_group:
-  if not (await is_register_admin(e.input_chat, e.message.sender_id)):
-     await event.reply("😜 Hai.. You are not admin..🤭 You can't use this command.. But you can use in my pm🙈")
-     return
- try:
-    movie_name = e.pattern_match.group(1)
+@run_async
+@user_admin
+def imdb(update,context):
+    args = update.effective_message.text.split(None, 1)
+    movie_name = args[1]
+ 
+    
     remove_space = movie_name.split(' ')
     final_name = '+'.join(remove_space)
     page = requests.get("https://www.imdb.com/find?ref_=nv_sr_fn&q="+final_name+"&s=all")
@@ -100,7 +85,7 @@ async def imdb(e):
     		mov_rating = r.strong['title']
     else:
     	mov_rating = 'Not available'
-    await e.reply('<a href='+poster+'>&#8203;</a>'
+    send_message(update.effective_message,('<a href='+poster+'>&#8203;</a>'
     			'<b>Title : </b><code>'+mov_title+
     			'</code>\n<code>'+mov_details+
     			'</code>\n<b>Rating : </b><code>'+mov_rating+
@@ -112,6 +97,17 @@ async def imdb(e):
     			'</code>\n<b>IMDB Url : </b>'+mov_link+
     			'\n<b>Story Line : </b>'+story_line,
     			link_preview = True , parse_mode = 'HTML'
-    			)
+    			))
  except IndexError:
-     await e.reply("Please enter a valid movie name !")
+     send_message(update.effective_message,"Please enter a valid movie name !")
+        
+        
+IMDB_HANDLER = CommandHandler('movie', imdb)
+
+dispatcher.add_handler(IMDB_HANDLER)
+
+
+__command_list__ = ["imdb"]
+__handlers__ = [
+    IMDB_HANDLER
+]
