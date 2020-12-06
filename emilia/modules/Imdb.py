@@ -87,7 +87,7 @@ def imdb(update,context):
     	mov_rating = 'Not available'
         
     
-    a=('<a href='+poster+'>&#8203;</a>'+
+    a=('<a href='+poster+'>&#8203;</a>'
     			'<b>Title : </b><code>'+mov_title+
     			'</code>\n<code>'+mov_details+
     			'</code>\n<b>Rating : </b><code>'+mov_rating+
