@@ -98,7 +98,7 @@ def imdb(update,context):
     			'</code>\n<b>Stars : </b><code>'+stars+
     			'</code>\n<b>IMDB Url : </b>'+mov_link+
     			'\n<b>Story Line : </b>'+story_line,
-    			link_preview = True , parse_mode = 'HTML'
+    			parse_mode='HTML'
     			)
     send_message(update.effective_message,a)
  except IndexError:
