@@ -35,7 +35,7 @@ def purge(update,context):
                     context.bot.deleteMessage(chat.id, m_id)
                 except BadRequest as err:
                     if err.message == "Message can't be deleted":
-                        send_message(chat.id, "Cannot delete all messages. The messages may be too old, I might "
+                        send_message(update.effective_message, "Cannot delete all messages. The messages may be too old, I might "
                                                   "not have delete rights, or this might not be a supergroup.")
 
                     elif err.message != "Message to delete not found":
@@ -45,13 +45,13 @@ def purge(update,context):
                 msg.delete()
             except BadRequest as err:
                 if err.message == "Message can't be deleted":
-                    send_message(chat.id, "Cannot delete all messages. The messages may be too old, I might "
+                    send_message(update.effective_message, "Cannot delete all messages. The messages may be too old, I might "
                                               "not have delete rights, or this might not be a supergroup.")
 
                 elif err.message != "Message to delete not found":
                     LOGGER.exception("Error while purging chat messages.")
 
-            send_message(chat.id, "Purge complete.")
+            send_message(update.effective_message, "Purge complete.")
             return "<b>{}:</b>" \
                    "\n#PURGE" \
                    "\n<b>• Admin:</b> {}" \
