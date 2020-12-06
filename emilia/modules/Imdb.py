@@ -22,6 +22,8 @@ langi = "en"
 @user_admin
 def imdb(update,context):
     args = update.effective_message.text.split(None, 1)
+ try:    
+    
     movie_name = args[1]
  
     
@@ -102,6 +104,7 @@ def imdb(update,context):
     			)
     send_message(update.effective_message,a,parse_mode=telegram.ParseMode.HTML)
  except IndexError:
+    
      send_message(update.effective_message,"Please enter a valid movie name !")
         
         
