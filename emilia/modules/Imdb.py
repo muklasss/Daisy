@@ -85,7 +85,9 @@ def imdb(update,context):
     		mov_rating = r.strong['title']
     else:
     	mov_rating = 'Not available'
-    send_message(update.effective_message,('<a href='+poster+'>&#8203;</a>'
+        
+    
+    a=('<a href='+poster+'>&#8203;</a>'+
     			'<b>Title : </b><code>'+mov_title+
     			'</code>\n<code>'+mov_details+
     			'</code>\n<b>Rating : </b><code>'+mov_rating+
@@ -97,7 +99,8 @@ def imdb(update,context):
     			'</code>\n<b>IMDB Url : </b>'+mov_link+
     			'\n<b>Story Line : </b>'+story_line,
     			link_preview = True , parse_mode = 'HTML'
-    			))
+    			)
+    send_message(update.effective_message,a)
  except IndexError:
      send_message(update.effective_message,"Please enter a valid movie name !")
         
