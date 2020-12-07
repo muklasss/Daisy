@@ -10,6 +10,7 @@ from emilia.events import register
 from emilia import LOGGER, client
 from telethon import types
 from telethon.tl import functions
+from telegram.ext import CommandHandler, MessageHandler, DispatcherHandlerStop, run_async
 
 from emilia.modules.helper_funcs.chat_status import user_admin
 from emilia.modules.helper_funcs.alternate import send_message
