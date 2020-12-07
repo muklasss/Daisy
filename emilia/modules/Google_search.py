@@ -24,7 +24,7 @@ from emilia.modules.helper_funcs.alternate import send_message
 
 @run_async
 @user_admin
-def google(update,context):
+def google(update,,**args.**kwargs):
 
     # SHOW_DESCRIPTION = False
     args = context.args
