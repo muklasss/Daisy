@@ -5,33 +5,19 @@ from telethon import *
 from emilia import client
 from emilia.events import register
 
+from emilia import client, dispatcher
+from emilia.events import register
+from telegram.ext import CommandHandler , run_async
+from emilia.modules.helper_funcs.chat_status import user_admin
+from emilia.modules.helper_funcs.alternate import send_message
 
-async def is_register_admin(chat, user):
-    if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
-
-        return isinstance(
-            (await client(functions.channels.GetParticipantRequest(chat, user))).participant,
-            (types.ChannelParticipantAdmin, types.ChannelParticipantCreator)
-        )
-    elif isinstance(chat, types.InputPeerChat):
-
-        ui = await client.get_peer_id(user)
-        ps = (await client(functions.messages.GetFullChatRequest(chat.chat_id))) \
-            .full_chat.participants.participants
-        return isinstance(
-            next((p for p in ps if p.user_id == ui), None),
-            (types.ChatParticipantAdmin, types.ChatParticipantCreator)
-        )
-    else:
-        return None
+@run_async
+@user_admin
 
 
-@register(pattern="^/app (.*)")
-async def apk(e):
-    if e.is_group:
-     if not (await is_register_admin(e.input_chat, e.message.sender_id)):
-          await e.reply("🙄 You are not admin here.. But you can use this command in my pm 😜🙈")
-          return
+
+def apk(update,context):
+    
     try:
         app_name = e.pattern_match.group(1)
         remove_space = app_name.split(' ')
@@ -52,8 +38,8 @@ async def apk(e):
         app_details += "\n<code>Rating :</code> "+app_rating.replace("Rated ", "⭐ ").replace(" out of ", "/").replace(" stars", "", 1).replace(" stars", "⭐ ").replace("five", "5")
         app_details += "\n<code>Features :</code> <a href='"+app_link+"'>View in Play Store</a>"
         app_details += "\n\n 🍀 @MissDaisyRobot 🍀"
-        await e.reply(app_details, link_preview = True, parse_mode = 'HTML')
+        asend_message(update.effective_message,app_details, link_preview = True, parse_mode = 'HTML')
     except IndexError:
-        await e.reply("No result found in search. Please enter **Valid app name**")
+        send_message(update.effective_message,"No result found in search. Please enter **Valid app name**")
     except Exception as err:
-        await e.reply("Exception Occured:- "+str(err))
+        send_message(update.effective_message,"Exception Occured:- "+str(err))
