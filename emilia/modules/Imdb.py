@@ -7,7 +7,8 @@ import subprocess
 import time
 from datetime import datetime
 from emilia.events import register
-from emilia import LOGGER, client
+
+from emilia import LOGGER, client, dispatcher
 from telethon import types
 from telethon.tl import functions
 from telegram.ext import CommandHandler, MessageHandler, DispatcherHandlerStop, run_async
