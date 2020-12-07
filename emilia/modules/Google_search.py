@@ -27,8 +27,8 @@ from emilia.modules.helper_funcs.alternate import send_message
 def google(update,context):
 
     # SHOW_DESCRIPTION = False
-    args = context.args
-    information = args
+    args = update.effective_message.reply_to_message
+    information = str(args)
     input_str = information # + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (mkv|mp4|avi|epub|pdf|mp3)"
     input_url = "https://bots.shrimadhavuk.me/search/?q={}".format(input_str)
     headers = {"USER-AGENT": "UniBorg"}
