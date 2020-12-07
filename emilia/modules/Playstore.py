@@ -19,7 +19,8 @@ from emilia.modules.helper_funcs.alternate import send_message
 def apk(update,context):
     
     try:
-        app_name = e.pattern_match.group(1)
+        args=context.args
+        app_name = args[1]
         remove_space = app_name.split(' ')
         final_name = '+'.join(remove_space)
         page = requests.get("https://play.google.com/store/search?q="+final_name+"&c=apps")
@@ -43,3 +44,13 @@ def apk(update,context):
         send_message(update.effective_message,"No result found in search. Please enter **Valid app name**")
     except Exception as err:
         send_message(update.effective_message,"Exception Occured:- "+str(err))
+        
+APK_HANDLER = CommandHandler('app', apk)
+
+dispatcher.add_handler(APK_HANDLER)
+
+
+__command_list__ = ["app"]
+__handlers__ = [
+    APK_HANDLER
+]
