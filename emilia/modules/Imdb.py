@@ -21,9 +21,9 @@ langi = "en"
 @run_async
 @user_admin
 def imdb(update,context):
-    args = update.effective_message.text.split(None, 1)
- try:    
     
+ try:    
+    args = update.effective_message.text.split(None, 1)
     movie_name = args[1]
  
     
