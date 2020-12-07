@@ -24,11 +24,11 @@ from emilia.modules.helper_funcs.alternate import send_message
 
 @run_async
 @user_admin
-def google(update,**args,**kwargs):
+def google(update,context):
 
     # SHOW_DESCRIPTION = False
     args = context.args
-    information = str(args)
+    information = args
     input_str = information # + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (mkv|mp4|avi|epub|pdf|mp3)"
     input_url = "https://bots.shrimadhavuk.me/search/?q={}".format(input_str)
     headers = {"USER-AGENT": "UniBorg"}
