@@ -104,7 +104,7 @@ def imdb(update,context):
     			'\n<b>Story Line : </b>'+story_line,
     			
     			)
-    send_message(update.effective_message,a,parse_mode=telegram.ParseMode.HTML)
+    send_message(update.effective_message,a,parse_mode='HTML')
  except IndexError:
     
      send_message(update.effective_message,"Please enter a valid movie name !")
