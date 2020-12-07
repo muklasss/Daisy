@@ -25,8 +25,8 @@ langi = "en"
 def imdb(update,context):
     
  try:    
-    args = update.effective_message.text.split(None, 1)
-    movie_name = args[1]
+    args = context.args
+    movie_name = str(args)
  
     
     remove_space = movie_name.split(' ')
