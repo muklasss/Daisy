@@ -85,6 +85,7 @@ if ENV:
 	MAPS_API = os.environ.get('MAPS_API', None)
 	TEMPORARY_DATA = os.environ.get('TEMPORARY_DATA', None)
 	SPAMWATCH_TOKEN = os.environ.get('SPAMWATCH_TOKEN', None)
+	WALL_API = os.environ.get("WALL_API", None)
 
 else:
 	from emilia.config import Development as Config
@@ -145,6 +146,7 @@ else:
 	API_ACCUWEATHER = Config.API_ACCUWEATHER
 	MAPS_API = Config.MAPS_API
 	TEMPORARY_DATA = Config.TEMPORARY_DATA
+	WALL_API = config.WALL_API
 	try:
 		SPAMWATCH_TOKEN = Config.SPAMWATCH_TOKEN
 	except:
