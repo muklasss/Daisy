@@ -23,7 +23,8 @@ opener.addheaders = [('User-agent', useragent)]
 
 
 @run_async
-def reverse(update, context ,bot):
+def reverse(update, context):
+    global bot
     args=context.args
     args=str(args)
     if os.path.isfile("okgoogle.png"):
