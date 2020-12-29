@@ -13,7 +13,7 @@ from telegram import ParseMode
 from telegram.ext import CommandHandler, run_async, Filters
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
 
-from emilia import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS, BAN_STICKER, spamcheck, MAPS_API
+from emilia import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS, BAN_STICKER, spamcheck, MAPS_API,WALL_API
 from emilia.__main__ import STATS, USER_INFO
 from emilia.modules.disable import DisableAbleCommandHandler
 from emilia.modules.helper_funcs.extraction import extract_user
@@ -413,7 +413,105 @@ def echo(update, context):
             context.bot.send_message(chat_id, tl(update.effective_message, "Teks markdown salah!\nJika anda tidak tahu apa itu markdown, silahkan ketik `/markdownhelp` pada PM."), parse_mode="markdown")
             return
 
+@run_async
+@spamcheck
+def covid(update, context):
+    message = update.effective_message
+    country = str(message.text[len(f"/covid ") :])
+    data = Covid(source="worldometers")
 
+    if country == "":
+        country = "world"
+        link = "https://www.worldometers.info/coronavirus"
+    elif country.lower() in ["south korea", "korea"]:
+        country = "s. korea"
+        link = "https://www.worldometers.info/coronavirus/country/south-korea"
+    else:
+        link = f"https://www.worldometers.info/coronavirus/country/{country}"
+    try:
+        c_case = data.get_status_by_country_name(country)
+    except Exception:
+        message.reply_text(
+            "An error have occured! Are you sure the country name is correct?"
+        )
+        return
+    total_tests = c_case["total_tests"]
+    if total_tests == 0:
+        total_tests = "N/A"
+    else:
+        total_tests = format_integer(c_case["total_tests"])
+
+    date = datetime.datetime.now().strftime("%d %b %Y")
+
+    output = (
+        f"<b>Corona Virus Statistics in {c_case['country']}</b>\n"
+        f"<b>on {date}</b>\n\n"
+        f"<b>Confirmed Cases :</b> <code>{format_integer(c_case['confirmed'])}</code>\n"
+        f"<b>Active Cases :</b> <code>{format_integer(c_case['active'])}</code>\n"
+        f"<b>Deaths :</b> <code>{format_integer(c_case['deaths'])}</code>\n"
+        f"<b>Recovered :</b> <code>{format_integer(c_case['recovered'])}</code>\n\n"
+        f"<b>New Cases :</b> <code>{format_integer(c_case['new_cases'])}</code>\n"
+        f"<b>New Deaths :</b> <code>{format_integer(c_case['new_deaths'])}</code>\n"
+        f"<b>Critical Cases :</b> <code>{format_integer(c_case['critical'])}</code>\n"
+        f"<b>Total Tests :</b> <code>{total_tests}</code>\n\n"
+        f"Data provided by <a href='{link}'>Worldometer</a>"
+    )
+
+    message.reply_text(
+        output, parse_mode=ParseMode.HTML, disable_web_page_preview=True
+    )
+        
+@run_async
+@spamcheck        
+def wall(update, context):
+    chat_id = update.effective_chat.id
+    msg = update.effective_message
+    msg_id = update.effective_message.message_id
+    args = context.args
+    query = " ".join(args)
+    if not query:
+        msg.reply_text("Please enter a query!")
+        return
+    else:
+        caption = query
+        term = query.replace(" ", "%20")
+        json_rep = r.get(
+            f"https://wall.alphacoders.com/api2.0/get.php?auth={WALL_API}&method=search&term={term}"
+        ).json()
+        if not json_rep.get("success"):
+            msg.reply_text("An error occurred!")
+
+        else:
+            wallpapers = json_rep.get("wallpapers")
+            if not wallpapers:
+                msg.reply_text("No results found! Refine your search.")
+                return
+            else:
+                index = randint(0, len(wallpapers) - 1)  # Choose random index
+                wallpaper = wallpapers[index]
+                wallpaper = wallpaper.get("url_image")
+                wallpaper = wallpaper.replace("\\", "")
+                context.bot.send_photo(
+                    chat_id,
+                    photo=wallpaper,
+                    caption="Preview",
+                    reply_to_message_id=msg_id,
+                    timeout=60,
+                )
+                context.bot.send_document(
+                    chat_id,
+                    document=wallpaper,
+                    filename="wallpaper",
+                    caption=caption,
+                    reply_to_message_id=msg_id,
+                    timeout=60,
+                )
+
+        
+        
+        
+        
+        
 @run_async
 @spamcheck
 def markdown_help(update, context):
@@ -442,10 +540,12 @@ TIME_HANDLER = DisableAbleCommandHandler("time", get_time_alt, pass_args=True)
 RUNS_HANDLER = DisableAbleCommandHandler(["runs", "lari"], runs)
 SLAP_HANDLER = DisableAbleCommandHandler("slap", slap, pass_args=True)
 INFO_HANDLER = DisableAbleCommandHandler("info", info, pass_args=True)
-
+COVID_HANDLER = CommandHandler("covid", covid)
 ECHO_HANDLER = CommandHandler("echo", echo, filters=Filters.user(OWNER_ID))
 MD_HELP_HANDLER = CommandHandler("markdownhelp", markdown_help, filters=Filters.private)
-
+WALLPAPER_HANDLER = DisableAbleCommandHandler(
+    "wall", wall, pass_args=True, run_async=True
+)
 STATS_HANDLER = CommandHandler("stats", stats, filters=CustomFilters.sudo_filter)
 
 dispatcher.add_handler(ID_HANDLER)
@@ -457,3 +557,5 @@ dispatcher.add_handler(INFO_HANDLER)
 dispatcher.add_handler(ECHO_HANDLER)
 dispatcher.add_handler(MD_HELP_HANDLER)
 dispatcher.add_handler(STATS_HANDLER)
+dispatcher.add_handler(COVID_HANDLER)
+dispatcher.add_handler(WALLPAPER_HANDLER)
