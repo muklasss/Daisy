@@ -1,5 +1,5 @@
 
-from Elizabeth import client
+from emilia import client
 import os
 
 from gtts import gTTS
