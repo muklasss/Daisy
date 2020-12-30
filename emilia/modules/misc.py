@@ -544,7 +544,7 @@ COVID_HANDLER = CommandHandler("covid", covid)
 ECHO_HANDLER = CommandHandler("echo", echo, filters=Filters.user(OWNER_ID))
 MD_HELP_HANDLER = CommandHandler("markdownhelp", markdown_help, filters=Filters.private)
 WALLPAPER_HANDLER = DisableAbleCommandHandler(
-    "wall", wall, pass_args=True, run_async=True
+    "wall", wall, pass_args=True
 )
 STATS_HANDLER = CommandHandler("stats", stats, filters=CustomFilters.sudo_filter)
 
