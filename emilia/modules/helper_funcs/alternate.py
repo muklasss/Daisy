@@ -59,6 +59,20 @@ def send_message_raw(chat_id, text, *args, **kwargs):
 		else:
 			LOGGER.exception("ERROR: {}".format(err))
 
+def typing_action(func):
+    """Sends typing action while processing func command."""
+
+    @wraps(func)
+    def command_func(update, context, *args, **kwargs):
+        context.bot.send_chat_action(
+            chat_id=update.effective_chat.id, action=ChatAction.TYPING
+        )
+        return func(update, context, *args, **kwargs)
+
+    return command_func
+			
+			
+			
 def leave_chat(message):
 	try:
 		dispatcher.bot.leaveChat(message.chat.id)
