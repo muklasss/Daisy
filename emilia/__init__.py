@@ -4,7 +4,7 @@ import sys
 import time
 from datetime import datetime
 from functools import wraps
-
+from telethon import TelegramClient
 import telegram.ext as tg
 
 # enable logging
