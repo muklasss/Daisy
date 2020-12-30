@@ -88,7 +88,10 @@ if ENV:
 	TEMPORARY_DATA = os.environ.get('TEMPORARY_DATA', None)
 	SPAMWATCH_TOKEN = os.environ.get('SPAMWATCH_TOKEN', None)
 	WALL_API = os.environ.get("WALL_API", None)
-
+	TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
+    	CASH_API_KEY = os.environ.get("CASH_API_KEY", None)
+    	TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
+	LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", None)
 else:
 	from emilia.config import Development as Config
 	TOKEN = Config.API_KEY
@@ -170,7 +173,7 @@ WHITELIST_USERS = list(WHITELIST_USERS)
 SUPPORT_USERS = list(SUPPORT_USERS)
 SPAMMERS = list(SPAMMERS)
 GROUP_BLACKLIST = list(GROUP_BLACKLIST)
-
+DEV_USERS = SUDO_USERS
 # Load at end to ensure all prev variables have been set
 from emilia.modules.helper_funcs.handlers import CustomCommandHandler
 
