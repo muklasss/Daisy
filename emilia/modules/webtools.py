@@ -19,35 +19,6 @@ from emilia.modules.helper_funcs.alternate import typing_action
 from emilia.modules.helper_funcs.filters import CustomFilters
 
 
-@run_async
-@typing_action
-def leavechat(update, context):
-    args = context.args
-    msg = update.effective_message
-    if args:
-        chat_id = int(args[0])
-
-    else:
-        msg.reply_text("Bro.. Give Me ChatId And boom!!")
-    try:
-        titlechat = context.bot.get_chat(chat_id).title
-        context.bot.sendMessage(
-            chat_id,
-            "I'm here trying to survive, but this world is too cruel, goodbye everyone 😌",
-        )
-        context.bot.leaveChat(chat_id)
-        msg.reply_text("I have left the group {}".format(titlechat))
-
-    except BadRequest as excp:
-        if excp.message == "bot is not a member of the supergroup chat":
-            msg = update.effective_message.reply_text(
-                "I'Am not Joined The Group, Maybe You set wrong id or I Already Kicked out"
-            )
-
-        else:
-            return
-
-
 
 @typing_action
 def ping(update, context):
@@ -192,12 +163,7 @@ SPEED_HANDLER = CommandHandler(
 SYS_STATUS_HANDLER = CommandHandler(
     "sysinfo", system_status, filters=CustomFilters.dev_filter
 )
-LEAVECHAT_HANDLER = CommandHandler(
-    ["leavechat", "leavegroup", "leave"],
-    leavechat,
-    pass_args=True,
-    filters=CustomFilters.dev_filter
-)
+
 GITPULL_HANDLER = CommandHandler(
     "gitpull", gitpull, filters=CustomFilters.dev_filter
 )
@@ -209,6 +175,5 @@ dispatcher.add_handler(IP_HANDLER)
 dispatcher.add_handler(SPEED_HANDLER)
 dispatcher.add_handler(PING_HANDLER)
 dispatcher.add_handler(SYS_STATUS_HANDLER)
-dispatcher.add_handler(LEAVECHAT_HANDLER)
 dispatcher.add_handler(GITPULL_HANDLER)
 dispatcher.add_handler(RESTART_HANDLER)
