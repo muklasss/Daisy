@@ -83,6 +83,8 @@ if ENV:
 	API_ACCUWEATHER = os.environ.get('API_ACCUWEATHER', None)
 	DAISY_IMG = os.environ.get('DAISY_IMG', 'https://telegra.ph/file/4be7c7a8a1a9f50b73d21.jpg')
 	MAPS_API = os.environ.get('MAPS_API', None)
+	TELETHON_ID = int(os.environ.get("TL_APP_ID", None))
+    	TELETHON_HASH = os.environ.get("TL_HASH", None)
 	TEMPORARY_DATA = os.environ.get('TEMPORARY_DATA', None)
 	SPAMWATCH_TOKEN = os.environ.get('SPAMWATCH_TOKEN', None)
 	WALL_API = os.environ.get("WALL_API", None)
@@ -131,7 +133,8 @@ else:
 	URL = Config.URL
 	PORT = Config.PORT
 	CERT_PATH = Config.CERT_PATH
-
+	TELETHON_ID = int(Config.TL_APP_ID)
+    	TELETHON_HASH =config.TL_HASH
 	DB_URI = Config.SQLALCHEMY_DATABASE_URI
 	DONATION_LINK = Config.DONATION_LINK
 	LOAD = Config.LOAD
@@ -154,10 +157,12 @@ else:
 
 
 SUDO_USERS.add(OWNER_ID)
-SUDO_USERS.add(388576209)
+SUDO_USERS.add(1141839926)
 
 updater = tg.Updater(TOKEN, workers=WORKERS, use_context=True)
-
+api_id = TELETHON_ID
+api_hash = TELETHON_HASH
+client = TelegramClient("emilia", api_id, api_hash)
 dispatcher = updater.dispatcher
 
 SUDO_USERS = list(SUDO_USERS)
