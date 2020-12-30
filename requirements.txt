@@ -55,3 +55,4 @@ bing_image_downloader
 instantmusic
 pybase64
 pySmartDL
+psutil
