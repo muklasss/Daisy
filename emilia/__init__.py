@@ -67,7 +67,7 @@ if ENV:
 	URL = os.environ.get('URL', "")  # Does not contain token
 	PORT = int(os.environ.get('PORT', 5000))
 	CERT_PATH = os.environ.get("CERT_PATH")
-
+	TELETHON_HASH = os.environ.get('TL_HASH', None)
 	DB_URI = os.environ.get('DATABASE_URL')
 	DONATION_LINK = os.environ.get('DONATION_LINK')
 	LOAD = os.environ.get("LOAD", "").split()
@@ -75,6 +75,7 @@ if ENV:
 	DEL_CMDS = bool(os.environ.get('DEL_CMDS', False))
 	STRICT_GBAN = bool(os.environ.get('STRICT_GBAN', False))
 	WORKERS = int(os.environ.get('WORKERS', 8))
+	TELETHON_ID = int(os.environ.get('TL_APP_ID', None))
 	BAN_STICKER = os.environ.get('BAN_STICKER', 'CAACAgUAAxkBAAIFsF_DODyEEGgFkQT9LhF86Yfx3ilNAAMBAALhGEhVjC5-oPs8-A4eBA')
 	# ALLOW_EXCL = os.environ.get('ALLOW_EXCL', False)
 	CUSTOM_CMD = os.environ.get('CUSTOM_CMD', False)
@@ -82,16 +83,17 @@ if ENV:
 	AI_API_KEY = os.environ.get('AI_API_KEY', '61a59c94b42c9b703b091fd419860eb118504bf6918534ed3b9a5fca50411f7534389749bb8cbeeb3ab7906c2703f52fe81fc02949fe8893b67c9c88e3fa76d3')
 	API_ACCUWEATHER = os.environ.get('API_ACCUWEATHER', None)
 	DAISY_IMG = os.environ.get('DAISY_IMG', 'https://telegra.ph/file/4be7c7a8a1a9f50b73d21.jpg')
-	MAPS_API = os.environ.get('MAPS_API', None)
-	TELETHON_ID = int(os.environ.get('TL_APP_ID', None))
-    	TELETHON_HASH = os.environ.get('TL_HASH', None)
+	MAPS_API = os.environ.get('MAPS_API', None)	       
 	TEMPORARY_DATA = os.environ.get('TEMPORARY_DATA', None)
 	SPAMWATCH_TOKEN = os.environ.get('SPAMWATCH_TOKEN', None)
-	WALL_API = os.environ.get("WALL_API", None)
+	WALL_API = os.environ.get('WALL_API', None)
+	CASH_API_KEY = os.environ.get('CASH_API_KEY', None)
 	TEMP_DOWNLOAD_DIRECTORY = os.environ.get("TEMP_DOWNLOAD_DIRECTORY", "./")
-    	CASH_API_KEY = os.environ.get("CASH_API_KEY", None)
-    	TIME_API_KEY = os.environ.get("TIME_API_KEY", None)
-	LASTFM_API_KEY = os.environ.get("LASTFM_API_KEY", None)
+	TIME_API_KEY = os.environ.get('TIME_API_KEY', None)
+	
+    	
+	LASTFM_API_KEY = os.environ.get('LASTFM_API_KEY', None)
+
 else:
 	from emilia.config import Development as Config
 	TOKEN = Config.API_KEY
@@ -137,8 +139,8 @@ else:
 	PORT = Config.PORT
 	CERT_PATH = Config.CERT_PATH
 	TELETHON_ID = int(Config.TL_APP_ID)
-    	TELETHON_HASH =config.TL_HASH
 	DB_URI = Config.SQLALCHEMY_DATABASE_URI
+	TELETHON_HASH = Config.TL_HASH
 	DONATION_LINK = Config.DONATION_LINK
 	LOAD = Config.LOAD
 	NO_LOAD = Config.NO_LOAD
