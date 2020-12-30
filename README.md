@@ -1,6 +1,7 @@
 # The Daisy Robot
-All Errors are now fixed and the bot is working fine..
-
+# ON A MEGA UPDATE.. SOURCE WILL READY SOON..
+<details>
+     All Errors are now fixed and the bot is working fine..
 ![Daisy](https://telegra.ph/file/d0c0156487ee42d9685e9.jpg)
 
 
@@ -238,3 +239,4 @@ Thanks to this user:
 - [Paul Larsen](https://github.com/PaulSonOfLars) - marie creator, inspiration to do many things
 - [Yan Gorobtsov](https://github.com/MrYacha) - for welcome security base and connection base and maybe others
 - [アキト ミズキト](https://github.com/peaktogoo) - for reworked federation module
+</details>
