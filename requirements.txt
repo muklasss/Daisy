@@ -56,3 +56,4 @@ instantmusic
 pybase64
 pySmartDL
 psutil
+spamwatch
