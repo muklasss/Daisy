@@ -1,6 +1,5 @@
 # The Daisy Robot
-# ON A MEGA UPDATE.. SOURCE WILL READY SOON..
-<details>
+
      All Errors are now fixed and the bot is working fine..
 ![Daisy](https://telegra.ph/file/d0c0156487ee42d9685e9.jpg)
 
@@ -17,6 +16,11 @@ A Modular Group management Bot on Sinhala
 ```
 1) Create an account at https://heroku.com
 
+```
+```
+2) Get APP_ID and API_HASH from my.telegram.org
+```
+```
 ```
 ```
 2) Create a new bot from @botfather and copy its api token
