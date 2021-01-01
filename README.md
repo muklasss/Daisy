@@ -3,8 +3,10 @@
      Source Code is under an update.. (But code is working Perfectly)
      Newly added features may be not working..  
      It is a massive update, So it takes time.
-<img src="https://telegra.ph/file/d0c0156487ee42d9685e9.jpg" width =400 Height=400 align = centre>Daisy</img>
-
+     
+<p align = center>
+<img src="https://telegra.ph/file/d0c0156487ee42d9685e9.jpg" width =400 Height=400 >Daisy</img>
+</p>
 ## Available on Telegram as [@MissDaisyRobot](t.me/missdaisyrobot)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/InukaAsith/Daisy.git)
