@@ -9,7 +9,9 @@ from emilia import TEMP_DOWNLOAD_DIRECTORY
 from emilia import LOGGER, client
 from telethon import types
 from telethon.tl import functions
+from emilia import dispatcher
 
+from emilia.modules.disable import DisableAbleCommandHandler
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
 
@@ -31,7 +33,7 @@ async def is_register_admin(chat, user):
         
 
 @register(pattern="^/zip")
-async def _(event):
+async def _zip(event):
     if event.fwd_from:
         return
 
@@ -106,7 +108,7 @@ async def is_register_admin(chat, user):
 
 
 @register(pattern="^/unzip")
-async def _(event):
+async def _unzip(event):
     if event.fwd_from:
         return
 
@@ -204,3 +206,12 @@ __help__ = """
 """
 
 __mod_name__ = "ZIPPER"
+ZIP_HANDLER = DisableAbleCommandHandler("zip", _zip, pass_args=True, admin_ok=True)
+UNZIP_HANDLER = DisableAbleCommandHandler("unzip", _unzip, pass_args=True, admin_ok=True)
+dispatcher.add_handler(ZIP_HANDLER)
+dispatcher.add_handler(UNZIP_HANDLER)
+
+__command_list__ = ["zip"]
+__handlers__ = [
+    ZIP_HANDLER , UNZIP_HANDLER
+]
