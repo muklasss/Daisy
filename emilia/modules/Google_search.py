@@ -13,7 +13,7 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 import html2text
-
+from emilia.modules.disable import DisableAbleCommandHandler
 
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
