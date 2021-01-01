@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 from emilia.events import register
-from emilia import client
+from emilia import client, dispatcher
 import sys
 import shutil
 from re import findall
@@ -13,38 +13,23 @@ from telethon.tl import functions
 from telethon.tl import types
 from telethon.tl.types import *
 import html2text
-from emilia.modules.disable import DisableAbleCommandHandler
-from emilia import dispatcher
-async def is_register_admin(chat, user):
-    if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
 
-        return isinstance(
-            (await client(functions.channels.GetParticipantRequest(chat, user))).participant,
-            (types.ChannelParticipantAdmin, types.ChannelParticipantCreator)
-        )
-    elif isinstance(chat, types.InputPeerChat):
-
-        ui = await client.get_peer_id(user)
-        ps = (await client(functions.messages.GetFullChatRequest(chat.chat_id))) \
-            .full_chat.participants.participants
-        return isinstance(
-            next((p for p in ps if p.user_id == ui), None),
-            (types.ChatParticipantAdmin, types.ChatParticipantCreator)
-        )
-    else:
-        return None
+from telegram.ext import CommandHandler , run_async
+from emilia.modules.helper_funcs.chat_status import user_admin
+from emilia.modules.helper_funcs.alternate import send_message
 
 
-@register(pattern="^/google (.*)") 
-async def _google(event):
-    if event.fwd_from:
-        return
-    if event.is_group:
-     if not (await is_register_admin(event.input_chat, event.message.sender_id)):
-       await event.reply("😜 Hai.. You are not admin..🤭 You can't use this command.. But you can use in my pm🙈")
-       return
+
+
+
+@run_async
+@user_admin
+def google(update,context):
+
     # SHOW_DESCRIPTION = False
-    input_str = event.pattern_match.group(2) # + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (mkv|mp4|avi|epub|pdf|mp3)"
+    args = context.args
+    information = str(args)
+    input_str = information # + " -inurl:(htm|html|php|pls|txt) intitle:index.of \"last modified\" (mkv|mp4|avi|epub|pdf|mp3)"
     input_url = "https://bots.shrimadhavuk.me/search/?q={}".format(input_str)
     headers = {"USER-AGENT": "UniBorg"}
     response = requests.get(input_url, headers=headers).json()
@@ -55,7 +40,7 @@ async def _google(event):
         description = result.get("description")
         last = html2text.html2text(description)
         output_str += "[{}]({})\n{}\n".format(text, url, last)       
-    await event.reply("{}".format(output_str), link_preview=False, parse_mode='Markdown')
+    send_message(update.effective_message,"{}".format(output_str), link_preview=False, parse_mode='Markdown')
 
 
 __help__ = """
@@ -67,7 +52,7 @@ __help__ = """
 
 __mod_name__ = "GOOGLE"
 
-GOOGLE_HANDLER = DisableAbleCommandHandler("google", _google, pass_args=True, admin_ok=True)
+GOOGLE_HANDLER = CommandHandler('google', google)
 
 dispatcher.add_handler(GOOGLE_HANDLER)
 
