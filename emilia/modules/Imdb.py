@@ -41,7 +41,8 @@ async def imdb(e):
      await event.reply("😜 Hai.. You are not admin..🤭 You can't use this command.. But you can use in my pm🙈")
      return
  try:
-    movie_name = e.pattern_match.group(1)
+    args = update.effective_message.text.split(None, 1)
+    movie_name = args[1]
     remove_space = movie_name.split(' ')
     final_name = '+'.join(remove_space)
     page = requests.get("https://www.imdb.com/find?ref_=nv_sr_fn&q="+final_name+"&s=all")
