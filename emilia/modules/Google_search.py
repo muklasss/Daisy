@@ -36,7 +36,7 @@ async def is_register_admin(chat, user):
 
 
 @register(pattern="^/google (.*)") 
-async def _(event):
+async def _google(event):
     if event.fwd_from:
         return
     if event.is_group:
@@ -66,3 +66,13 @@ __help__ = """
 """
 
 __mod_name__ = "GOOGLE"
+
+GOOGLE_HANDLER = DisableAbleCommandHandler("google", _google, pass_args=True, admin_ok=True)
+
+dispatcher.add_handler(GOOGLE_HANDLER)
+
+
+__command_list__ = ["google"]
+__handlers__ = [
+    GOOGLE_HANDLER
+]
