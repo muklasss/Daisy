@@ -1,6 +1,6 @@
 # The Daisy Robot
 
-     All Errors are now fixed and the bot is working fine..
+     Source Code is under an update.. Newly added features may be not working..  It takes some time for the updates
 ![Daisy](https://telegra.ph/file/d0c0156487ee42d9685e9.jpg)
 
 
