@@ -1,6 +1,6 @@
 # The Daisy Robot
 
-A Modular Group management Bot on Sinhala
+### A Modular Group management Bot on Sinhala
 
 
      Source Code is under an update.. (But code is working Perfectly)
@@ -52,20 +52,24 @@ A Modular Group management Bot on Sinhala
 ```
 7) Enter url of the app ass https://#Appneme.herokuapp.com
 
+8) Enter TL_APP_ID (Get from my.telegram.org 's API Development tools)
+
+9) Enter TL_API_HASH (Get from my.telegram.org 's API Development tools)
+
 ```
 ![url](https://telegra.ph/file/5b159343abc4d3a369ac0.png)
 ```
-8)Then Deploy
+10)Then Deploy
 
-9) After Deploy over click manage app
+11) After Deploy over click manage app
 ```
 ```
-10) Goto Resources and Turn Worker Emilia to on (by clicking edit)
+12) Goto Resources and Turn Worker Emilia to on (by clicking edit)
 
 ```
 ![worker](https://telegra.ph/file/eed4d6b0a2177bf7cdf76.png)
 ```
-11) Goto Logs and check for the errors
+13) Goto Logs and check for the errors
 ```
 ![logs](https://telegra.ph/file/06409b6ce522d005a3ad4.png)
 ```
@@ -244,10 +248,9 @@ through the `/stats` command, which is only available to the bot owner.
 </details>
 
 ## Special Credits
-
+-[Kaviya-Admin](https://github.com/kaviya-admin) - A Co-Developer of Project
 Thanks to this user:
 - [Arya Hikari](https://github.com/Aryahikari) - The Emilia Bot Owner
 - [Paul Larsen](https://github.com/PaulSonOfLars) - marie creator, inspiration to do many things
-- [Yan Gorobtsov](https://github.com/MrYacha) - for welcome security base and connection base and maybe others
-- [アキト ミズキト](https://github.com/peaktogoo) - for reworked federation module
+
 </details>
