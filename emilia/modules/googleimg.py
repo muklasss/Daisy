@@ -11,7 +11,9 @@ from telethon.tl.types import *
 from emilia import client
 from emilia.events import register
 
+from emilia import dispatcher
 
+from emilia.modules.disable import DisableAbleCommandHandler
 async def is_register_admin(chat, user):
     if isinstance(chat, (types.InputPeerChannel, types.InputChannel)):
 
@@ -51,3 +53,14 @@ async def img_sampler(event):
      await event.client.send_file(event.chat_id, files_grabbed, reply_to=event.id)
      os.remove(files_grabbed)
      os.chdir('./')
+
+    
+IMG_HANDLER = DisableAbleCommandHandler("img", img_sampler, pass_args=True, admin_ok=True)
+
+dispatcher.add_handler(IMG_HANDLER)
+
+
+__command_list__ = ["img"]
+__handlers__ = [
+    IMG_HANDLER
+]
