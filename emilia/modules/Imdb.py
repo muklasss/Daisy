@@ -10,7 +10,9 @@ from emilia.events import register
 from emilia import LOGGER, client
 from telethon import types
 from telethon.tl import functions
+from emilia import dispatcher
 
+from emilia.modules.disable import DisableAbleCommandHandler
 langi = "en"
 
 async def is_register_admin(chat, user):
@@ -115,3 +117,15 @@ async def imdb(e):
     			)
  except IndexError:
      await e.reply("Please enter a valid movie name !")
+
+
+
+IMDB_HANDLER = DisableAbleCommandHandler("imdb", reverse, pass_args=True, admin_ok=True)
+
+dispatcher.add_handler(IMDB_HANDLER)
+
+
+__command_list__ = ["imdb"]
+__handlers__ = [
+    IMDB_HANDLER
+]
