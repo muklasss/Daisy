@@ -120,7 +120,7 @@ async def imdb(e):
 
 
 
-IMDB_HANDLER = DisableAbleCommandHandler("imdb", reverse, pass_args=True, admin_ok=True)
+IMDB_HANDLER = DisableAbleCommandHandler("imdb", imdb, pass_args=True, admin_ok=True)
 
 dispatcher.add_handler(IMDB_HANDLER)
 
