@@ -1,17 +1,21 @@
 # The Daisy Robot
 
+A Modular Group management Bot on Sinhala
+
+
      Source Code is under an update.. (But code is working Perfectly)
      Newly added features may be not working..  
      It is a massive update, So it takes time.
      
 <p align = center>
-<img src="https://telegra.ph/file/d0c0156487ee42d9685e9.jpg" width =400 Height=400 >Daisy</img>
+<img src="https://telegra.ph/file/d0c0156487ee42d9685e9.jpg" width =400 Height=400 ></img>
 </p>
+
 ## Available on Telegram as [@MissDaisyRobot](t.me/missdaisyrobot)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/InukaAsith/Daisy.git)
 
-A Modular Group management Bot on Sinhala
+
 
 
 ## THE EASY WAY to Deploy 
@@ -24,45 +28,44 @@ A Modular Group management Bot on Sinhala
 ```
 2) Get APP_ID and API_HASH from my.telegram.org
 ```
+
 ```
-```
-```
-2) Create a new bot from @botfather and copy its api token
+3) Create a new bot from @botfather and copy its api token
 
 ```
 ![api](https://telegra.ph/file/9770210e1205bce0e06bb.png)
 
 ```
-3) Click Deploy
+4) Click Deploy
 ```
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/InukaAsith/Daisy.git)
 ```
-3) Give an app name
+5) Give an app name
 
 ```
 ![Appname](https://telegra.ph/file/216e81c30118aeabd6574.png)
 ```
-3) Paste the Api token copied at token space
+36 Paste the Api token copied at token space
 
 ```
 ![Token](https://telegra.ph/file/83574a44d10a89ea8e4d9.png)
 ```
-4) Enter url of the app ass https://#Appneme.herokuapp.com
+7) Enter url of the app ass https://#Appneme.herokuapp.com
 
 ```
 ![url](https://telegra.ph/file/5b159343abc4d3a369ac0.png)
 ```
-5)Then Deploy
+8)Then Deploy
 
-6) After Deploy over click manage app
+9) After Deploy over click manage app
 ```
 ```
-7) Goto Resources and Turn Worker Emilia to on (by clicking edit)
+10) Goto Resources and Turn Worker Emilia to on (by clicking edit)
 
 ```
 ![worker](https://telegra.ph/file/eed4d6b0a2177bf7cdf76.png)
 ```
-8) Goto Logs and check for the errors
+11) Goto Logs and check for the errors
 ```
 ![logs](https://telegra.ph/file/06409b6ce522d005a3ad4.png)
 ```
