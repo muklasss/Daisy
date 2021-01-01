@@ -1,4 +1,3 @@
-
 {
   "name": "GroupHelpManager Bot",
   "description": "Modular Telegram group management bot!",
@@ -33,6 +32,21 @@
       "description": "An integer of consisting of your owner ID",
       "value": "1141839926"
     },
+    
+    "TELETHON_ID": {
+      "description": "App ID (get it from my.telegram.org)",
+      "required":true,
+      "value": ""
+    },
+    
+    "TELETHON_HASH": {
+      "description": "API HASH (get it from my.telegram.org)",
+      "required":true,
+      "value": ""
+    },
+    
+    
+    
     "OWNER_USERNAME": {
       "description": "Your username",
       "value": "InukaASiTH"
@@ -82,7 +96,7 @@
     },
     "BAN_STICKER": {
       "description": "Which sticker to use when banning people. Use https://telegram.dog/ShowJsonBot to get the file_id",
-      "value": "CAACAgUAAxkBAAIIg1_Lb2T_cG4LOJrmfGi8G4dPW3FCAAMBAALhGEhVjC5-oPs8-A4eBA"
+      "value": "CAADBQADNwEAAjZzSxRZAc49mnFSSAI"
     }
   },
   "addons": [
