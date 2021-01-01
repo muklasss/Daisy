@@ -248,7 +248,8 @@ through the `/stats` command, which is only available to the bot owner.
 </details>
 
 ## Special Credits
--[Kaviya-Admin](https://github.com/kaviya-admin) - A Co-Developer of Project
+- [Kaviya-Admin](https://github.com/kaviya-admin) - A Co-Developer of Project
+
 Thanks to this user:
 - [Arya Hikari](https://github.com/Aryahikari) - The Emilia Bot Owner
 - [Paul Larsen](https://github.com/PaulSonOfLars) - marie creator, inspiration to do many things
