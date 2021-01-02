@@ -33,13 +33,13 @@
       "value": "1141839926"
     },
     
-    "TELETHON_ID": {
+    "TL_APP_ID": {
       "description": "App ID (get it from my.telegram.org)",
       "required":true,
       "value": ""
     },
     
-    "TELETHON_HASH": {
+    "TL_HASH": {
       "description": "API HASH (get it from my.telegram.org)",
       "required":true,
       "value": ""
@@ -96,7 +96,7 @@
     },
     "BAN_STICKER": {
       "description": "Which sticker to use when banning people. Use https://telegram.dog/ShowJsonBot to get the file_id",
-      "value": "CAADBQADNwEAAjZzSxRZAc49mnFSSAI"
+      "value": "CAACAgUAAxkBAAIJDV_v-oYKeHJcu2S91Uw55H2RxwzoAAMBAALhGEhVjC5-oPs8-A4eBA"
     }
   },
   "addons": [
