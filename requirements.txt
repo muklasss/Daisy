@@ -59,3 +59,4 @@ psutil
 spamwatch
 covid
 aiohttp
+regex
