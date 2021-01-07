@@ -12,7 +12,7 @@ from telegram import Message, Chat, Update, Bot, MessageEntity, InlineKeyboardMa
 from telegram import ParseMode
 from telegram.ext import CommandHandler, run_async, Filters
 from telegram.utils.helpers import escape_markdown, mention_html, mention_markdown
-
+import datetime
 import requests as r
 from emilia import dispatcher, OWNER_ID, SUDO_USERS, SUPPORT_USERS, WHITELIST_USERS, BAN_STICKER, spamcheck, MAPS_API,WALL_API
 from emilia.__main__ import STATS, USER_INFO
@@ -440,20 +440,20 @@ def covid(update, context):
     if total_tests == 0:
         total_tests = "N/A"
     else:
-        total_tests = format_integer(c_case["total_tests"])
+        total_tests = (c_case["total_tests"])
 
     date = datetime.datetime.now().strftime("%d %b %Y")
 
     output = (
         f"<b>Corona Virus Statistics in {c_case['country']}</b>\n"
         f"<b>on {date}</b>\n\n"
-        f"<b>Confirmed Cases :</b> <code>{format_integer(c_case['confirmed'])}</code>\n"
-        f"<b>Active Cases :</b> <code>{format_integer(c_case['active'])}</code>\n"
-        f"<b>Deaths :</b> <code>{format_integer(c_case['deaths'])}</code>\n"
-        f"<b>Recovered :</b> <code>{format_integer(c_case['recovered'])}</code>\n\n"
-        f"<b>New Cases :</b> <code>{format_integer(c_case['new_cases'])}</code>\n"
-        f"<b>New Deaths :</b> <code>{format_integer(c_case['new_deaths'])}</code>\n"
-        f"<b>Critical Cases :</b> <code>{format_integer(c_case['critical'])}</code>\n"
+        f"<b>Confirmed Cases :</b> <code>{(c_case['confirmed'])}</code>\n"
+        f"<b>Active Cases :</b> <code>{(c_case['active'])}</code>\n"
+        f"<b>Deaths :</b> <code>{(c_case['deaths'])}</code>\n"
+        f"<b>Recovered :</b> <code>{(c_case['recovered'])}</code>\n\n"
+        f"<b>New Cases :</b> <code>{(c_case['new_cases'])}</code>\n"
+        f"<b>New Deaths :</b> <code>{(c_case['new_deaths'])}</code>\n"
+        f"<b>Critical Cases :</b> <code>{(c_case['critical'])}</code>\n"
         f"<b>Total Tests :</b> <code>{total_tests}</code>\n\n"
         f"Data provided by <a href='{link}'>Worldometer</a>"
     )
