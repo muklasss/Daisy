@@ -30,7 +30,10 @@ ANTIARABIC_GROUPS = 12
 
 @run_async
 @user_admin
-def antiarabic_setting(bot: Bot, update: Update, args: List[str]):
+def antiarabic_setting(update , context):
+    bot = context.bot
+    args = context.args
+    args = args[1]  
     chat = update.effective_chat
     msg = update.effective_message
 
@@ -54,6 +57,7 @@ def antiarabic_setting(bot: Bot, update: Update, args: List[str]):
 def antiarabic(update, contet):
     bot = context.bot
     args = context.args
+    args = args[1]
     chat = update.effective_chat
     msg = update.effective_message
     to_match = extract_text(msg)
