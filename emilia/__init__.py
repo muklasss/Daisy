@@ -169,8 +169,8 @@ api_id = TELETHON_ID
 api_hash = TELETHON_HASH
 client = TelegramClient("emilia", api_id, api_hash)
 dispatcher = updater.dispatcher
-pbot = Client("Daisypyro", api_id=API_KEY,
-              api_hash=API_HASH,
+pbot = Client("Daisypyro", api_id=TELETHON_ID,
+              api_hash=TELETHON_HASH,
               bot_token=TOKEN)
 
 SUDO_USERS = list(SUDO_USERS)
