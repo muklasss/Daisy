@@ -6,7 +6,7 @@ from datetime import datetime
 from functools import wraps
 from telethon import TelegramClient
 import telegram.ext as tg
-from pyrogram import Client
+
 # enable logging
 logging.basicConfig(
 	format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
@@ -169,9 +169,7 @@ api_id = TELETHON_ID
 api_hash = TELETHON_HASH
 client = TelegramClient("emilia", api_id, api_hash)
 dispatcher = updater.dispatcher
-pbot = Client("Daisypyro", api_id=TELETHON_ID,
-              api_hash=TELETHON_HASH,
-              bot_token=TOKEN)
+
 
 SUDO_USERS = list(SUDO_USERS)
 WHITELIST_USERS = list(WHITELIST_USERS)
