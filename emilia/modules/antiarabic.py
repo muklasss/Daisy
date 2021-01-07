@@ -15,8 +15,8 @@
 
 from typing import List
 
-from hitsuki import dispatcher
-from hitsuki.modules.helper_funcs.chat_status import (can_delete, user_admin,
+from emilia import dispatcher
+from emilia.modules.helper_funcs.chat_status import (can_delete, user_admin,
                                                       user_not_admin)
 from emilia.modules.helper_funcs.extraction import extract_text
 from emilia.modules.sql import antiarabic_sql as sql
