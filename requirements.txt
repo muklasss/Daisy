@@ -1,3 +1,5 @@
+git+https://github.com/inukaasith/daisy.git
+pyrogram>=1.0.7
 future
 emoji
 requests
