@@ -547,14 +547,13 @@ RUNS_HANDLER = DisableAbleCommandHandler(["runs", "lari"], runs)
 SLAP_HANDLER = DisableAbleCommandHandler("slap", slap, pass_args=True)
 INFO_HANDLER = DisableAbleCommandHandler("info", info, pass_args=True)
 COVID_HANDLER = CommandHandler("covid", covid)
-REDDIT_MEMES_HANDLER = DisableAbleCommandHandler("rmeme", rmemes)
 ECHO_HANDLER = CommandHandler("echo", echo, filters=Filters.user(OWNER_ID))
 MD_HELP_HANDLER = CommandHandler("markdownhelp", markdown_help, filters=Filters.private)
 WALLPAPER_HANDLER = DisableAbleCommandHandler(
     "wall", wall, pass_args=True
 )
 STATS_HANDLER = CommandHandler("stats", stats, filters=CustomFilters.sudo_filter)
-dispatcher.add_handler(REDDIT_MEMES_HANDLER)
+
 dispatcher.add_handler(ID_HANDLER)
 dispatcher.add_handler(IP_HANDLER)
 dispatcher.add_handler(TIME_HANDLER)
