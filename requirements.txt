@@ -1,4 +1,3 @@
-pyrogram>=1.0.7
 future
 emoji
 requests
@@ -58,5 +57,4 @@ pySmartDL
 psutil
 spamwatch
 covid
-aiohttp
-regex
+markdown2>=2.3.10
