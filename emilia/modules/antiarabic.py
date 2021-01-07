@@ -51,7 +51,9 @@ def antiarabic_setting(bot: Bot, update: Update, args: List[str]):
 
 @user_not_admin
 @run_async
-def antiarabic(bot: Bot, update: Update):
+def antiarabic(update, contet):
+    bot = context.bot
+    args = context.args
     chat = update.effective_chat
     msg = update.effective_message
     to_match = extract_text(msg)
