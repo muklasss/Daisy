@@ -56,3 +56,4 @@ pybase64
 pySmartDL
 psutil
 spamwatch
+covid
