@@ -58,3 +58,4 @@ pySmartDL
 psutil
 spamwatch
 covid
+aiohttp
