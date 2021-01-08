@@ -58,3 +58,4 @@ psutil
 spamwatch
 covid
 markdown2>=2.3.10
+zalgo_text
