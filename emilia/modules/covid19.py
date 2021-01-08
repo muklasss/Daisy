@@ -108,8 +108,8 @@ def cov(update, context):
 
 
 __help__ = """
- - /cov <country> <state> <locality>: Get real time COVID-19 stats for the input location.
- - /cov top <n(integer)>: Get the top n countries with the highest confirmed cases.
+ - /covid <country> <state> <locality>: Get real time COVID-19 stats for the input location.
+ - /covid : Gives Covid world stats.
 """
 
 
