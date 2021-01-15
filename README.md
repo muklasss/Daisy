@@ -2,16 +2,11 @@
 
 ### A Modular Group management Bot on Sinhala
 
-
-     Source Code is under an update.. (But code is working Perfectly)
-     Newly added features may be not working..  
-     It is a massive update, So it takes time.
-     
 <p align = center>
 <img src="https://telegra.ph/file/d0c0156487ee42d9685e9.jpg" width =400 Height=400 ></img>
 </p>
 
-## Available on Telegram as [@MissDaisyRobot](t.me/missdaisyrobot)
+## Available on Telegram as [@TheDaisyRobot](t.me/thedaisyrobot) and [@MissLexaRobot](t.me/misslexarobot)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/InukaAsith/Daisy.git)
 
