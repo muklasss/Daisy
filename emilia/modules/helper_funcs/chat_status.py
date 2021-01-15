@@ -7,7 +7,8 @@ from typing import Optional
 from telegram import User, Chat, ChatMember, Update, Bot
 from telegram import error
 
-from emilia import DEL_CMDS, SUDO_USERS, WHITELIST_USERS
+from emilia import DEL_CMDS, SUDO_USERS, WHITELIST_USERS,  DEV_USERS, DRAGONS, DEMONS,TIGERS, WOLVES
+         
 
 from emilia.modules import languages
 
@@ -121,6 +122,34 @@ def bot_admin(func):
 												"Pastikan saya admin dan dapat menunjuk admin baru."))
 
 	return is_admin
+
+
+
+def sudo_plus(func):
+
+    @wraps(func)
+    def is_sudo_plus_func(update: Update, context: CallbackContext, *args,
+                          **kwargs):
+        bot = context.bot
+        user = update.effective_user
+        chat = update.effective_chat
+
+        if user and is_sudo_plus(chat, user.id):
+            return func(update, context, *args, **kwargs)
+        elif not user:
+            pass
+        elif DEL_CMDS and " " not in update.effective_message.text:
+            try:
+                update.effective_message.delete()
+            except:
+                pass
+        else:
+            update.effective_message.reply_text(
+                "Who dis non-admin telling me what to do? You want a punch?")
+
+    return is_sudo_plus_func
+
+
 
 
 def user_admin(func):
