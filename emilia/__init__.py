@@ -177,6 +177,8 @@ SUPPORT_USERS = list(SUPPORT_USERS)
 SPAMMERS = list(SPAMMERS)
 GROUP_BLACKLIST = list(GROUP_BLACKLIST)
 DEV_USERS = SUDO_USERS
+DRAGONS = SUDO_USERS
+DEMONS = SUDO_USERS
 # Load at end to ensure all prev variables have been set
 from emilia.modules.helper_funcs.handlers import CustomCommandHandler
 
