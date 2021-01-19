@@ -3,8 +3,8 @@ __lang__ = "🇺🇸 English"
 
 id = {
 # Global default
-	"You can do this command in groups, not PM: "Anda bisa lakukan command ini pada grup, bukan pada PM.",
-	"You don't seem to be referring to a user: "Anda sepertinya tidak mengacu pada pengguna.",
+	"You can do this command in groups, not PM": "Anda bisa lakukan command ini pada grup, bukan pada PM ",
+	"You don't seem to be referring to a user": "Anda sepertinya tidak mengacu pada pengguna.",
 
 # chat_status
 	"Saya tidak dapat menghapus pesan di sini! Pastikan saya admin dan dapat menghapus pesan pengguna lain.": "I can't delete messages here! Make sure I'm admin and can delete other user's messages.",
