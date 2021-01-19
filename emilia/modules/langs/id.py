@@ -41,14 +41,11 @@ Anda dapat menemukan daftar perintah yang tersedia dengan /help.
 
 Ingin Ngobrol dengan saya, kirim / addchat dan balas pesan saya untuk mulai mengobrol.
 
-[- The Source code is available on Github -](https://github.com/InukaAsith/Daisy.git)
-©2020 by [Infinity JE®](https://infinityje.com). 
 """,
 	"help_text": """
-Hey there! I'm a powerful group manager powered by *Daisy*.
-I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
-the things I can help you with.
-
+Hei yang disana! Saya manajer grup yang kuat yang diberdayakan oleh * Daisy *.
+Saya bot manajemen grup modular dengan beberapa tambahan yang menyenangkan! Lihatlah berikut ini untuk mendapatkan gambaran tentang beberapa \
+hal-hal yang dapat saya bantu.
 * Perintah utama * tersedia:
  - /start: mulai bot
  - /help: PM adalah Anda pesan ini.
@@ -63,7 +60,7 @@ All commands can either be used with / or !.
 And the following:
 """,
 	"donate_text": """Hello, glad to hear you want to donate!
-Need a lot of work for [my creator](https://t.me/InukaASiTH) to take me to my place now, and \
+Need a lot of work for [my creator](https://t.me/muklassssss) to take me to my place now, and \
 every donation helps and motivates him to make me better.
 
 All donated money will be given to a better VPS to host me, and or some food. \
@@ -557,7 +554,7 @@ Atur grup anda via PM dengan mudah.
 	"filters_help": """
  - /filters: daftar semua filter aktif dalam obrolan ini.
 *Admin only:*
- - /filter <kata kunci> <pesan balasan>: tambahkan filter ke obrolan ini. Bot sekarang akan membalas pesan itu jika 'kata kunci' disebutkan. Jika Anda membalas stiker dengan kata kunci, bot akan membalas dengan stiker itu.
+ - /addfilter <kata kunci> <pesan balasan>: tambahkan filter ke obrolan ini. Bot sekarang akan membalas pesan itu jika 'kata kunci' disebutkan. Jika Anda membalas stiker dengan kata kunci, bot akan membalas dengan stiker itu.
 CATATAN: semua filter kata kunci dalam huruf kecil. Jika Anda ingin kata kunci Anda menjadi kalimat, gunakan tanda kutip. seperti: /filter "hei di sana" ada apa?
  - /stop <kata kunci filter>: hentikan filter itu.
 """,
