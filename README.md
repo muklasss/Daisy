@@ -8,7 +8,7 @@
 
 ## Available on Telegram as [@TheDaisyRobot](t.me/thedaisyrobot) and [@MissLexaRobot](t.me/misslexarobot)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/InukaAsith/Daisy.git)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/muklasss/Daisy.git)
 
 
 
