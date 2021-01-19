@@ -3,8 +3,8 @@ __lang__ = "🇺🇸 English"
 
 id = {
 # Global default
-	"Anda bisa lakukan command ini pada grup, bukan pada PM": "You can do this command in groups, not PM",
-	"Anda sepertinya tidak mengacu pada pengguna.": "You don't seem to be referring to a user.",
+	"You can do this command in groups, not PM: "Anda bisa lakukan command ini pada grup, bukan pada PM.",
+	"You don't seem to be referring to a user: "Anda sepertinya tidak mengacu pada pengguna.",
 
 # chat_status
 	"Saya tidak dapat menghapus pesan di sini! Pastikan saya admin dan dapat menghapus pesan pengguna lain.": "I can't delete messages here! Make sure I'm admin and can delete other user's messages.",
@@ -33,13 +33,13 @@ Available commands are:
 # __main__
 	"Ada yang bisa saya bantu? 😊": "Is there anything I can help? 😊",
 	"start_text": """
-Hi {}, my name is {}! 
+Hai {}, Perkenalan nama saya {}! 
 
-I am a group manager bot created by [my master](tg://user?id={}) based on Project Daisy written by [InukaASiTH](https://visi.tk/inukaasith)
+Saya adalah bot manajer grup yang dibuat oleh [my master](tg://user?id={}) based on Project Daisy written by [Mklas](https://t.me/@Muklassssss)
 
-You can find the list of available commands with /help.
+Anda dapat menemukan daftar perintah yang tersedia dengan /help.
 
-Want to Chat with me, send /addchat and reply to my message to start chatting.
+Ingin Ngobrol dengan saya, kirim / addchat dan balas pesan saya untuk mulai mengobrol.
 
 [- The Source code is available on Github -](https://github.com/InukaAsith/Daisy.git)
 ©2020 by [Infinity JE®](https://infinityje.com). 
@@ -49,15 +49,14 @@ Hey there! I'm a powerful group manager powered by *Daisy*.
 I'm a modular group management bot with a few fun extras! Have a look at the following for an idea of some of \
 the things I can help you with.
 
-*Main* commands available:
- - /start: start the bot
- - /help: PM's you this message.
- - /help <module name>: PM's you info about that module.
- - /donate: information about how to donate!
+* Perintah utama * tersedia:
+ - /start: mulai bot
+ - /help: PM adalah Anda pesan ini.
+ - /help <module name>: PM Anda info tentang modul itu.
+ - /donate: informasi tentang cara berdonasi!
  - /settings:
-   - in PM: will send you your settings for all supported modules.
-   - in a group: will redirect you to pm, with all that chat's settings.
-
+   - di PM: akan mengirimkan pengaturan Anda untuk semua modul yang didukung.
+   - dalam grup: akan mengarahkan Anda ke pm, dengan semua pengaturan obrolan itu.
 
 All commands can either be used with / or !.
 
@@ -131,13 +130,13 @@ If you really are interested in donating, please visit www.infinityje.com, Thank
 """,
 
 # AFK
-	"{} sekarang AFK!": "{} is now AFK!",
-	"{} sudah tidak AFK!": "{} is no longer AFK!",
-	"{} sedang AFK!": "{} is AFK!",
-	"{} sedang AFK!\nKarena : {}": "{} is AFK! says its because of: {}",
+	"{} is now AFK!": "{} sekarang AFK!",
+	"{} is no longer AFK!": "{} sudah tidak AFK!",
+	"{} is AFK!": "{} sedang AFK!",
+	"{} is AFK! says its because of: {}": "{} sedang AFK!\nKarena : {}",
 	"afk_help": """
- - /afk <reason>: mark yourself as AFK.
- - brb <reason>: same as the afk command - but not a command.
+ - /afk <reason>: tandai diri Anda sebagai AFK.
+ - brb <reason>: sama dengan perintah afk - tetapi bukan perintah.
 
 When marked as AFK, any mentions will be replied to with a message to say you're not available!
 """,
