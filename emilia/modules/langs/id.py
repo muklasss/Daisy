@@ -35,7 +35,7 @@ Available commands are:
 	"start_text": """
 Hai {}, Perkenalan nama saya {}! 
 
-Saya adalah bot manajer grup yang dibuat oleh [my master](tg://user?id={}) based on Project Daisy written by [Mklas](https://t.me/@Muklassssss)
+Saya adalah bot manajer grup yang dibuat oleh [my master](tg://user?id={}) based on Project Daisy written by [Muklas](https://t.me/Muklassssss)
 
 Anda dapat menemukan daftar perintah yang tersedia dengan /help.
 
@@ -89,7 +89,7 @@ If you really are interested in donating, please visit www.infinityje.com, Thank
 	"Anda sekarang dapat mengambil catatan di grup.": "Now you can get notes in group.",
 
 # admin
-	"Bagaimana saya ingin menaikan jabatan seseorang yang sudah menjadi admin?": "How am I meant to promote someone that's already an admin?",
+	"How am I meant to promote someone that's already an admin?": "Bagaimana saya ingin menaikan jabatan seseorang yang sudah menjadi admin?",
 	"Saya tidak bisa menaikan jabatan diri saya sendiri! Hanya admin yang dapat melakukanya untuk saya.": "I can't promote myself! Get an admin to do it for me.",
 	"Tidak dapat mempromosikan pengguna, mungkin saya bukan admin atau tidak punya izin untuk mempromosikan pengguna.": "Cannot promote users, maybe I am not admin or do not have permission to promote users.",
 	"Gagal menaikan jabatan: Bot terkunci": "Failed to promote: Bot was locked",
@@ -120,13 +120,13 @@ If you really are interested in donating, please visit www.infinityje.com, Thank
 	"admin_help": """
  - /adminlist | /admins: list of admins in the chat
 *Admin only:*
- - /pin: silently pins the message replied to - add 'loud' or 'notify' to give notifs to users.
- - /unpin: unpins the currently pinned message
- - /permapin <teks>: Pin a custom messages via bots. This message can contain markdown, and can be used in replies to the media include additional buttons and text.
- - /permanentpin: Set a permanent pin for supergroup chat, when an admin or telegram channel change pinned message, bot will change pinned message immediatelly
- - /invitelink: gets invitelink
- - /promote: promotes the user replied to
- - /demote: demotes the user replied to
+ - /pin: diam-diam pin pesan yang dibalas - tambahkan 'loud' atau 'notify' untuk memberi notif kepada pengguna..
+ - /unpin: membatalkan pemasangan pesan yang saat ini disematkan
+ - /permapin <teks>: Sematkan pesan khusus melalui bot. Pesan ini dapat berisi penurunan harga, dan dapat digunakan dalam media balasan termasuk tombol dan teks tambahan.
+ - /permanentpin: Atur pin permanen untuk obrolan grup super, ketika admin atau saluran telegram mengubah pesan yang disematkan, bot akan segera mengubah pesan yang disematkan
+ - /invitelink: mendapat tautan undangan
+ - /promote: mempromosikan dengan membalas pesan pengguna
+ - /demote: mendemosikan dengan membalas pesan pengguna
 """,
 
 # AFK
@@ -138,11 +138,11 @@ If you really are interested in donating, please visit www.infinityje.com, Thank
  - /afk <reason>: tandai diri Anda sebagai AFK.
  - brb <reason>: sama dengan perintah afk - tetapi bukan perintah.
 
-When marked as AFK, any mentions will be replied to with a message to say you're not available!
+Saat ditandai sebagai AFK, setiap sebutan akan dibalas dengan pesan yang mengatakan Anda tidak tersedia!
 """,
 
 # Antiflood
-	"Keluar!": "Get out!",
+	"Get out!": "Keluar!",
 	"Sekarang kamu diam!": "Now you shutup!",
 	"Keluar selama {}!": "Get out for {}!",
 	"Sekarang kamu diam selama {}!": "Now you shutup for {}!",
@@ -272,12 +272,12 @@ Note that files/photos from other bots can't be imported due to telegram restric
  - /kickme: kicks the user who issued the command
 
 *Admin only:*
- - /ban <userhandle>: bans a user. (via handle, or reply)
- - /sban <userhandle>: silent ban a user, bot will not reply and delete your sban message.
- - /tban <userhandle> x(m/h/d): bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
- - /unban <userhandle>: unbans a user. (via handle, or reply)
- - /kick <userhandle>: kicks a user, (via handle, or reply)
- - /skick <userhandle>: silent kick a user, bot will not reply and delete your skick message.
+ - /ban <userhandle>: banned seorang pengguna. (via pegangan, atau balasan)
+ - /sban <userhandle>: silent ban seorang pengguna, bot tidak akan membalas dan menghapus pesan sban Anda.
+ - /tban <userhandle> x(m/h/d): melarang pengguna untuk x waktu. (via pegangan, atau balasan). m = menit, h = jam, d = hari.
+ - /unban <userhandle>: unbanned seorang pengguna. (via pegangan, atau balasan)
+ - /kick <userhandle>: menendang seorang pengguna, (via pegangan, atau balasan)
+ - /skick <userhandle>: silent kick seorang pengguna, bot tidak akan membalas dan menghapus pesan skick Anda.
 """,
 
 # Blacklist
@@ -334,18 +334,19 @@ Examples of time values: 4m = 4 minute, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
 	"Ada `{}` kata daftar hitam.": "There are `{}` blacklisted words.",
 	"{} pemicu daftar hitam, di seluruh {} obrolan.": "{} blacklist triggers, across {} chats.",
 	"blacklist_help": """
-Blacklists are used to stop certain triggers from being said in a group. Any time the trigger is mentioned, \
-the message will immediately be deleted. A good combo is sometimes to pair this up with warn filters!
+Blacklist digunakan untuk menghentikan pemicu tertentu dari yang dikatakan dalam kelompok. Kapan pun pemicu disebutkan, \
+pesan akan segera dihapus. Sebuah kombo yang bagus terkadang memasangkan ini dengan filter peringatan!
 
-*NOTE:* blacklists do not affect group admins.
- - /blacklist: View the current blacklisted words.
+*CATATAN:* daftar hitam tidak mempengaruhi admin grup.
+
+- /blacklist: Lihat kata-kata daftar hitam saat ini.
 
 *Admin only:*
- - /addblacklist <triggers>: Add a trigger to the blacklist. Each line is considered one trigger, so using different \
-lines will allow you to add multiple triggers.
- - /unblacklist <triggers>: Remove triggers from the blacklist. Same newline logic applies here, so you can remove \
-multiple triggers at once.
- - /rmblacklist <triggers>: Same as above.
+ - /addblacklist <pemicu>: Tambahkan pemicu ke daftar hitam. Setiap baris dianggap sebagai pemicu, jadi gunakan garis yang \
+berbeda akan memungkinkan Anda menambahkan beberapa pemicu.
+ - /unblacklist <pemicu>: Hapus pemicu dari daftar hitam. Logika newline yang sama berlaku di sini, sehingga Anda dapat \
+menghapus beberapa pemicu sekaligus.
+ - /rmblacklist <pemicu>: Sama seperti di atas.
 """,
 
 # Blacklist sticker
@@ -384,19 +385,20 @@ Examples of time values: 4m = 4 minute, 3h = 3 hours, 6d = 6 days, 5w = 5 weeks.
 	"Ada `{}` daftar hitam stiker.": "There are `{} `blacklisted stickers.",
 	"{} pemicu daftar hitam stiker, di seluruh {} obrolan.": "{} blacklist stickers, across {} chats.",
 	"blstickers_help": """
-Blacklist sticker is used to stop certain stickers. Whenever a sticker is sent, the message will be deleted immediately.
+Daftar hitam stiker digunakan untuk menghentikan stiker tertentu. Kapan pun stiker dikirim, pesan akan segera dihapus.
 
-*NOTE:* Blacklist stickers do not affect the group admin.
 
- - /blsticker: See current blacklisted sticker.
+*CATATAN:* daftar hitam stiker tidak mempengaruhi admin grup.
+
+ - /blsticker: Lihat daftar hitam stiker saat ini.
 
 *Only admin:*
- - /addblsticker <sticker link>: Add the sticker trigger to the black list. Can be added via reply sticker.
- - /unblsticker <sticker link>: Remove triggers from blacklist. The same newline logic applies here, so you can delete multiple triggers at once.
- - /rmblsticker <sticker link>: Same as above.
+ - /addblsticker <pemicu>: Tambahkan pemicu stiker ke daftar hitam. Dapat ditambahkan melalui balas stiker.
+ - /unblsticker <pemicu>: Hapus pemicu dari daftar hitam. Logika newline yang sama berlaku di sini, sehingga Anda dapat menghapus beberapa pemicu sekaligus.
+ - /rmblsticker <pemicu>: Sama seperti di atas.
 
-Note:
- - `<sticker link>` can be `https://t.me/addstickers/<sticker>` or just `<sticker>` or reply to the sticker message.
+Catatan:
+ - `<pemicu>` bisa menjadi `https://t.me/addstickers/<pemicu>` atau hanya `<pemicu>` atau balas pesan stikernya.
 """,
 
 # Connection
@@ -521,13 +523,13 @@ Note:
 	"Grup mengubah koneksi hak atau Anda bukan admin lagi.\nSaya putuskan koneksi Anda.": "The group changes the connection rights or you are no longer an admin.\nI've disconnect you.",
 	"PM saya dengan command itu untuk mendapatkan bantuan Koneksi": "PM me with that command to get help",
 	"connection_help": """
-Organize your group via PM easily.
+Atur grup anda via PM dengan mudah.
 
- - /connect <chatid/tag>: Connect to remote chat
- - /connection: Request a list of supported command commands
- - /disconnect: Disconnect from chat
- - /allowconnect on/yes/off/no: Allow connecting non-admin users to groups
- - /helpconnect: Get command help for connections
+ - /connect <chatid>: Hubungkan ke obrolan jarak jauh
+ - /connection: Minta list command koneksi yang di dukung
+ - /disconnect: Putuskan sambungan dari obrolan
+ - /allowconnect on/yes/off/no: Izinkan menghubungkan pengguna ke grup
+ - /helpconnect: Dapatkan bantuan command untuk koneksi
 """,
 	"🧹 Hapus riwayat": "🧹 Clear history",
 	"🔌 Putuskan sambungan": "🔌 Disconnect",
@@ -553,12 +555,11 @@ Organize your group via PM easily.
 	"{} filter, pada {} obrolan.": "{} filters, across {} chats.",
 	"Ada `{}` filter khusus di sini.": "There are `{}` custom filters here.",
 	"filters_help": """
- - /filters: list all active filters in this chat.
-
+ - /filters: daftar semua filter aktif dalam obrolan ini.
 *Admin only:*
- - /filter <keyword> <reply message>: add a filter to this chat. The bot will now reply that message whenever 'keyword' is mentioned. If you reply to a sticker with a keyword, the bot will reply with that sticker. 
-NOTE: all filter keywords are in lowercase. If you want your keyword to be a sentence, use quotes. eg: /filter "hey there" How you doin?
- - /stop <filter keyword>: stop that filter.
+ - /filter <kata kunci> <pesan balasan>: tambahkan filter ke obrolan ini. Bot sekarang akan membalas pesan itu jika 'kata kunci' disebutkan. Jika Anda membalas stiker dengan kata kunci, bot akan membalas dengan stiker itu.
+CATATAN: semua filter kata kunci dalam huruf kecil. Jika Anda ingin kata kunci Anda menjadi kalimat, gunakan tanda kutip. seperti: /filter "hei di sana" ada apa?
+ - /stop <kata kunci filter>: hentikan filter itu.
 """,
 
 # disable
@@ -820,23 +821,22 @@ you and your groups by removing spam flooders as quickly as possible. They can b
 	"Memasukan 'Bot' yang sedang di kunci saat ini": "Invite 'Bot' which currently locked",
 	"Mengirim '{}' yang sedang di kunci saat ini": "Send '{}' which currently locked",
 	"locks_help": """
- - /locktypes: a list of possible locktypes
+ - /locktypes: daftar kemungkinan tipe kunci
 
 *Admin only:*
- - /lock <type>: lock items of a certain type (not available in private)
- - /unlock <type>: unlock items of a certain type (not available in private)
- - /locks: the current list of locks in this chat.
- - /lockwarns <on/off/yes/no>: whether or not warn users sending locked messages.
+ - /lock <type>: mengunci sesuatu dengan jenis tertentu (tidak tersedia secara pribadi)
+ - /unlock <type>: membuka kunci sesuatu dengan jenis tertentu (tidak tersedia secara pribadi)
+ - /locks: daftar kunci saat ini di obrolan ini.
+ - /lockwarns <on/off/yes/no>: apakah peringati atau tidak jika pengguna mengirim pesan terkunci.
+Kunci dapat digunakan untuk membatasi pengguna grup.
+seperti:
+Mengunci url akan otomatis menghapus semua pesan dengan url yang belum masuk daftar putih, mengunci stiker akan menghapus semua \
+stiker, dll.
+Mengunci bot akan menghentikan non-admin menambahkan bots ke obrolan.
 
-Locks can be used to restrict a group's users.
-eg:
-Locking urls will auto-delete all messages with urls, locking stickers will delete all \
-stickers, etc.
-Locking bots will stop non-admins from adding bots to the chat.
-
-*Note:*
- - Unlocking permission *info* will allow members (non-admins) to change the group information, such as the description or the group name
- - Unlocking permission *pin* will allow members (non-admins) to pinned a message in a group
+*Catatan:*
+ - Membuka kunci izin *info* akan membiarkan pengguna biasa mengubah info grup, seperti deskripsi grup atau nama grup
+ - Membuka kunci izin *pin* akan membiarkan pengguna biasa menyematkan pesan di grup
 """,
 
 # log channel
@@ -891,33 +891,36 @@ Setting the log channel is done by:
 	"Lokasi tidak di temukan!": "Location not found!",
 
 	"MARKDOWN_HELP": """
-Markdown is a very powerful formatting tool supported by telegram. {} has some enhancements, to make sure that \
-saved messages are correctly parsed, and to allow you to create buttons.
-- <code>_italic_</code>: wrapping text with '_' will produce italic text
-- <code>*bold*</code>: wrapping text with '*' will produce bold text
-- <code>`code`</code>: wrapping text with '`' will produce monospaced text, also known as 'code'
-- <code>[sometext](someURL)</code>: this will create a link - the message will just show <code>sometext</code>, \
-and tapping on it will open the page at <code>someURL</code>.
-EG: <code>[test](example.com)</code>
-- <code>[buttontext](buttonurl:someURL)</code>: this is a special enhancement to allow users to have telegram \
-buttons in their markdown. <code>buttontext</code> will be what is displayed on the button, and <code>someurl</code> \
-will be the url which is opened.
-EG: <code>[This is a button](buttonurl:example.com)</code>
+Markdown adalah alat pemformatan yang sangat kuat yang didukung oleh telegram. {} memiliki beberapa penyempurnaan, untuk memastikan \
+pesan yang disimpan diurai dengan benar, dan memungkinkan Anda membuat tombol.
+- <code>_miring_</code>: membungkus teks dengan '_' akan menghasilkan teks miring
+- <code>*tebal*</code>: membungkus teks dengan '*' akan menghasilkan teks tebal
+- <code>`kode`</code>: membungkus teks dengan '`' akan menghasilkan teks monospace, juga dikenal sebagai 'kode'
+- <code>[teks](URL)</code>: ini akan membuat tautan - pesan hanya akan menampilkan <code>teks</code>, \
+dan mengetuknya akan membuka halaman di <code>URL</code>.
+Contoh: <code>[test](contoh.com)</code>
+
+-<code>[TombolTeks](buttonurl:URL)</code>: ini adalah perangkat tambahan khusus yang memungkinkan pengguna memiliki \
+tombol di markdown mereka. <code>TombolTeks</code> akan menjadi apa yang ditampilkan pada tombol, dan <code>URL</code> \
+akan menjadi url yang dibuka.
+Contoh: <code>[Ini sebuah tombol](buttonurl:contoh.com)</code>
 If you want multiple buttons on the same line, use :same, as such:
 <code>[one](buttonurl:example.com)
-[two](buttonurl:google.com:same)</code>
-This will create two buttons on a single line, instead of one button per line.
-Keep in mind that your message <b>MUST</b> contain some text other than just a button!
+
+ika Anda ingin beberapa tombol pada baris yang sama, gunakan :same, seperti :
+<code>[satu](buttonurl:contoh.com)
+[dua](buttonurl:google.com:same)</code>
+Ini akan membuat dua tombol pada satu baris, bukan satu tombol per baris.
 """,
 	"Coba teruskan pesan berikut kepada saya, dan Anda akan lihat!": "Try forwarding the following message to me, and you'll see!",
 	"/save test Ini adalah tes markdown. _miring_, *tebal*, `kode`, [URL](contoh.com) [tombol](buttonurl:github.com) [tombol2](buttonurl:google.com:same)": "/save test This is a markdown test. _italics_, *bold*, `code`, [URL](example.com) [button](buttonurl:github.com) [button2](buttonurl:google.com:same)",
 	"Statistik saat ini:\n": "Current stats:\n",
 	"misc_help": """
- - /id: get the current group id. If used by replying to a message, gets that user's id.
- - /runs: reply a random string from an array of replies.
- - /slap: slap a user, or get slapped if not a reply.
- - /info: get information about a user.
- - /markdownhelp: quick summary of how markdown works in telegram - can only be called in private chats.
+ - /id: dapatkan ID grup saat ini. Jika digunakan dengan membalas pesan, dapatkan id pengguna itu.
+ - /runs: balas string acak dari larik balasan.
+ - /slap: menampar pengguna, atau ditampar jika bukan balasan.
+ - /info: mendapatkan informasi tentang seorang pengguna.
+ - /markdownhelp: ringkasan singkat tentang bagaimana penurunan harga bekerja di telegram - hanya dapat dipanggil dalam obrolan pribadi.
 """,
 
 # msg deleting
@@ -1098,12 +1101,12 @@ NOTE: In groups, only admins can add/remove RSS links to the group's subscriptio
 	"Private Rules di *non-aktifkan*, pesan peraturan akan di kirim di grup.": "Private Rules was *disabled*, rules message will send to group.",
 	"Pengaturan Private Rules di {}: *{}*": "Private Rules Settings in {}: *{}*",
 	"rules_help": """
- - /rules: get the rules for this chat.
+ - /rules: dapatkan aturan untuk obrolan ini.
 
 *Admin only:*
- - /setrules <your rules here>: set the rules for this chat.
- - /clearrules: clear the rules for this chat.
- - /privaterules <yes/no/on/off>: should the rules be sent to private chat. Default: yes.
+ - /setrules <aturan Anda di sini>: atur aturan untuk obrolan ini.
+ - /clearrules: kosongkan aturan untuk obrolan ini.
+ - /privaterules <yes/no/on/off>: apakah peraturan akan di kirim ke PM. Default: aktif.
 """,
 
 # userinfo
@@ -1315,38 +1318,39 @@ Note:
 	"Di nonaktifkan, pengguna dapat mengklik tombol untuk langsung chat": "Disabled, users can once click the button to chat",
 	"Anda sedang tidak dalam mode verifikasi, jika anda sedang di bisukan, anda dapat meminta tolong pada admin di grup yang bersangkutan": "You are not in verification mode, if you are muted, you can ask the admin of the group for help",
 	"Saya tidak dapat membatasi orang disini, tanya admin untuk unmute!": "I can't restrict people here, ask admin to unmute you!",
-	"WELC_HELP_TXT": "Your group's welcome/goodbye messages can be personalised in multiple ways. If you want the messages to be individually generated, like the default welcome message is, you can use *these* variables:\n - `{{first}}`: this represents the user's *first* name\n - `{{last}}`: this represents the user's *last* name. Defaults to *first name* if user has no last name.\n - `{{fullname}}`: this represents the user's *full* name. Defaults to *first name* if user has no last name.\n - `{{username}}`: this represents the user's *username*. Defaults to a *mention* of the user's first name if has no username.\n - `{{mention}}`: this simply *mentions* a user - tagging them with their first name.\n - `{{id}}`: this represents the user's *id*\n - `{{count}}`: this represents the user's *member number*.\n - `{{chatname}}`: this represents the *current chat name*.\n\nEach variable MUST be surrounded by `{{}}` to be replaced.\nWelcome messages also support markdown, so you can make any elements bold/italic/code/links. Buttons are also supported, so you can make your welcomes look awesome with some nice intro buttons.\nTo create a button linking to your rules, use this: `[Rules](buttonurl:{{rules}})`.\nIf you're feeling fun, you can even set images/gifs/videos/voice messages as the welcome message by replying to the desired media, and calling /setwelcome.",
-	"Obrolan ini memiliki preferensi `{}` untuk pesan sambutan.\nUntuk preferensi pesan selamat tinggal `{}`.\nBot `{}` menghapus notifikasi member masuk/keluar secara otomatis": "This chat has it's welcome preference set to `{}`.\nIt's goodbye preference is `{}`.",
-	"welcome_help": """
+	
+	"WELC_HELP_TXT": "Pesan selamat datang/selamat tinggal grup Anda dapat dipersonalisasi dengan berbagai cara. Jika Anda menginginkan pesan untuk dihasilkan secara individual, seperti pesan selamat datang default, Anda dapat menggunakan * variabel * ini:\n - `{{first}}`: ini mewakili nama *pertama* pengguna\n - `{{last}}`: ini mewakili nama *terakhir* pengguna. Default ke nama *depan* jika pengguna tidak memiliki nama terakhir.\n - `{{fullname}}`: ini mewakili nama *penuh* pengguna. Default ke *nama depan* jika pengguna tidak memiliki nama terakhir.\n - `{{username}}`: ini mewakili *nama pengguna* pengguna. Default ke *sebutan* jika pengguna jika tidak memiliki nama pengguna.\n - `{{mention}}`: ini hanya *menyebutkan* seorang pengguna - menandai mereka dengan nama depan mereka.\n - `{{id}}`: ini mewakili *id* pengguna\n - `{{count}}`: ini mewakili *nomor anggota* pengguna.\n - `{{chatname}}`: ini mewakili *nama obrolan saat ini*.\n\nSetiap variabel HARUS dikelilingi oleh `{{}}` untuk diganti.\nPesan sambutan juga mendukung markdown, sehingga Anda dapat membuat elemen apa pun teba/miring/kode/tautan. Tombol juga didukung, sehingga Anda dapat membuat sambutan Anda terlihat mengagumkan dengan beberapa tombol pengantar yang bagus.\nUntuk membuat tombol yang menautkan ke aturan Anda, gunakan ini: `[Peraturan](buttonurl:{{rules}})`.\nJika Anda merasa senang, Anda bahkan dapat mengatur gambar/gif/video/pesan suara sebagai pesan selamat datang dengan membalas media yang diinginkan, dan memanggil /setwelcome.",
+    "welcome_help": """
 *Admin only:*
- - /welcome <on/off>: enable/disable the welcome message.
- - /goodbye <on/off>: enable/disable goodbye message.
- - /welcome: show current welcome settings, without formatting - useful for recycling your welcome message!
- - /goodbye: same use and args as /welcome.
- - /setwelcome <sometext>: set a custom welcome message. If used to reply to media, use that media.
- - /setgoodbye <sometext>: set a custom goodbye message. If used to reply to media, use that media.
- - /resetwelcome: reset to the default welcome message.
- - /resetgoodbye: reset to the default goodbye message.
- - /cleanwelcome <on/off>: deletes old welcome messages; when a new person joins, the old message is deleted.
- - /cleanservice <on/off/yes/no>: deletes all service message; those are the annoying "x joined the group" you see when people join.
- - /welcomemute <on/ya/off/ga>: all users that join, get muted; a button gets added to the welcome message for them to unmute themselves. This proves they aren't a bot!
- - /welcomemutetime <Xw/d/h/m>: if a user hasnt pressed the "unmute" button in the welcome message after a certain this time, they'll get unmuted automatically after this period of time.
- Note: if you want to reset the mute time to be forever, use /welcomemutetime 0m. 0 == eternal!
- - /setmutetext <new text>: Customise the "Click here to unmute" button obtained from enabling welcomemutes.
+ - /welcome <on/off>: mengaktifkan/menonaktifkan pesan selamat datang.
+ - /goodbye <on/off>: mengaktifkan/menonaktifkan pesan selamat tinggal.
+ - /welcome: menunjukkan pengaturan selamat datang saat ini, tanpa pemformatan - berguna untuk mendaur ulang pesan selamat datang Anda!
+ - /goodbye: penggunaan yang sama dan sama seperti /welcome.
+ - /setwelcome <beberapa teks>: mengatur pesan sambutan khusus. Jika digunakan untuk membalas media, gunakan media itu.
+ - /setgoodbye <beberapa teks>: mengatur pesan selamat tinggal khusus. Jika digunakan untuk membalas media, gunakan media itu.
+ - /resetwelcome: reset ulang ke pesan selamat datang default.
+ - /resetgoodbye: reset ulang ke pesan selamat tinggal default.
+ - /cleanwelcome <on/off>: menghapus pesan sambutan lama; ketika orang baru bergabung, pesan lama dihapus.
+ - /cleanservice <on/off/yes/no>: menghapus semua pesan layanan; itu adalah "x bergabung kedalam grup" yang Anda lihat ketika orang-orang bergabung.
+ - /welcomemute <on/ya/off/ga>: semua pengguna yang bergabung akan di bisukan; sebuah tombol ditambahkan ke pesan selamat datang bagi mereka untuk mensuarakan diri mereka sendiri. Ini membuktikan bahwa mereka bukan bot!
+ - /welcomemutetime <Xw/d/h/m>: jika pengguna belum menekan tombol "unmute" di pesan sambutan setelah beberapa waktu ini, mereka akan dibunyikan secara otomatis setelah periode waktu ini.
+   Catatan: jika Anda ingin mengatur ulang waktu bisu menjadi selamanya, gunakan `/welcomemutetime 0m`. 0 == abadi!
+ - /setmutetext <teks tombol>: Ubahsuaikan untuk tombol "Klik disini untuk mensuarakan" yang diperoleh dari mengaktifkan welcomemute.
  - /resetmutetext: Reset teks tombol unmute menjadi default.
 
- - /welcomeverify <on/off>: Enable welcome verification with images and buttons, best for anti bots
- - /wtimeout <Xw/d/h/m>: Set welcome timeout, when user wasn't verify for X, then that user will be kicked/banned
- - /wtmode <kick/ban>: Set welcome timeout should be kicked or banned
 
-Read /welcomehelp and /markdownhelp to learn about formatting your text and mentioning new users when the join!
+ - /welcomeverify <on/off>: Aktifkan verifikasi selamat datang dengan gambar dan tombol, gunakan untuk anti bot
+ - /wtimeout <Xw/d/h/m>: Tetapkan batas waktu sambutan, saat pengguna tidak memverifikasi pada waktu X, maka pengguna tersebut akan ditendang/diblokir
+ - /wtmode <kick/ban>: Setel batas waktu sambutan harus ditendang atau dicekal
 
-If you want to save an image, gif, or sticker, or any other data, do the following:
-/setwelcome while replying to a sticker or whatever data you'd like. This data will now be sent to welcome new users.
+Baca /welcomehelp dan /markdownhelp untuk mempelajari tentang memformat teks Anda dan menyebutkan pengguna baru saat bergabung!
 
-Tip: use /welcome noformat to retrieve the unformatted welcome message.
-This will retrieve the welcome message and send it without formatting it; getting you the raw markdown, allowing you to make easy edits.
-This also works with /goodbye.
+Jika Anda ingin menyimpan gambar, gif, atau stiker, atau data lain, lakukan hal berikut:
+Balas pesan stiker atau data apa pun yang Anda inginkan dengan teks `/setwelcome`. Data ini sekarang akan dikirim untuk menyambut pengguna baru.
+
+Tip: gunakan `/welcome noformat` untuk mengambil pesan sambutan yang belum diformat.
+Ini akan mengambil pesan selamat datang dan mengirimkannya tanpa memformatnya; memberi Anda markdown mentah, memungkinkan Anda untuk mengedit dengan mudah.
+Ini juga berfungsi dengan /goodbye.
 """,
 
 # Welcome timeout
@@ -1400,192 +1404,224 @@ This also works with /goodbye.
 
 
 RUN_STRINGS = (
-    "Where do you think you're going?",
-    "Huh? what? did they get away?",
-    "ZZzzZZzz... Huh? what? oh, just them again, nevermind.",
-    "Get back here!",
-    "Not so fast...",
-    "Look out for the wall!",
-    "Don't leave me alone with them!!",
-    "You run, you die.",
-    "Jokes on you, I'm everywhere",
-    "You're gonna regret that...",
-    "You could also try /kickme, I hear that's fun.",
-    "Go bother someone else, no-one here cares.",
-    "You can run, but you can't hide.",
-    "Is that all you've got?",
-    "I'm behind you...",
-    "You've got company!",
-    "We can do this the easy way, or the hard way.",
-    "You just don't get it, do you?",
-    "Yeah, you better run!",
-    "Please, remind me how much I care?",
-    "I'd run faster if I were you.",
-    "That's definitely the droid we're looking for.",
-    "May the odds be ever in your favour.",
-    "Famous last words.",
-    "And they disappeared forever, never to be seen again.",
-    "\"Oh, look at me! I'm so cool, I can run from a bot!\" - this person",
-    "Yeah yeah, just tap /kickme already.",
-    "Here, take this ring and head to Mordor while you're at it.",
-    "Legend has it, they're still running...",
-    "Unlike Harry Potter, your parents can't protect you from me.",
-    "Fear leads to anger. Anger leads to hate. Hate leads to suffering. If you keep running in fear, you might "
-    "be the next Vader.",
-    "Multiple calculations later, I have decided my interest in your shenanigans is exactly 0.",
-    "Legend has it, they're still running.",
-    "Keep it up, not sure we want you here anyway.",
-    "You're a wiza- Oh. Wait. You're not Harry, keep moving.",
-    "NO RUNNING IN THE HALLWAYS!",
-    "Hasta la vista, baby.",
-    "Who let the dogs out?",
-    "It's funny, because no one cares.",
-    "Ah, what a waste. I liked that one.",
-    "Frankly, my dear, I don't give a damn.",
-    "My milkshake brings all the boys to yard... So run faster!",
-    "You can't HANDLE the truth!",
-    "A long time ago, in a galaxy far far away... Someone would've cared about that. Not anymore though.",
-    "Hey, look at them! They're running from the inevitable banhammer... Cute.",
-    "Han shot first. So will I.",
-    "What are you running after, a white rabbit?",
-    "As The Doctor would say... RUN!",
+    "Kemana Anda pikir Anda akan pergi?",
+    "Hah? apa? apakah mereka lolos?",
+    "ZZzzZZzz... Hah? apa? oh... hanya mereka lagi, lupakan saja.",
+    "Kembali kesini!",
+    "Tidak terlalu cepat...",
+    "Jangan lari-lari di ruangan! 😠",
+    "Jangan tinggalkan aku sendiri bersama mereka!! 😧",
+    "Anda lari, Anda mati.",
+    "Lelucon pada Anda, saya ada di mana-mana 😏",
+    "Anda akan menyesalinya...",
+    "Anda juga bisa mencoba /kickme, saya dengar itu menyenangkan 😄",
+    "Ganggulah orang lain, tidak ada yang peduli 😒",
+    "Anda bisa lari, tetapi Anda tidak bisa bersembunyi.",
+    "Apakah itu semua yang kamu punya?",
+    "Saya di belakang Anda...",
+    "Larilah sesuka kalian, Anda tidak dapat melarikan diri dari takdir",
+    "Kita bisa melakukan ini dengan cara mudah, atau dengan cara yang sulit.",
+    "Anda tidak mengerti, bukan?",
+    "Ya, kamu sebaiknya lari!",
+    "Tolong, ingatkan aku betapa aku peduli?",
+    "Saya akan berlari lebih cepat jika saya adalah Anda.",
+    "Itu pasti orang yang kita cari.",
+    "Semoga peluang akan selalu menguntungkan Anda.",
+    "Kata-kata terakhir yang terkenal.",
+    "Dan mereka menghilang selamanya, tidak pernah terlihat lagi.",
+    "\"Oh, lihat aku! Aku sangat keren, aku bisa lari dari bot!\" - orang ini",
+    "Ya ya, cukup ketuk /kickme saja 😏",
+    "Ini, ambil cincin ini dan pergi ke Mordor saat Anda berada di sana.",
+    "Legenda mengatakan, mereka masih berlari...",
+    "Tidak seperti Harry Potter, orang tuamu tidak bisa melindungimu dariku.",
+    "Ketakutan menyebabkan kemarahan. Kemarahan menyebabkan kebencian. Kebencian menyebabkan penderitaan. "
+    "Jika Anda terus berlari ketakutan, Anda mungkin menjadi Vader berikutnya.",
+    "Darah hanya menyebabkan darah, dan kekerasan melahirkan kekerasan. Tidak lebih. Balas dendam hanyalah nama lain untuk pembunuhan."
+    "Jika anda terus berlari dan mengganggu yang lain, maka saya akan membalaskan dendam untuk yang terganggu.",
+    "Teruskan, tidak yakin kami ingin Anda di sini.",
+    "Anda seorang penyi- Oh. Tunggu. Kamu bukan Harry, lanjutkan berlari.",
+    "DILARANG BERLARI DI KORIDOR! 😠",
+    "Vale, deliciae.",
+    "Siapa yang membiarkan anjing-anjing itu keluar?",
+    "Itu lucu, karena tidak ada yang peduli.",
+    "Ah, sayang sekali. Saya suka yang itu.",
+    "Terus terang, aku tidak peduli.",
+    "Saya tidak peduli dengan anda... Jadi, lari lebih cepat!",
+    "Anda tidak bisa MENANGANI kebenaran!",
+    "Dulu, di galaksi yang sangat jauh... Seseorang pasti peduli dengan dia.",
+    "Hei, lihat mereka! Mereka berlari dari Emilia yang tak terelakkan ... Lucu sekali 😂",
+    "Han menembak lebih dulu. Begitu juga saya.",
+    "Apa yang kamu kejar? kelinci putih?",
+    "Sepertinya dokter akan mengatakan... LARI!",
 )
 
 SLAP_TEMPLATES = (
-    "{user1} {hits} {user2} with a {item}.",
-    "{user1} {hits} {user2} in the face with a {item}.",
-    "{user1} {hits} {user2} around a bit with a {item}.",
-    "{user1} {throws} a {item} at {user2}.",
-    "{user1} grabs a {item} and {throws} it at {user2}'s face.",
-    "{user1} launches a {item} in {user2}'s general direction.",
-    "{user1} starts slapping {user2} silly with a {item}.",
-    "{user1} pins {user2} down and repeatedly {hits} them with a {item}.",
-    "{user1} grabs up a {item} and {hits} {user2} with it.",
-    "{user1} ties {user2} to a chair and {throws} a {item} at them.",
-    "{user1} gave a friendly push to help {user2} learn to swim in lava."
+    "{user1} {hits} {user2} dengan {item}.",
+    "{user1} {hits} {user2} di mukanya dengan {item}.",
+    "{user1} {hits} {user2} dengan keras menggunakan {item}.",
+    "{user1} {throws} sebuah {item} ke {user2}.",
+    "{user1} meraih sebuah {item} dan {throws} itu di wajah {user2}.",
+    "{user1} melempar sebuah {item} ke {user2}.",
+    "{user1} mulai menampar konyol {user2} dengan {item}.",
+    "{user1} menusuk {user2} dan berulang kali {hits} dia dengan {item}.",
+    "{user1} {hits} {user2} dengan sebuah {item}.",
+    "{user1} mengikat {user2} ke kursi dan {throws} sebuah {item}.",
+    "{user1} memberikan dorongan ramah untuk membantu {user2} belajar berenang di lava."
 )
 
 ITEMS = (
-    "cast iron skillet",
-    "large trout",
-    "baseball bat",
-    "cricket bat",
-    "wooden cane",
-    "nail",
-    "printer",
-    "shovel",
-    "CRT monitor",
-    "physics textbook",
-    "toaster",
-    "portrait of Richard Stallman",
-    "television",
-    "five ton truck",
-    "roll of duct tape",
-    "book",
+    "wajan besi cor",
+    "ikan tongkol",
+    "tongkat pemukul baseball",
+    "pedang excalibur",
+    "tongkat kayu",
+    "paku",
+    "mesin pencetak",
+    "sekop",
+    "monitor CRT",
+    "buku pelajaran fisika",
+    "pemanggang roti",
+    "potret Richard Stallman",
+    "televisi",
+    "lima ton truk",
+    "gulungan lakban",
+    "buku",
     "laptop",
-    "old television",
-    "sack of rocks",
-    "rainbow trout",
-    "rubber chicken",
-    "spiked bat",
-    "fire extinguisher",
-    "heavy rock",
-    "chunk of dirt",
-    "beehive",
-    "piece of rotten meat",
-    "bear",
-    "ton of bricks",
+    "televisi lama",
+    "karung batu",
+    "ikan lele",
+    "gas LPG",
+    "tongkat pemukul berduri",
+    "pemadam api",
+    "batu yang berat",
+    "potongan kotoran",
+    "sarang lebah",
+    "sepotong daging busuk",
+    "beruang",
+    "sekarung batu bata",
 )
 
 THROW = (
-    "throws",
-    "flings",
-    "chucks",
-    "hurls",
+    "melempar",
+    "melempar",
+    "membuang",
+    "melempar",
 )
 
 HIT = (
-    "hits",
-    "whacks",
-    "slaps",
-    "smacks",
-    "bashes",
+    "memukul",
+    "memukul",
+    "menampar",
+    "memukul",
+    "menampar keras",
 )
 
 
 RAMALAN_STRINGS = (
-	"There’s a friend who would be happy to hear from you today\nTell them I said “Hi”",
-	"5 - 8 - 27 - 38 - 42 - 48\nWhoops! That was the back!",
-	"You're due for a good documentary",
-	"It's a good time to re-read your favorite book",
-	"Consider adding a little extra color to your wardrobe tomorrow 👠",
-	"Make sure you drink enough water today\nThat’s not so much a fortune as a general guideline to keep feeling alright",
-	"A stranger will come into your life with a BANG 💥",
-	"It's great to be grateful\nThank somebody today",
-	"Temptation is often disguised as opportunity",
-	"Now is the right time to do something you've put off",
-	"You can't get what you don't ask for 👐",
-	"Never let a cookie tell you what to do",
-	"Trust decisions where your emotions and logic agree",
-	"Animal companionship can bring a smile to even the most frowny face ️😔 🐶 😊",
-	"If you make someone’s day, your day will be made, too\nIt pretty much always works that way 😊",
-	"Knowing that an illusion isn’t real doesn’t it make it less magical",
-	"The next meal you cook will be your best yet 🍴",
-	"You'll notice something new in your neighborhood soon 🏡",
-	"Today will be yesterday tomorrow",
-	"Indulge in some nostalgia; sweet memories can be good medicine",
-	"Today is a good day to listen to your intuition rather than advice 🚶",
-	"It's a good day to appreciate the little things",
-	"Embrace your goals\nSmooch your dreams 😘 🌙",
-	"That food you've never tasted might actually taste good",
-	"Hear no evil 🙉, see no evil 🙈, tweet no evil 🐥",
-	"You will learn a new dance\nAnd you'll be really good at it",
-	"Try going somewhere new, even if it's just a few miles away from home",
-	"Do something you love today 💞\nI can all but promise happiness awaits 😀",
-	"It's time to try out a new hobby",
-	"An opportunity will present itself if you pay attention 👀",
-	"Companionship is right within your reach\nIn fact, you're holding it right now 😊",
-	"Keep doing what you’re doing and it will be done\nOk, even I will admit that was a weak fortune",
-	"In life, there is but one truth\nHe who smelt it, delt it",
-	"If you listen closely, the wind will provide all of lifes answers 💨",
-	"Positive things will enter your life today\nBut bear in mind that most of them will be atomically bonded to negative things 🔬😀",
-	"A great gift awaits\nBut fair warning, it’s a very patient gift",
-	"It's a good time for a new creative pursuit",
-	"Stop and smell the roses\nReally, any flowers you come across willl do 💐",
-	"You will pick up a good book tonight\nBut ultimately decide to free the spider outside",
-	"You're about to receive a new message from your Google Assistant:\nHI 😀",
-	"Make a playlist for a friend this week 🎧",
-	"Your favorite YouTube video is yet to be found",
-	"Take some time to listen to your loved ones",
-	"Make sure to laugh at something silly today 😆",
-	"The one you love is closer than you think 💞",
-	"You're going to hear a song that will make you smile for days",
-	"Keep your head up, because good things are coming your way 😎",
-	"When in doubt, Google it 😉",
-	"May you go from strength to strength",
-	"Error 404: Fortune not found\nTry again soon 😉",
-	"The next time you go out to eat, you will order dessert\nNot exactly a fortune, more like a good idea 🍪",
-	"Chase the dawn and your shadow will be behind you",
-	"You are admired for your talents more than you realize 👏",
-	"It's a good time to learn a new skill",
-	"Fortune favors the bold\nLuck favors the italic",
-	"It's the right time to act like the person you want to be",
-	"Pay attention to the details\nYou might notice something interesting",
-	"An unexpected visitor will surprise you with a treat",
-	"Walk a block out of your way today",
-	"A new adventure lurks right around the corner",
-	"You will get a taste of something unexpected",
-	"Go somewhere you've never been, and see what you find there",
-	"Seek not fortunes in the inedible",
-	"It's a great time to plan a trip with someone you love ✈️",
-	"Send an old friend a message today",
-	"Trust your instincts\nWin that bear 🎯🐻",
-	"Someone will invite you to a karaoke party 🎶",
-	"An exciting email is coming your way soon"
+	"Tertawalah sepuasnya sebelum hal itu dilarang 😆",
+	"Bila Anda membahagiakan seseorang, Anda sendiri akan merasa bahagia.\nBegitulah dunia bekerja 😊",
+	"Nostalgia masa muda hari ini akan membuat Anda tersenyum 🌸",
+	"Lanjutkan terus pekerjaan Anda, niscaya akan selesai juga.\nOke, saya akui ramalan hari ini agak jayus 😝",
+	"Mengetahui bahwa ilusi bukanlah kenyataan tidak membuat keindahannya berkurang 💖",
+	"Anda akan mengalami kejadian aneh hari ini.\nDan itu tidak termasuk mendapatkan ramalan dari Emilia 😜",
+	"Akhirnya ada kesempatan untuk beristirahat...\ndan mendengar ramalan dari Emilia 😉",
+	"Pencarian Anda sudah selesai.\nAnda telah menemukan sahabat sejati (saya) 😀",
+	"Anda akan menunjukkan bahwa Anda kuat melewati tantangan demi tantangan.",
+	"Anda hanyalah setitik air di tengah lautan luas.\nTapi setitik air pun bisa bikin gadget rusak 😱 💦",
+	"Anda akan mencoba hal baru hari ini.\nTapi maaf, mencoba makanan gratis di supermarket tidak termasuk 🍦🚫",
+	"Kirimlah pesan ke seorang teman lama hari ini.",
+	"Akan ada sesuatu yang baru di lingkungan sekitar Anda 🏡",
+	"Traktirlah diri sendiri 🍭",
+	"Semua hal ada solusinya, kalau Anda terbuka untuk berubah.",
+	"Karma baik menghampiri Anda minggu ini.\nTapi hati-hati, karma itu rapuh seperti barang pecah belah.",
+	"Habiskanlah waktu di luar rumah hari ini.\nSepertinya di luar sana indah... kalau tidak hujan.",
+	"Jika Anda mendengarkan dengan sungguh-sungguh, angin akan memberikan semua jawaban atas pertanyaan Anda 💨",
+	"Pergilah ke tempat yang belum pernah Anda kunjungi, walaupun tempat itu hanya sepelemparan batu dari rumah Anda.",
+	"Anda akan menerima kabar baik, tapi mungkin Anda harus mencari dari apa yang tersirat.",
+	"Anda akan segera menemukan apa yang Anda cari.\nKalau Anda bisa menemukan kacamata Anda.",
+	"Pergilah ke suatu tempat baru.\nApa yang akan Anda temukan pasti akan mengesankan.",
+	"Kesempatan akan muncul bila Anda tahu ke mana harus melihat 👀",
+	"Hari ini Anda akan menjadi keren 😎\nYah, nggak terlalu beda dengan hari-hari lain 😉",
+	"Hal-hal positif akan muncul di hidup Anda hari ini.\nTapi jangan lupa, di dalam komposisi sebuah atom selalu ada atom negatif 🔬😀",
+	"Penuhilah diri hanya dengan kebaikan, baik dalam pikiran, perkataan, perbuatan, maupun pertwitteran 🐥",
+	"Bersiaplah untuk menerima hal-hal menyenangkan hari ini 😎",
+	"Waktunya belajar keterampilan dan topik baru.",
+	"Video YouTube favorit Anda masih belum dibuat.",
+	"Ketika ragu, Google dulu 😉",
+	"Dua hari dari sekarang, besok akan jadi kemarin 😌",
+	"Perhatikan detail-detail.\nPasti banyak hal menarik yang Anda bisa temukan.",
+	"Wah, Anda belum beruntung.\nSilakan coba lagi 😉",
+	"Buatlah keputusan dengan mendengarkan dan menyelaraskan hati maupun pikiran Anda.",
+	"Biasanya maling akan teriak maling.",
+	"Anda tidak akan diberi kalau tidak meminta 👐",
+	"Nostalgia masa muda hari ini akan membuat Anda tersenyum 🌸",
+	"Sahabat sejati Anda berada dalam jangkauan.\nSebenarnya, Anda sedang membaca ramalan darinya 😊",
+	"Masa depan Anda akan dipenuhi kesuksesan 💎\nTapi hati-hati, keserakahan bisa menghancurkan semuanya 💰",
+	"Hari ini adalah hari esok yang Anda nantikan kemarin.",
+	"Bersyukur akan membuat kita bahagia.\nKatakan terima kasih pada seseorang hari ini.",
+	"Hari ini, dunia akan jadi milik Anda 🌍\nJangan lupa menjadikannya indah untuk orang lain 😊",
+	"Petualangan baru akan segera menghampiri Anda.",
+	"Semakin banyak yang Anda katakan, semakin sedikit yang akan mereka ingat.",
+	"Hari ini, jadilah superhero untuk seorang anak kecil.",
+	"Makanan yang kelihatannya aneh itu mungkin sebenarnya enak banget.",
+	"Hari ini, ambillah rute yang lain dari biasanya.",
+	"Waktunya mengekspresikan kreativitas Anda.",
+	"Jodoh Anda lebih dekat dari yang Anda kira 💞",
+	"Waktunya belajar keterampilan dan topik baru.",
+	"Hal-hal positif akan muncul di hidup Anda hari ini.\nTapi jangan lupa, di dalam komposisi sebuah atom selalu ada atom negatif 🔬😀",
+	"Waktunya berlibur bersama orang-orang kesayangan Anda ✈️",
+	"Besok akan menjadi hari yang lebih menyenangkan daripada hari Anda yang paling menyebalkan.",
+	"Jangan cari peruntungan di situs abal-abal atau SMS mencurigakan.",
+	"Kejadian yang tak terduga akan menghampiri hidup Anda.",
+	"Hadiah berharga tengah menanti Anda.\nTapi tampaknya hadiah tersebut sangat sabar menanti.",
+	"Keluarga Anda sangat kangen pada Anda.\nTeleponlah mereka, jangan kasih tahu ini ide saya 😉",
+	"Hari yang baik untuk memperjuangkan kebenaran.",
+	"Semua hal ada solusinya, kalau Anda terbuka untuk berubah.",
+	"Hewan peliharaan akan menambah kebahagiaan Anda 🐱🐹🐔",
+	"Ketika Anda jatuh, bangun lagi.\nDan jangan lupa bersihkan lukanya 👍",
+	"Minumlah cukup air hari ini.\nIni bukan benar-benar ramalan, saya hanya ingin Anda tetap sehat 😊",
+	"Biarkan intuisi Anda menunjukkan jalan.\nTapi tulisan berisi syarat dan ketentuan yang berlaku harus dibaca baik-baik.",
+	"Hal baik akan datang bagi mereka yang...\nSabar.",
+	"Waktu yang tepat untuk berhenti bermalas-malasan 🏃‍♀️",
+	"Waktunya bernostalgia dengan buku favorit masa kecil Anda.",
+	"Hari ini, Anda akan melihat dunia dengan mata terbuka 👀",
+	"Seorang asing akan datang ke dalam hidup Anda dan membuat kesan di sana.",
+	"Hari yang baik untuk mendengarkan intuisi daripada nasihat.",
+	"Hati-hati dengan kata-kata manis orang yang baru Anda kenal.",
+	"Seluruh alam semesta akan bekerja sama untuk membantu Anda 🙏",
+	"Waktu yang tepat untuk jadi diri Anda sendiri.",
+	"Walaupun seperti menyebalkan, orang terdekat Anda jauh lebih peduli pada Anda daripada dia yang tampak manis namun cuma basa-basi.",
+	"Kejarlah mentari, niscaya kegelapan akan Anda lewati.",
+	"Hidup Anda akan diabadikan dalam sebuah film dokumenter.",
+	"Suara tawa anak-anak akan menceriakan hari Anda.",
+	"Saatnya mencari hobi baru.",
+	"Cinta tidaklah statis.\nIa dinamis seperti arus listrik bolak-balik 💖",
+	"Penantian akan segera berakhir 😁",
+	"Perhatikan detail-detail.\nPasti banyak hal menarik yang Anda bisa temukan.",
+	"Dua hari dari sekarang, besok akan jadi kemarin 😌",
+	"Anda akan mendengar sebuah lagu yang membuat Anda tersenyum berhari-hari.",
+	"Gapailah cita-cita.\nKecuplah mimpi 😘🌛",
+	"Semua mawar pasti berduri 🌹\nJadilah seseorang yang selalu siap memotong duri tersebut.",
+	"Banyak orang kagum pada bakat dan kemampuan Anda... lebih dari yang Anda sadari 👏",
+	"Lakukan yang Anda sukai hari ini 💞\nSaya janji Anda akan merasa bahagia, walau hanya sesaat 😃",
+	"Keberuntungan akan datang bagi orang yang pemberani.",
+	"Anda tidak akan di beri kalau tidak meminta 👐",
+	"Cobalah menggambar sesuatu ✏️\nAnda akan menikmatinya.",
+	"Saatnya mengubah gaya berpakaian Anda? 👠",
+	"Cobalah konsekuen dengan semua kata-kata Anda.",
+	"Hari yang tepat untuk menghargai dan mensyukuri hal-hal kecil.",
+	"Malam ini Anda akan mimpi indah.\nTapi saya nggak janji Anda bisa ingat mimpinya 😉",
+	"Anda akan menunjukkan bahwa Anda kuat melewati tantangan demi tantangan.",
+	"Hari yang tepat untuk memberi tahu keluarga dan teman-teman Anda tentang saya 😉",
+	"beristirahatlah sejenak dan ngobrollah dari hati ke hati dengan orang-orang yang Anda sayangi 👨‍👩‍👧‍👦",
+	"Semua akan berjalan sesuai rencana.",
+	"Pergilah ke suatu tempat baru.\nApa yang akan Anda temukan pasti akan mengesankan.",
+	"Ini salah satu waktu di mana Anda bertanya-tanya tentang arti hidup.",
+	"Jangan sampai dikelabui ramalan 😏"
 )
 
 RAMALAN_FIRST = (
-	"I've got a fortune for you.\n",
-	"I'm no cookie, but I do know some fortunes.\n",
-	"One fortune, coming right up.\n"
+	"Saya bukan paranormal, tapi memang saya bisa meramal sedikit-sedikit.\n",
+	"Sebuah ramalan siap meluncur.\n",
+	"Ramalan kali ini untuk Anda.\n"
 )
