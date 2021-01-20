@@ -539,17 +539,17 @@ Atur grup anda via PM dengan mudah.
 	"*Filter di {}*:\n": "*Filters in {}*:\n",
 	"Tidak ada filter di {}!": "There is no filter in {}!",
 	"catatan lokal": "local notes",
-	"Anda harus memberi nama untuk filter ini!": "You must give a name for this filter!",
+	"You must give a name for this filter!": "Anda harus memberi nama untuk filter ini!",
 	"Tidak ada pesan catatan - Anda tidak bisa HANYA menekan tombol, Anda perlu pesan untuk melakukannya!": "There is no note message - You can't JUST have buttons, you need a message to go with it!",
-	"Anda tidak menentukan apa yang harus dibalas!": "You didn't specify what to reply with!",
-	"Handler '{}' ditambahkan di *{}*!": "Handler '{}' added in *{}*!",
-	"Apa yang harus saya hentikan?": "What should I stop?",
+	"You didn't specify what to reply with!": "Anda tidak menentukan apa yang harus dibalas!",
+	"Handler '{}' added in *{}*!": "Handler '{}' ditambahkan di *{}*!":,
+	"What should I stop?": "Apa yang harus saya hentikan?",
 	"Tidak ada filter aktif di sini!": "There are no active filters here!",
-	"Ya, saya akan berhenti menjawabnya di *{}*.": "Yep, I'll stop replying than in *{}*.",
+	"Yep, I'll stop replying than in *{}*.": "Ya, saya akan berhenti menjawabnya di *{}*.",
 	"Itu bukan filter aktif - jalankan /filter untuk semua filter aktif.": "That's not a current filter - run /filters for all active filters.",
 	"Anda tampaknya mencoba menggunakan protokol url yang tidak didukung. Telegram tidak mendukung tombol untuk beberapa protokol, seperti tg://. Silakan coba lagi.": "You seem to be trying to use an unsupported url protocol. Telegram doesn't support buttons for some protocols, such as tg://. Please try again",
-	"Catatan ini tidak dapat dikirim karena formatnya salah.": "This note could not be sent, as it is incorrectly formatted.",
-	"{} filter, pada {} obrolan.": "{} filters, across {} chats.",
+	"This note could not be sent, as it is incorrectly formatted.": "Catatan ini tidak dapat dikirim karena formatnya salah.",
+	"{} filters, across {} chats.": "{} filter, pada {} obrolan.",
 	"Ada `{}` filter khusus di sini.": "There are `{}` custom filters here.",
 	"filters_help": """
  - /filters: daftar semua filter aktif dalam obrolan ini.
@@ -1083,20 +1083,20 @@ NOTE: In groups, only admins can add/remove RSS links to the group's subscriptio
 """,
 
 # rules
-	"Pintasan aturan untuk obrolan ini belum diatur dengan benar! Mintalah admin untuk perbaiki ini.": "The rules shortcut for this chat hasn't been set properly! Ask admins to fix this.",
-	"Peraturan untuk *{}* adalah:\n\n{}": "The rules for *{}* are:\n\n{}",
-	"Admin grup belum menetapkan aturan apa pun untuk obrolan ini. Bukan berarti obrolan ini tanpa hukum...!": "The group admins haven't set any rules for this chat yet. This probably doesn't mean it's lawless though...!",
-	"Admin grup belum menetapkan aturan apa pun untuk *{}*. Bukan berarti obrolan ini tanpa hukum...!": "The group admins haven't set any rules for *{}*. This probably doesn't mean it's lawless though...!",
-	"Hubungi saya di PM untuk mendapatkan aturan grup ini": "Contact me in PM to get this group's rules.",
-	"Peraturan": "Rules",
-	"Berhasil mengatur aturan untuk *{}*.": "Successfully set rules for *{}*.",
-	"Berhasil mengatur aturan untuk grup ini.": "Successfully set rules for this group.",
-	"Berhasil membersihkan aturan!": "Successfully cleared rules!",
-	"{} obrolan memiliki aturan yang ditetapkan.": "{} chats have rules set.",
-	"Obrolan ini memiliki aturan yang ditetapkan: `{}`": "This chat has had it's rules set: `{}`",
-	"Private Rules di *aktifkan*, pesan peraturan akan di kirim di PM.": "Private Rules was *enabled*, rules message will send to PM.",
-	"Private Rules di *non-aktifkan*, pesan peraturan akan di kirim di grup.": "Private Rules was *disabled*, rules message will send to group.",
-	"Pengaturan Private Rules di {}: *{}*": "Private Rules Settings in {}: *{}*",
+	"The rules shortcut for this chat hasn't been set properly! Ask admins to fix this.": "Pintasan aturan untuk obrolan ini belum diatur dengan benar! Mintalah admin untuk perbaiki ini.",
+	"The rules for *{}* are:\n\n{}": "Peraturan untuk *{}* adalah:\n\n{}",
+	"The group admins haven't set any rules for this chat yet. This probably doesn't mean it's lawless though...!" "Admin grup belum menetapkan aturan apa pun untuk obrolan ini. Bukan berarti obrolan ini tanpa hukum...!",
+	"The group admins haven't set any rules for *{}*. This probably doesn't mean it's lawless though...!": "Admin grup belum menetapkan aturan apa pun untuk *{}*. Bukan berarti obrolan ini tanpa hukum...!",
+	"Contact me in PM to get this group's rules.": "Hubungi saya di PM untuk mendapatkan aturan grup ini",
+	"Rules": "Peraturan",
+	"Successfully set rules for *{}*." "Berhasil mengatur aturan untuk *{}*.",
+	"Successfully set rules for this group.": "Berhasil mengatur aturan untuk grup ini.",
+	"Successfully cleared rules!": "Berhasil membersihkan aturan!",
+	"{} chats have rules set.": "{} obrolan memiliki aturan yang ditetapkan.",
+	"This chat has had it's rules set: `{}`": "Obrolan ini memiliki aturan yang ditetapkan: `{}`",
+	"Private Rules was *enabled*, rules message will send to PM.": "Private Rules di *aktifkan*, pesan peraturan akan di kirim di PM.",
+	"Private Rules was *disabled*, rules message will send to group.": "Private Rules di *non-aktifkan*, pesan peraturan akan di kirim di grup.",
+	"Private Rules Settings in {}: *{}*": "Pengaturan Private Rules di {}: *{}*",
 	"rules_help": """
  - /rules: dapatkan aturan untuk obrolan ini.
 
@@ -1237,7 +1237,7 @@ be a sentence, encompass it with quotes, as such: `/addwarn "very angry" This is
 	"\nCatatan: Terjadi kesalahan saat mengirim pesan kustom. Harap perbarui.": "\nNote: An error occured when sending the custom message. Please update.",
 	"Master telah pulang! Mari kita mulai pesta ini! 😆": "Master is in the houseeee, let's get this party started! 😆",
 	"Catatan: Terjadi kesalahan saat mengirim pesan kustom. Harap perbarui.": "Note: An error occurred while sending custom messages. Please update.",
-	"Kamu telah disuarakan!": "You've been unmuted!",
+	"You've been unmuted!": "Kamu telah disuarakan!",
 	"Kamu bukan pengguna baru!": "You are not a new member!",
 	"Kamu sudah pernah mengklik ini sebelumnya!": "You've clicked this before!",
 	"Tolong pilih emoji yang sama dibawah ini:": "Please select matching emoji below:",
@@ -1279,11 +1279,11 @@ Note:
 	"Tombol teks security saat ini adalah: `{}`": "Current custom text button is: `{}`",
 	"Klik disini untuk mensuarakan": "Click here to unmute",
 	"Tombol custom teks security telah di reset menjadi: `Klik disini untuk mensuarakan`": "Custom text security button has been reset to: `Click here to unmute`",
-	"Saya meninggalkan pesan layanan": "I left a service message",
-	"Saya akan membersihkan pesan layanan": "I will clean the service message",
+	"I left a service message": "Saya meninggalkan pesan layanan",
+	"I will clean the service message": "Saya akan membersihkan pesan layanan",
 	"Silakan masukkan yes/ya atau no/tidak!": "Please enter yes or no!",
-	"Saat ini saya akan membersihkan `x joined the group` ketika ada member baru.": "At this time I will clean `x joined the group` when there is a new member.",
-	"Saat ini saya tidak akan membersihkan `x joined the group` ketika ada member baru.": "At this time I will not clean `x joined the group` when there is a new member.",
+	"At this time I will clean `x joined the group` when there is a new member.": "Saat ini saya akan membersihkan `x joined the group` ketika ada member baru.",
+	"At this time I will not clean `x joined the group` when there is a new member.": "Saat ini saya tidak akan membersihkan `x joined the group` ketika ada member baru.",
 	"Aktif ": "Enabled ",
 	"Tidak aktif ": "Disabled ",
 	"(di bisukan selamanya sampai menekan tombol unmute)": "(mute forever until pressing the unmute button)",
@@ -1295,15 +1295,15 @@ Note:
 	"Pengguna baru harus verifikasi tombol: `{}`\n": "New users must verify: `{}`\n",
 	"Tombol welcomemute akan mengatakan: `{}`\n": "The button welcomemute will say: `{}`\n",
 	"\n*Pesan selamat datang (tidak mengisi {{}}) adalah:*": "\n*Welcome message (not filling the {{}}) is:*",
-	"Saya akan sopan 😁": "I'll be polite! 😁",
-	"Aku ngambek, tidak menyapa lagi. 😣": "I'm sulking, not saying hello anymore. 😣",
-	"Saya hanya mengerti 'on/yes' atau 'off/no' saja!": "I only understand 'on/yes' or 'off/no' only!",
+	"I'll be polite! 😁": "Saya akan sopan 😁",
+	"I'm sulking, not saying hello anymore. 😣": "Aku ngambek, tidak menyapa lagi. 😣",
+	"I only understand 'on/yes' or 'off/no' only!": "Saya hanya mengerti 'on/yes' atau 'off/no' saja!",
 	"Obrolan ini memiliki setelan selamat tinggal yang disetel ke: `{}`.\n*Pesan selamat tinggal (tidak mengisi {{}}) adalah:*": "This chat has it's goodbye setting set to: `{}`.\n*The goodbye  message (not filling the {{}}) is:*",
 	"Aku akan menyesal jika orang-orang pergi!": "I'll be sorry when people leave!",
 	"Mereka pergi, mereka sudah mati bagi saya.": "They leave, they're dead to me.",
 	"Anda harus memberikan isi dalam pesan selamat datang!\nKetik `/welcomehelp` untuk beberapa bantuan pada welcome": "You must provide the contents in the welcome message!\nType `/welcomehelp` to get some help on welcome",
 	"Anda tidak menentukan apa yang harus dibalas!": "You do not determine what must be returned!",
-	"Berhasil mengatur pesan sambutan kustom!": "Successfully set a custom welcome message!",
+	"Successfully set a custom welcome message!": "Berhasil mengatur pesan sambutan kustom!",
 	"Berhasil menyetel ulang pesan sambutan ke default!": "Successfully reset the welcome message to default!",
 	"Berhasil mengatur pesan selamat tinggal kustom!": "Successfully set custom goodbye messages!",
 	"Berhasil me-reset pesan selamat tinggal ke default!": "Successfully reset goodbye message to default!",
@@ -1375,8 +1375,8 @@ Ini juga berfungsi dengan /goodbye.
 	"Selamat tinggal semua 😁": "Goodbye everyone 😁",
 	"Saya telah keluar dari grup {}": "I have left the group {}",
 	"Sepertinya saya sudah keluar atau di tendang di grup tersebut": "Looks like I have been out or kicked in the group",
-	"Pong!\nKecepatannya: {0:.2f} detik": "Pong!\nSpeed was: {0:.2f}s",
-	"Diterjemahkan dari `{}` ke `{}`:\n`{}`": "Translated from `{}` to `{}`:\n`{}`",
+	"Pong!\nSpeed was: {0:.2f}s": "Pong!\nKecepatannya: {0:.2f} detik",
+	"Translated from `{}` to `{}`:\n`{}`": "Diterjemahkan dari `{}` ke `{}`:\n`{}`",
 	"Balas pesan atau tulis pesan dari bahasa lain untuk diterjemahkan kedalam bahasa yang di dituju\n\nContoh: `/tr en-id` untuk menerjemahkan dari Bahasa inggris ke Bahasa Indonesia\nAtau gunakan: `/tr id` untuk deteksi otomatis dan menerjemahkannya kedalam bahasa indonesia": "Reply to messages or write messages from other languages ​​to translate into the intended language\n\nExample: `/tr en-id` to translate from English to Indonesian\nOr use: `/tr id` for automatic detection and translating it into Indonesian",
 	"Bahasa yang di tuju tidak ditemukan!": "The destination language is not found!",
 	"Hasil tidak ditemukan": "Results not found",
@@ -1385,13 +1385,13 @@ Ini juga berfungsi dengan /goodbye.
 	"Baca di Wikipedia": "Read on Wikipedia",
 	"Baca Lebih Lengkap": "Read More",
 	"exclusive_help": """
- - /stickerid: reply message sticker at PM to get ID sticker
- - /ping: check the speed of the bot
- - /fortune: give a fortune
- - /tr <from>-<to> <text>: translate text written or reply for any language to the intended language, or
- - /tr <to> <text>: translate text written or reply for any language to the intended language
- - /wiki <text>: search for text written from the wikipedia source
- - /ud <text>: search from urban dictionary
+ - /stickerid: balas stiker pesan di PM untuk mendapatkan stiker ID
+ - /ping: periksa kecepatan bot
+ - /fortune: beri keberuntungan
+ - /tr <from>-<to> <text>: menerjemahkan teks tertulis atau membalas untuk bahasa apa pun ke bahasa yang dimaksudkan, atau
+ - /tr <to> <text>:terjemahkan teks tertulis atau balas untuk bahasa apa pun ke bahasa yang dimaksudkan
+ - /wiki <text>: mencari teks yang ditulis dari sumber wikipedia
+ - /ud <text>: cari dari kamus 
 """,
 
 # Misc
