@@ -542,7 +542,7 @@ Atur grup anda via PM dengan mudah.
 	"You must give a name for this filter!": "Anda harus memberi nama untuk filter ini!",
 	"Tidak ada pesan catatan - Anda tidak bisa HANYA menekan tombol, Anda perlu pesan untuk melakukannya!": "There is no note message - You can't JUST have buttons, you need a message to go with it!",
 	"You didn't specify what to reply with!": "Anda tidak menentukan apa yang harus dibalas!",
-	"Handler '{}' added in *{}*!": "Handler '{}' ditambahkan di *{}*!":,
+	"Handler '{}' added in *{}*!": "Handler '{}' ditambahkan di *{}*!",
 	"What should I stop?": "Apa yang harus saya hentikan?",
 	"Tidak ada filter aktif di sini!": "There are no active filters here!",
 	"Yep, I'll stop replying than in *{}*.": "Ya, saya akan berhenti menjawabnya di *{}*.",
