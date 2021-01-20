@@ -1085,7 +1085,7 @@ NOTE: In groups, only admins can add/remove RSS links to the group's subscriptio
 # rules
 	"The rules shortcut for this chat hasn't been set properly! Ask admins to fix this.": "Pintasan aturan untuk obrolan ini belum diatur dengan benar! Mintalah admin untuk perbaiki ini.",
 	"The rules for *{}* are:\n\n{}": "Peraturan untuk *{}* adalah:\n\n{}",
-	"The group admins haven't set any rules for this chat yet. This probably doesn't mean it's lawless though...!" "Admin grup belum menetapkan aturan apa pun untuk obrolan ini. Bukan berarti obrolan ini tanpa hukum...!",
+	"The group admins haven't set any rules for this chat yet. This probably doesn't mean it's lawless though...!": "Admin grup belum menetapkan aturan apa pun untuk obrolan ini. Bukan berarti obrolan ini tanpa hukum...!",
 	"The group admins haven't set any rules for *{}*. This probably doesn't mean it's lawless though...!": "Admin grup belum menetapkan aturan apa pun untuk *{}*. Bukan berarti obrolan ini tanpa hukum...!",
 	"Contact me in PM to get this group's rules.": "Hubungi saya di PM untuk mendapatkan aturan grup ini",
 	"Rules": "Peraturan",
