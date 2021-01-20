@@ -1089,7 +1089,7 @@ NOTE: In groups, only admins can add/remove RSS links to the group's subscriptio
 	"The group admins haven't set any rules for *{}*. This probably doesn't mean it's lawless though...!": "Admin grup belum menetapkan aturan apa pun untuk *{}*. Bukan berarti obrolan ini tanpa hukum...!",
 	"Contact me in PM to get this group's rules.": "Hubungi saya di PM untuk mendapatkan aturan grup ini",
 	"Rules": "Peraturan",
-	"Successfully set rules for *{}*." "Berhasil mengatur aturan untuk *{}*.",
+	"Successfully set rules for *{}*.": "Berhasil mengatur aturan untuk *{}*.",
 	"Successfully set rules for this group.": "Berhasil mengatur aturan untuk grup ini.",
 	"Successfully cleared rules!": "Berhasil membersihkan aturan!",
 	"{} chats have rules set.": "{} obrolan memiliki aturan yang ditetapkan.",
